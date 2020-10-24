@@ -65,6 +65,8 @@ $(function() {
 <div class="title">Database Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="database_8h_source.html">database.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -74,13 +76,13 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:acbed9ea8d0a159f656313aa521406c8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0513531192c3c5fbf51b933ca157757"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDatabase.html#ac0513531192c3c5fbf51b933ca157757">storeSensorValue</a> (uint32_t mysensor, char *value)</td></tr>
 <tr class="separator:ac0513531192c3c5fbf51b933ca157757"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a179202ecf51dd6f990af7f9e46d78a96"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDatabase.html#a179202ecf51dd6f990af7f9e46d78a96">storeNodeConfig</a> (NODE_DATTYPE node, uint8_t channel, char *value)</td></tr>
+<tr class="memitem:a179202ecf51dd6f990af7f9e46d78a96"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDatabase.html#a179202ecf51dd6f990af7f9e46d78a96">storeNodeConfig</a> (<a class="el" href="rf24__config_8h.html#a030de4f033221607739a15cb52508022">NODE_DATTYPE</a> <a class="el" href="home_2norbert_2projekte_2RF24Hub_2rf24hubd_8h.html#aebefdde19ce858c7a858e511d493aa9d">node</a>, uint8_t channel, char *value)</td></tr>
 <tr class="separator:a179202ecf51dd6f990af7f9e46d78a96"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1eaefc60fc21b1e37ffca8700c3419de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDatabase.html#a1eaefc60fc21b1e37ffca8700c3419de">initSensor</a> (<a class="el" href="classSensor.html">Sensor</a> *sensor)</td></tr>
+<tr class="memitem:a1eaefc60fc21b1e37ffca8700c3419de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDatabase.html#a1eaefc60fc21b1e37ffca8700c3419de">initSensor</a> (<a class="el" href="classSensor.html">Sensor</a> *<a class="el" href="home_2norbert_2projekte_2RF24Hub_2rf24hubd_8h.html#a788321ec5c87f740898fb2e99ea6da01">sensor</a>)</td></tr>
 <tr class="separator:a1eaefc60fc21b1e37ffca8700c3419de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62299881145b2ac5dd15b0c3eccbd122"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDatabase.html#a62299881145b2ac5dd15b0c3eccbd122">initNode</a> (<a class="el" href="classNode.html">Node</a> *node)</td></tr>
+<tr class="memitem:a62299881145b2ac5dd15b0c3eccbd122"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDatabase.html#a62299881145b2ac5dd15b0c3eccbd122">initNode</a> (<a class="el" href="classNode.html">Node</a> *<a class="el" href="home_2norbert_2projekte_2RF24Hub_2rf24hubd_8h.html#aebefdde19ce858c7a858e511d493aa9d">node</a>)</td></tr>
 <tr class="separator:a62299881145b2ac5dd15b0c3eccbd122"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae42318c5e9b50413d213ae51b50e1959"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDatabase.html#ae42318c5e9b50413d213ae51b50e1959">initGateway</a> (<a class="el" href="classGateway.html">Gateway</a> *gateway)</td></tr>
+<tr class="memitem:ae42318c5e9b50413d213ae51b50e1959"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDatabase.html#ae42318c5e9b50413d213ae51b50e1959">initGateway</a> (<a class="el" href="classGateway.html">Gateway</a> *<a class="el" href="home_2norbert_2projekte_2RF24Hub_2rf24hubd_8h.html#afa321d377f8c71e1452c901fab6efbcd">gateway</a>)</td></tr>
 <tr class="separator:ae42318c5e9b50413d213ae51b50e1959"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63afca68774fd4faaa85ec80f0df8908"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDatabase.html#a63afca68774fd4faaa85ec80f0df8908">initSystem</a> (void)</td></tr>
 <tr class="separator:a63afca68774fd4faaa85ec80f0df8908"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -267,7 +269,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void Database::storeNodeConfig </td>
           <td>(</td>
-          <td class="paramtype">NODE_DATTYPE&#160;</td>
+          <td class="paramtype"><a class="el" href="rf24__config_8h.html#a030de4f033221607739a15cb52508022">NODE_DATTYPE</a>&#160;</td>
           <td class="paramname"><em>node</em>, </td>
         </tr>
         <tr>
@@ -400,7 +402,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>/mnt/rpi1/projekte/RF24Hub/<a class="el" href="database_8h_source.html">database.h</a></li>
-<li>/mnt/rpi1/projekte/RF24Hub/database.cpp</li>
+<li>/mnt/rpi1/projekte/RF24Hub/<a class="el" href="database_8cpp.html">database.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
