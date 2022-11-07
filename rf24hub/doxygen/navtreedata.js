@@ -27,9 +27,9 @@ var NAVTREE =
   [ "RF24Hub", "index.html", [
     [ "Environment:", "index.html#autotoc_md0", null ],
     [ "Aim of the project:", "index.html#autotoc_md1", null ],
-    [ "A howto to build an Arduino node from the internal template", "md_doc__a_r_d_u_i_n_o__n_o_d_e__g_u_i_d_e.html", null ],
+    [ "A howto to build an Arduino node from the internal template", "md_doc_ARDUINO_NODE_GUIDE.html", null ],
     [ "create_db", "md_doc_create_db.html", null ],
-    [ "A guide to build an ESP Node from the Template", "md_doc__e_s_p__n_o_d_e__g_u_i_d_e.html", null ],
+    [ "A guide to build an ESP Node from the Template", "md_doc_ESP_NODE_GUIDE.html", null ],
     [ "Modules", "modules.html", "modules" ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
@@ -56,8 +56,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_parts_8h.html",
-"class_order_buffer.html#ad1d77cfabad48e73a59caf09be2d1a16",
+"Parts_8h.html",
+"classOrderBuffer.html#ad1d77cfabad48e73a59caf09be2d1a16",
 "group__cfgprm.html#ga59a900dc73429083f9aa8d06c504e493",
 "group__datafmt.html#ga7512197e1d94493ecab02587e70fb799",
 "group__reg.html#ga6fbd8624ea37b66935a94b5944745ea5",

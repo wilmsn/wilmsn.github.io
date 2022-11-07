@@ -17,35 +17,34 @@
 <h2>3. Clone and Compile the RF24Hub Repro</h2>
 
    git clone https://github.com/wilmsn/RF24Hub.git RF24Hub
-   cd RF24Hub
+   cd RF24Hub/linux
    make
 
 <h2>4. Setup Database</h2>
+   TDB
    install tables from create_tab.sql
 
+<h2>5. Build and setup a Node</h2>
+TBD
+
 <h2>5. Do a test run</h2>
-
-   Have a least one node ready for test
-   Add the configuration of this node to the table node inside the database
-   Add at least one sensor to the table sensor
-   Edit the config file: rf24hub.cfg
-
-   Start the Hub:
-
-   sudo ./rf24hubd -c rf24hub.cfg # Just stop it with ctrl-c
-
-   Open a second terminal and go to the same dir as before
-
-   Start the Gateway:
-
-   sudo ./rf24gwd -v +rf24 -c rf24hub.cfg # Just stop it with ctrl-c
+Edit the config file to your needs/environment: rf24hub.cfg
+<br>
+Start the Hub:
+<pre>
+sudo ./rf24hubd -c rf24hub.cfg # Just stop it with ctrl-c
+</pre>
+Open a second terminal and go to the same dir as before and start the Gateway:
+<pre>
+sudo ./rf24gwd -v +rf24 -c rf24hub.cfg # Just stop it with ctrl-c
+</pre>
 
 <h2>6. If everything works, install it</h2>
-
-   sudo make install
-
-   Please be sure to edit "/etc/rf24hub/rf24hub.cfg" to your needs!
-   Restart the deamon after that:
+<pre>
+sudo make install
+</pre>
+Please be sure to copy rf24hub.cfg to /etc/rf24hub/rf24hub.cfg<br>
+Restart the deamon after that:
 
    sudo systemctl stop rf24hub
 

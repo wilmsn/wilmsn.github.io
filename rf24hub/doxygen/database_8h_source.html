@@ -28,6 +28,7 @@
    <div id="projectname">RF24Hub
    &#160;<span id="projectnumber">3.0</span>
    </div>
+   <div id="projectbrief">A Mesh Network for Sensors</div>
   </td>
  </tr>
  </tbody>
@@ -110,7 +111,7 @@ $(document).ready(function(){initNavTree('database_8h_source.html',''); initResi
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">using namespace </span>std; </div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_database.html">   37</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_database.html">Database</a> {</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classDatabase.html">   37</a></span>&#160;<span class="keyword">class </span><a class="code" href="classDatabase.html">Database</a> {</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
@@ -165,11 +166,11 @@ $(document).ready(function(){initNavTree('database_8h_source.html',''); initResi
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    </div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordtype">void</span> storeNodeConfig(<a class="code" href="group__rf24makros.html#ga030de4f033221607739a15cb52508022">NODE_DATTYPE</a> node_id, uint8_t channel, <span class="keywordtype">char</span>* value);</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keywordtype">void</span> initSensor(<a class="code" href="class_sensor_class.html">SensorClass</a>* <a class="code" href="rf24hubd_8h.html#a32b75ac9948db837416adb463c101ae7">sensorClass</a>);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keywordtype">void</span> initSensor(<a class="code" href="classSensorClass.html">SensorClass</a>* <a class="code" href="rf24hubd_8h.html#a32b75ac9948db837416adb463c101ae7">sensorClass</a>);</div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    </div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <span class="keywordtype">void</span> initNode(<a class="code" href="class_node_class.html">NodeClass</a>* <a class="code" href="rf24hubd_8h.html#a6f21c130ea438b6c54c3deb9a25901b2">nodeClass</a>);</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <span class="keywordtype">void</span> initNode(<a class="code" href="classNodeClass.html">NodeClass</a>* <a class="code" href="rf24hubd_8h.html#a6f21c130ea438b6c54c3deb9a25901b2">nodeClass</a>);</div>
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    </div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keywordtype">void</span> initGateway(<a class="code" href="class_gateway_class.html">GatewayClass</a>* <a class="code" href="rf24hubd_8h.html#a5d04e25b77f7ecfc9256335eac98b51f">gatewayClass</a>);</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keywordtype">void</span> initGateway(<a class="code" href="classGatewayClass.html">GatewayClass</a>* <a class="code" href="rf24hubd_8h.html#a5d04e25b77f7ecfc9256335eac98b51f">gatewayClass</a>);</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    </div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keywordtype">void</span> initSystem(<span class="keywordtype">void</span>);</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160; </div>
@@ -192,15 +193,15 @@ $(document).ready(function(){initNavTree('database_8h_source.html',''); initResi
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    </div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <span class="keywordtype">void</span> set_var(<span class="keyword">const</span> <span class="keywordtype">char</span>* _db_hostname, <span class="keyword">const</span> <span class="keywordtype">char</span>* _db_username, <span class="keyword">const</span> <span class="keywordtype">char</span>* _db_password, <span class="keyword">const</span> <span class="keywordtype">char</span>* _db_schema, <span class="keywordtype">int</span> _db_port);</div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160; </div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;   <a class="code" href="class_database.html">Database</a>();</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;   <a class="code" href="classDatabase.html">Database</a>();</div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;};</div>
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160; </div>
 <div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// _DATABASE_H_</span></div>
 <div class="ttc" id="acfg_8h_html_a2ac10a3f1b8393a2208b7dc7f6672704"><div class="ttname"><a href="cfg_8h.html#a2ac10a3f1b8393a2208b7dc7f6672704">verboseLevel</a></div><div class="ttdeci">uint16_t verboseLevel</div><div class="ttdoc">Die Variable verboseLevel wird extern mitbenutzt.</div><div class="ttdef"><b>Definition:</b> rf24gwd.h:54</div></div>
-<div class="ttc" id="aclass_database_html"><div class="ttname"><a href="class_database.html">Database</a></div><div class="ttdef"><b>Definition:</b> database.h:37</div></div>
-<div class="ttc" id="aclass_gateway_class_html"><div class="ttname"><a href="class_gateway_class.html">GatewayClass</a></div><div class="ttdef"><b>Definition:</b> gatewayclass.h:21</div></div>
-<div class="ttc" id="aclass_node_class_html"><div class="ttname"><a href="class_node_class.html">NodeClass</a></div><div class="ttdef"><b>Definition:</b> nodeclass.h:20</div></div>
-<div class="ttc" id="aclass_sensor_class_html"><div class="ttname"><a href="class_sensor_class.html">SensorClass</a></div><div class="ttdef"><b>Definition:</b> sensorclass.h:20</div></div>
+<div class="ttc" id="aclassDatabase_html"><div class="ttname"><a href="classDatabase.html">Database</a></div><div class="ttdef"><b>Definition:</b> database.h:37</div></div>
+<div class="ttc" id="aclassGatewayClass_html"><div class="ttname"><a href="classGatewayClass.html">GatewayClass</a></div><div class="ttdef"><b>Definition:</b> gatewayclass.h:21</div></div>
+<div class="ttc" id="aclassNodeClass_html"><div class="ttname"><a href="classNodeClass.html">NodeClass</a></div><div class="ttdef"><b>Definition:</b> nodeclass.h:20</div></div>
+<div class="ttc" id="aclassSensorClass_html"><div class="ttname"><a href="classSensorClass.html">SensorClass</a></div><div class="ttdef"><b>Definition:</b> sensorclass.h:20</div></div>
 <div class="ttc" id="acommon_8h_html"><div class="ttname"><a href="common_8h.html">common.h</a></div></div>
 <div class="ttc" id="agatewayclass_8h_html"><div class="ttname"><a href="gatewayclass_8h.html">gatewayclass.h</a></div></div>
 <div class="ttc" id="agroup__rf24makros_html_ga030de4f033221607739a15cb52508022"><div class="ttname"><a href="group__rf24makros.html#ga030de4f033221607739a15cb52508022">NODE_DATTYPE</a></div><div class="ttdeci">#define NODE_DATTYPE</div><div class="ttdoc">Der Datentyp für die Node_ID. Ist aktuell auf 1...255 festgelegt. Werden mehr Nodes benötigt,...</div><div class="ttdef"><b>Definition:</b> rf24_config.h:26</div></div>

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['tn_5fsocket_762',['tn_socket',['../struct_tn_data__t.html#a0a24ed22b4cd43b3168f7aac9b856511',1,'TnData_t']]],
+  ['tn_5fsocket_762',['tn_socket',['../structTnData__t.html#a0a24ed22b4cd43b3168f7aac9b856511',1,'TnData_t']]],
   ['tn_5fusage01_763',['tn_usage01',['../rf24gw__text_8h.html#aab6cc9e968266e0b9f7583cbf387ebb6',1,'tn_usage01():&#160;rf24gw_text.h'],['../rf24hub__text_8h.html#aab6cc9e968266e0b9f7583cbf387ebb6',1,'tn_usage01():&#160;rf24hub_text.h']]],
   ['tn_5fusage02_764',['tn_usage02',['../rf24hub__text_8h.html#a7647695a45ea70e949ab2e0ce77ab202',1,'rf24hub_text.h']]],
   ['tn_5fusage03_765',['tn_usage03',['../rf24hub__text_8h.html#a10d60dd0ff14e7bf67cba2b221064811',1,'rf24hub_text.h']]],
@@ -36,8 +36,8 @@ var searchData=
   ['tn_5fusage33_795',['tn_usage33',['../rf24hub__text_8h.html#a64a27e687695accf55e8d7a81c849ed6',1,'rf24hub_text.h']]],
   ['tn_5fusage_5fsize_796',['tn_usage_size',['../rf24hub__text_8h.html#a7bee619c37053267a26b290598afe7ea',1,'rf24hub_text.h']]],
   ['tn_5fusage_5ftxt_797',['tn_usage_txt',['../rf24hub__text_8h.html#a20d7204dd764a8fa5433bb70dc3caeee',1,'tn_usage_txt():&#160;rf24hub_text.h'],['../rf24gw__text_8h.html#a20d7204dd764a8fa5433bb70dc3caeee',1,'tn_usage_txt():&#160;rf24gw_text.h']]],
-  ['tndata_798',['TnData',['../struct_tn_msg__t.html#a4214b4f3cf94fdbc7c013d313fc58090',1,'TnMsg_t']]],
-  ['tnsocket_799',['tnsocket',['../struct_thread_tn_data__t.html#adc45a54cd22f52b9061fe96d32858f96',1,'ThreadTnData_t']]],
-  ['tntext_800',['tntext',['../struct_tn_data__t.html#a87707d4598519db53f7472c681124086',1,'TnData_t']]],
+  ['tndata_798',['TnData',['../structTnMsg__t.html#a4214b4f3cf94fdbc7c013d313fc58090',1,'TnMsg_t']]],
+  ['tnsocket_799',['tnsocket',['../structThreadTnData__t.html#adc45a54cd22f52b9061fe96d32858f96',1,'ThreadTnData_t']]],
+  ['tntext_800',['tntext',['../structTnData__t.html#a87707d4598519db53f7472c681124086',1,'TnData_t']]],
   ['tsbuf_801',['tsbuf',['../rf24gwd_8h.html#aa5a00c1b8970dc4fbaabfa7b8a4aa021',1,'tsbuf():&#160;rf24gwd.h'],['../rf24hubd_8h.html#aa5a00c1b8970dc4fbaabfa7b8a4aa021',1,'tsbuf():&#160;rf24hubd.h']]]
 ];

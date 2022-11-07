@@ -12,19 +12,19 @@ var dir_88e6415a3128b404f1102a130772bdb6 =
     [ "dataformattest.c", "dataformattest_8c.html", "dataformattest_8c" ],
     [ "gatewayclass.cpp", "gatewayclass_8cpp.html", null ],
     [ "gatewayclass.h", "gatewayclass_8h.html", [
-      [ "GatewayClass", "class_gateway_class.html", "class_gateway_class" ]
+      [ "GatewayClass", "classGatewayClass.html", "classGatewayClass" ]
     ] ],
     [ "nodeclass.cpp", "nodeclass_8cpp.html", null ],
     [ "nodeclass.h", "nodeclass_8h.html", [
-      [ "NodeClass", "class_node_class.html", "class_node_class" ]
+      [ "NodeClass", "classNodeClass.html", "classNodeClass" ]
     ] ],
     [ "order.cpp", "order_8cpp.html", null ],
     [ "order.h", "order_8h.html", [
-      [ "Order", "class_order.html", "class_order" ]
+      [ "Order", "classOrder.html", "classOrder" ]
     ] ],
     [ "orderbuffer.cpp", "orderbuffer_8cpp.html", null ],
     [ "orderbuffer.h", "orderbuffer_8h.html", [
-      [ "OrderBuffer", "class_order_buffer.html", "class_order_buffer" ]
+      [ "OrderBuffer", "classOrderBuffer.html", "classOrderBuffer" ]
     ] ],
     [ "rf24_config.h", "linux_2rf24__config_8h.html", "linux_2rf24__config_8h" ],
     [ "rf24gw_config.h", "rf24gw__config_8h.html", "rf24gw__config_8h" ],
@@ -37,7 +37,7 @@ var dir_88e6415a3128b404f1102a130772bdb6 =
     [ "rf24hubd.h", "rf24hubd_8h.html", "rf24hubd_8h" ],
     [ "sensorclass.cpp", "sensorclass_8cpp.html", null ],
     [ "sensorclass.h", "sensorclass_8h.html", [
-      [ "SensorClass", "class_sensor_class.html", "class_sensor_class" ]
+      [ "SensorClass", "classSensorClass.html", "classSensorClass" ]
     ] ],
     [ "simulator.c", "simulator_8c.html", "simulator_8c" ],
     [ "version.h", "linux_2version_8h.html", "linux_2version_8h" ]

@@ -1,8 +1,8 @@
 var common_8h =
 [
-    [ "TnData_t", "struct_tn_data__t.html", "struct_tn_data__t" ],
-    [ "TnMsg_t", "struct_tn_msg__t.html", "struct_tn_msg__t" ],
-    [ "ThreadTnData_t", "struct_thread_tn_data__t.html", "struct_thread_tn_data__t" ],
+    [ "TnData_t", "structTnData__t.html", "structTnData__t" ],
+    [ "TnMsg_t", "structTnMsg__t.html", "structTnMsg__t" ],
+    [ "ThreadTnData_t", "structThreadTnData__t.html", "structThreadTnData__t" ],
     [ "sockType_t", "common_8h.html#a32b5c6c372c524c9144fd368d586d4bb", [
       [ "TCP", "common_8h.html#a32b5c6c372c524c9144fd368d586d4bbaa040cd7feeb588104634cdadf35abf1c", null ],
       [ "UDP", "common_8h.html#a32b5c6c372c524c9144fd368d586d4bbadb542475cf9d0636e4225e216cee9ae6", null ]
