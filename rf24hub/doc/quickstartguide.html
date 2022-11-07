@@ -1,0 +1,54 @@
+<H1>RF24Hub Quick Start Guide</H1>
+<h2>0. Prerequisite</h2>
+
+   MariaDB is installed
+   You created a user and a database to be used with rf24hub
+
+<h2>1. Go to your development directory</h2>
+
+   cd ~/entw
+
+<h2>2. Clone, Compile and Install the RF24 Repo</h2>
+
+   git clone https://github.com/nRF24/RF24.git RF24
+   cd RF24
+   make && sudo make install
+
+<h2>3. Clone and Compile the RF24Hub Repro</h2>
+
+   git clone https://github.com/wilmsn/RF24Hub.git RF24Hub
+   cd RF24Hub
+   make
+
+<h2>4. Setup Database</h2>
+   install tables from create_tab.sql
+
+<h2>5. Do a test run</h2>
+
+   Have a least one node ready for test
+   Add the configuration of this node to the table node inside the database
+   Add at least one sensor to the table sensor
+   Edit the config file: rf24hub.cfg
+
+   Start the Hub:
+
+   sudo ./rf24hubd -c rf24hub.cfg # Just stop it with ctrl-c
+
+   Open a second terminal and go to the same dir as before
+
+   Start the Gateway:
+
+   sudo ./rf24gwd -v +rf24 -c rf24hub.cfg # Just stop it with ctrl-c
+
+<h2>6. If everything works, install it</h2>
+
+   sudo make install
+
+   Please be sure to edit "/etc/rf24hub/rf24hub.cfg" to your needs!
+   Restart the deamon after that:
+
+   sudo systemctl stop rf24hub
+
+   sudo systemctl start rf24hub
+
+
