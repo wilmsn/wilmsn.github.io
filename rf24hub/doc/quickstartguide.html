@@ -1,17 +1,17 @@
 <H1>RF24Hub Quick Start Guide</H1>
-<h2>0.Prerequisite</h2>
+<h2>0. Prerequisite</h2>
 * MariaDB is installed<br>
 * Developmenttools are installed<br>
 * Arduino-IDE (or any other tool to compile the SW fpr the ATMEGA) is installed<br>
-* Option 1:
-** The nrf24l01 transceiver module is connected to your host
-* Option 2:
+* <b>Option 1:</b><br>
+** The nrf24l01 transceiver module is connected to your host<br>
+* <b>Option 2:</b><br>
 ** Build an ESP32 or ESP8266 Node with the nrf24l01 transceiver module as Gateway
-<h2>1.Go to your development directory</h2>
+<h2>1. Go to your development directory</h2>
 <pre>
 cd ~/entw
 </pre>
-<h2>2.Clone, Compile and Install the RF24 Repo</h2>
+<h2>2. Clone, Compile and Install the RF24 Repo</h2>
 <pre>
 git clone https://github.com/nRF24/RF24.git RF24
 cd RF24
@@ -26,9 +26,10 @@ make
 <h2>4. Setup Database</h2>
 <a href=https://wilmsn.github.io/rf24hub/doc/dbguide.html>Have a look at the DB-Guide</a>
 <h2>5. Build and setup a Node</h2>
-<a href=https://wilmsn.github.io/rf24hub/doc/arduinoguide.html>Have a look at the Arduino-Node-Guide</a>
-With Option ":<br>
-Build an ESP-Node with
+<a href=https://wilmsn.github.io/rf24hub/doc/arduinoguide.html>Have a look at the Arduino-Node-Guide</a><br>
+<b>With Option 2:</b><br>
+Build an ESP-Node with Gateway<br>
+<a href=https://wilmsn.github.io/rf24hub/doc/espguide.html>Have a look at the Arduino-Node-Guide</a><br>
 <h2>6. Do a test run</h2>
 Edit the config file to your needs/environment: rf24hub.cfg
 <br>
@@ -37,13 +38,13 @@ Start the Hub:
 sudo ./rf24hubd -v +rf24 -c rf24hub.cfg # Just stop it with ctrl-c
 </pre>
 <br>
-Option 1:<br>
+<b>Option 1:</b><br>
 Open a second terminal and go to the same dir as before and start the Gateway:
 <pre>
 sudo ./rf24gwd -v +rf24 -c rf24hub.cfg # Just stop it with ctrl-c
 </pre>
 <br>
-Option 2:<br>
+<b>Option 2:</b><br>
 Power on the ESP Gateway.<br>
 <br>
 If you see datapackets on the hub (and in Option 1 on the Gateway) everything looks good:
@@ -64,7 +65,7 @@ Restart the deamon after that:
 sudo systemctl stop rf24hub
 sudo systemctl start rf24hub
 <pre>
-Option 1:<br>
+<b>Option 1:</b><br>
 Also restart the Gateway:<br>
 <pre>
 sudo systemctl stop rf24gw
