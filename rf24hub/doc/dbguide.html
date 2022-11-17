@@ -1,19 +1,22 @@
 <H1>Rf24Hub Database Guide</H1>
-This is a compleate guide to set up your database (MariaDB) and to install the tables you will need.
+<p>This is a compleate guide to set up your database (MariaDB) and to install the tables you will need.
+Words in capital letter must be replaced with real content. That means PASSWORD with your password, HOSTNAME with the real hostname,...</p>
 <H2>Create Database and User</h2>
-Open a terminal on your database-server:<br>
+Open a terminal on your host:<br>
 <pre>
+cd <my project dir>/RF24Hub
 sudo mysql
 
 create database rf24hub;
-create user rf24hubuser identified by "**********";
-grant all on rf24hub.* to rf24hubuser identified by "**********";
+create user rf24hubuser identified by "PASSWORD";
+grant all on rf24hub.* to rf24hubuser identified by "PASSWORD";
+flush privileges;
 exit
 </pre>
 <H2>Create Tables</H2>
 Now log in as the new user you just created:
 <pre>
-mysql -u rf24hubuser -p rf24hub < create_tab.sql
+mysql -u rf24hubuser -p rf24hub < database/create_tab.sql
 # Now you have to enter your password
 # After that the tables will be created
 </pre>
@@ -24,14 +27,21 @@ Node: 100<br>
 Sensor: 100<br>
 Gateway: 1<br>
 <pre>
-mysql -u rf24hubuser -p rf24hub < fill_test_data.sql
+mysql -u rf24hubuser -p rf24hub < database/fill_test_data.sql
 # Now you have to enter your password
 # After that the tables will be filled with data for 1 node and 1 sensor
+</pre>
+Now you have to update your gateway hostname. If you have a FritzBox it is HOSTNAME.fritz.box.
+<pre>
+mysql -u rf24hubuser -p rf24hub
+
+MariaDB [rf24hub]>update gateway set gw_name = 'HOSTNAME.WITH.DOMAINE' where gw_no = 1;
+MariaDB [rf24hub]>exit
 </pre>
 <H2>Cleanup the Database</H2>
 If you testing is finished you can remove the test data by running this script:<br>
 <pre>
-mysql -u rf24hubuser -p rf24hub < remove_test_data.sql
+mysql -u rf24hubuser -p rf24hub < database/remove_test_data.sql
 # Now you have to enter your password
 # After that the tables will be filled with data for 1 node and 1 sensor
 </pre>
