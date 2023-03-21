@@ -1,4 +1,0 @@
-<map id="arduino/Node/rf24_config.h" name="arduino/Node/rf24_config.h">
-<area shape="rect" id="node1" title="Definition der RF24 Parameter Diese Datei wird vom GW, vom Hub und von den Nodes eingebunden !..." alt="" coords="6,5,203,32"/>
-<area shape="rect" id="node2" href="$arduino_2_node_2dataformat_8h.html" title="As we use our own dataformat it is defined here." alt="" coords="5,80,204,107"/>
-</map>
