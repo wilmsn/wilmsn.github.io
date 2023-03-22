@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>RF24Hub: Main Page</title>
+<title>RF24Hub: RF24Hub Linux Components</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -84,11 +84,17 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">RF24Hub Documentation</div>  </div>
+<div class="title">RF24Hub Linux Components </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="md_README_linux"></a>A gateway and controler for Arduino nodes with nrf24l01 (demo nodes included)</p>
-<p>Doxygen generated documentation: <a href="http://wilmsn.github.io/rf24hub/linux/index.html">rf24hub on github.io</a> </p>
+<div class="textblock"><p><a class="anchor" id="md_doc_README_linux"></a></p>
+<p>Documentation startpage: <a href="../index.html">rf24hub on github.io</a></p>
+<h1><a class="anchor" id="autotoc_md1"></a>
+rf24hubd</h1>
+<p>Der RF24Hub (rf24hubd) ist das zentrale Programm zur Steuerung der Kommunikation mit den Nodes und zur Speicherung der Sensordaten. <a href="../rf24hub_flow.html">Flussplan rf24hub</a></p>
+<h1><a class="anchor" id="autotoc_md2"></a>
+rf24gwd</h1>
+<p>Der RF24GW (rf24gwd) nimmt die Funkdaten des RF24 Netzes entgegen, wandelt sie in einen UDP Datensatz um und leitet diesen mittels TCP/IP Netzwerk an den Hub weiter. UDP Datensätze vom Hub werden in Gegenrichtung an das RF24 Netz weitergeleitet. Im Gateway ist keine verarbeitende Logik eingebaut. </p>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 </div><!-- doc-content -->

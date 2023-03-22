@@ -8,7 +8,8 @@ var indexSectionsWithContent =
   5: "s",
   6: "tu",
   7: "bdfghlpst",
-  8: "\"dr"
+  8: "\"dr",
+  9: "r"
 };
 
 var indexSectionNames =
@@ -21,7 +22,8 @@ var indexSectionNames =
   5: "enums",
   6: "enumvalues",
   7: "defines",
-  8: "groups"
+  8: "groups",
+  9: "pages"
 };
 
 var indexSectionLabels =
@@ -34,6 +36,7 @@ var indexSectionLabels =
   5: "Enumerations",
   6: "Enumerator",
   7: "Macros",
-  8: "Modules"
+  8: "Modules",
+  9: "Pages"
 };
 

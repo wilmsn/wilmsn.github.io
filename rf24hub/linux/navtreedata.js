@@ -25,6 +25,10 @@
 var NAVTREE =
 [
   [ "RF24Hub", "index.html", [
+    [ "RF24Hub Linux Components", "index.html", [
+      [ "rf24hubd", "index.html#autotoc_md1", null ],
+      [ "rf24gwd", "index.html#autotoc_md2", null ]
+    ] ],
     [ "Modules", "modules.html", "modules" ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
@@ -53,7 +57,7 @@ var NAVTREEINDEX =
 [
 "annotated.html",
 "group__cfgprm.html#ga67553d2953df3c27a32c3f3cdafdd729",
-"rf24gw__config_8h.html#a63f627c83d06c9ea54c0f7882c61a1da"
+"rf24__config_8h_source.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

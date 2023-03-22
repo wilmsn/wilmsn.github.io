@@ -45,8 +45,9 @@ var searchData=
   ['rf24gw_5ftext_2eh_244',['rf24gw_text.h',['../rf24gw__text_8h.html',1,'']]],
   ['rf24gwd_2ecpp_245',['rf24gwd.cpp',['../rf24gwd_8cpp.html',1,'']]],
   ['rf24gwd_2eh_246',['rf24gwd.h',['../rf24gwd_8h.html',1,'']]],
-  ['rf24hub_5fconfig_2eh_247',['rf24hub_config.h',['../rf24hub__config_8h.html',1,'']]],
-  ['rf24hub_5ftext_2eh_248',['rf24hub_text.h',['../rf24hub__text_8h.html',1,'']]],
-  ['rf24hubd_2ecpp_249',['rf24hubd.cpp',['../rf24hubd_8cpp.html',1,'']]],
-  ['rf24hubd_2eh_250',['rf24hubd.h',['../rf24hubd_8h.html',1,'']]]
+  ['rf24hub_20linux_20components_247',['RF24Hub Linux Components',['../index.html',1,'']]],
+  ['rf24hub_5fconfig_2eh_248',['rf24hub_config.h',['../rf24hub__config_8h.html',1,'']]],
+  ['rf24hub_5ftext_2eh_249',['rf24hub_text.h',['../rf24hub__text_8h.html',1,'']]],
+  ['rf24hubd_2ecpp_250',['rf24hubd.cpp',['../rf24hubd_8cpp.html',1,'']]],
+  ['rf24hubd_2eh_251',['rf24hubd.h',['../rf24hubd_8h.html',1,'']]]
 ];
