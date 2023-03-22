@@ -1,0 +1,93 @@
+<h1>RF24Hub Quick Start Guide</h1>
+
+<h2>0. Prerequisite</h2>
+
+<ul>
+<li>MariaDB is installed</li>
+<li>Developmenttools are installed</li>
+<li>Arduino-IDE (or any other tool to compile the SW for the ATMEGA) is installed</li>
+<li><strong>Option 1</strong>:</li>
+<li><ul>
+<li>The nrf24l01 transceiver module is connected to your server/host</li>
+</ul></li>
+<li><strong>Option 2:</strong></li>
+<li><ul>
+<li>Build an ESP32 or ESP8266 Node with the nrf24l01 transceiver module as Gateway
+<h2>1. Go to your development directory</h2></li>
+</ul>
+
+<p>cd ~/entw</p>
+
+<h2>2. (Option 1 only) Clone, Compile and Install the RF24 Repo</h2></h2>
+
+<p><p>git clone https://github.com/nRF24/RF24.git RF24
+cd RF24
+make &amp;&amp; sudo make install</p></li>
+</ul></p>
+
+<h2>3. Clone and Compile the RF24Hub Repro</h2>
+
+<pre><code>git clone https://github.com/wilmsn/RF24Hub.git RF24Hub
+cd RF24Hub/linux
+#Option 1
+make
+#Option 2
+make rf24hubd
+</code></pre>
+
+<h2>3a (Option 2 only) Build an ESP gateway</h2>
+
+<p><a href="https://wilmsn.github.io/rf24hub/doc/espguide.html">Build an ESP-Node with Gateway</a></p>
+
+<h2>4. Setup Database</h2>
+
+<p><a href="https://wilmsn.github.io/rf24hub/arduinoguide.html">Have a look at the DB-Guide</a></p>
+
+<h2>5. Do a test run</h2>
+
+<p>Edit the config file to your needs/environment: </p>
+
+<pre><code>rf24hub.cfg
+</code></pre>
+
+<p><strong>Start the Hub:</strong></p>
+
+<pre><code>sudo ./rf24hubd -v +rf24 -c rf24hub.cfg # Just stop it with ctrl-c
+</code></pre>
+
+<p><strong>Option 1:</strong>
+Open a second terminal and go to the same dir as before and start the Gateway:</p>
+
+<pre><code>sudo ./rf24gwd -v +rf24 -c rf24hub.cfg # Just stop it with ctrl-c
+</code></pre>
+
+<p><strong>Option 2:</strong>
+Power on the ESP Gateway.</p>
+
+<p>If you see datapackets on the hub (and in Option 1 on the Gateway) everything looks good:</p>
+
+<pre><code>[2022.11.05 19:31:16.152] G:103&gt;H N:201 T:51 m:1 F:0x01 O:0 H:143 (79/3.164)(1/9.439)(2/1019.3)(3/88.80)(0/0.000)(0/0.000)
+</code></pre>
+
+<h2>6. If everything works, install it</h2>
+
+<pre><code>#Please be sure to copy rf24hub.cfg to /etc/rf24hub/rf24hub.cfg
+sudo mkdir /etc/rf24hub
+sudo cp ./rf24hub.cfg /etc/rf24hub/rf24hub.cfg
+sudo make install
+</code></pre>
+
+<p>Restart the deamon after that:</p>
+
+<pre><code>sudo systemctl stop rf24hub
+sudo systemctl start rf24hub
+</code></pre>
+
+<p><strong>Option 1:</strong>
+<strong>Also restart the Gateway!</strong></p>
+
+<pre><code>sudo systemctl stop rf24gw
+sudo systemctl start rf24gw
+</code></pre>
+
+<p><strong>Enjoy!</strong></p>
