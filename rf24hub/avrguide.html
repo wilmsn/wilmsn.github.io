@@ -1,0 +1,46 @@
+<h1>A howto to build an Avr node from the internal template</h1>
+
+<p><strong>RF24Hub startpage: <a href="../index.html">wilmsn.github.io/rf24hub</a></strong></p>
+
+<h2>A minimalistic Node without attached Sensor</h2>
+
+<h3>Node Schematic</h3>
+
+<p><img src="https://raw.githubusercontent.com/wilmsn/RF24Hub/master/doc/Avr_minimal_Schaltplan.png" alt="Layout minimalistic node" title="Schematic minimalistic Node" /></p>
+
+<h3>Node configuration</h3>
+
+<ul>
+<li>Open the Node Sketch (avr/Node/Node.ino) in your favorite IDE (Arduino IDE works fine for me).</li>
+<li>Go to the file Node.ino</li>
+<li>In the lines above "// ------ End of configuration part ------------" we select the node to build. All other konfigurationlines <strong>must</strong> be commented out (with "//" at the beginning of the line)!</li>
+<li>look for <strong>"//#define TESTNODE"</strong> and remove the slashs (uncomment it)
+Now you can compile it.</li>
+</ul>
+
+<p>Here are the configurations behind TESTNODE (file Node_settings.h)</p>
+
+<pre><code>#if defined(TESTNODE)
+#define RF24NODE                      100
+#define SLEEPTIME                     60
+#define EMPTYLOOPS                    0
+#define SENSOR_DUMMY
+#define DUMMY_TEMP                    33.3
+#endif
+</code></pre>
+
+<p>So we get a Node with id=100 that will send every 60 seconds a dummy value of "33.3" on channel "1"</p>
+
+<h3>Board settings</h3>
+
+<p>I use "Mini Core" as the board template. To install it look at "https://github.com/MCUdude/MiniCore" for details.
+Once the Mini Core is installed use this settings:</p>
+
+<p><img src="https://raw.githubusercontent.com/wilmsn/RF24Hub/master/doc/Arduino_IDE_settings.png" alt="Arduino Settings" title="Arduino settings" /></p>
+
+<p>Important:</p>
+
+<ul>
+<li>We use internal clock (8 Mhz or less)</li>
+<li>We do not need a bootloader</li>
+</ul>
