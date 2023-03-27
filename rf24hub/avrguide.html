@@ -1,21 +1,24 @@
 <h1>A howto to build an Avr node from the internal template</h1>
 
-<p><strong>RF24Hub startpage: <a href="../index.html">wilmsn.github.io/rf24hub</a></strong></p>
+<p><strong>RF24Hub startpage: <a href="index.html">wilmsn.github.io/rf24hub</a></strong></p>
 
 <h2>A minimalistic Node without attached Sensor</h2>
 
 <h3>Node Schematic</h3>
 
-<p><img src="https://raw.githubusercontent.com/wilmsn/RF24Hub/master/doc/Avr_minimal_Schaltplan.png" alt="Layout minimalistic node" title="Schematic minimalistic Node" /></p>
+<p><img src="https://wilmsn.github.io/rf24hub/Avr_minimal_Schaltplan.png" alt="Layout minimalistic node" title="Schematic minimalistic Node" /></p>
 
 <h3>Node configuration</h3>
 
 <ul>
-<li>Open the Node Sketch (avr/Node/Node.ino) in your favorite IDE (Arduino IDE works fine for me).</li>
-<li>Go to the file Node.ino</li>
-<li>In the lines above "// ------ End of configuration part ------------" we select the node to build. All other konfigurationlines <strong>must</strong> be commented out (with "//" at the beginning of the line)!</li>
-<li>look for <strong>"//#define TESTNODE"</strong> and remove the slashs (uncomment it)
-Now you can compile it.</li>
+<li><p>Open the Node Sketch (avr/Node/Node.ino) in your favorite IDE (Arduino IDE works fine for me).</p></li>
+<li><p>Go to the file Node.ino</p></li>
+<li><p>In the lines above </p>
+
+<p>// ------ End of configuration part ------------</p>
+
+<p>we select the node to build. All other konfigurationlines <strong>must</strong> be commented out (with "//" at the beginning of the line)!</p></li>
+<li><p>look for <strong>"//#define TESTNODE"</strong> and remove the slashs (uncomment it)</p></li>
 </ul>
 
 <p>Here are the configurations behind TESTNODE (file Node_settings.h)</p>
@@ -36,7 +39,7 @@ Now you can compile it.</li>
 <p>I use "Mini Core" as the board template. To install it look at "https://github.com/MCUdude/MiniCore" for details.
 Once the Mini Core is installed use this settings:</p>
 
-<p><img src="https://raw.githubusercontent.com/wilmsn/RF24Hub/master/doc/Arduino_IDE_settings.png" alt="Arduino Settings" title="Arduino settings" /></p>
+<p><img src="https://wilmsn.github.io/rf24hub/Arduino_IDE_settings.png" alt="Arduino Settings" title="Arduino settings" /></p>
 
 <p>Important:</p>
 
@@ -44,3 +47,9 @@ Once the Mini Core is installed use this settings:</p>
 <li>We use internal clock (8 Mhz or less)</li>
 <li>We do not need a bootloader</li>
 </ul>
+
+<h3>Compiling and uploading</h3>
+
+<p>If all the settings are done you can compile the scetch.</p>
+
+<p>For programming it onto the AVR microcontroler i use the USBASP Programmer. But there are lots of alternatives (eg. to use Arduino Uno as a programmer - google for it).</p>
