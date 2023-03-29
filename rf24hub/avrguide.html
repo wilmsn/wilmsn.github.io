@@ -50,6 +50,218 @@ Once the Mini Core is installed use this settings:</p>
 
 <h3>Compiling and uploading</h3>
 
-<p>If all the settings are done you can compile the scetch.</p>
+<p>If all the settings are done you can compile the sketch.</p>
 
-<p>For programming it onto the AVR microcontroler i use the USBASP Programmer. But there are lots of alternatives (eg. to use Arduino Uno as a programmer - google for it).</p>
+<p>For transfering the compiled code onto the AVR microcontroler i use the USBASP Programmer. But there are lots of alternatives (eg. to use Arduino Uno as a programmer - google for it).</p>
+
+<h2>Build a node to your needs</h2>
+
+<p>If you want to build your own node there are two posibilities to do it:</p>
+
+<ol>
+<li><p>If all of the sensors you used are already implemented you can configure it easily.</p></li>
+<li><p>If you used a new, unimplemented sensor you have to implement it first.</p></li>
+</ol>
+
+<h3>Node configuration</h3>
+
+<ul>
+<li><p>Open the Node Sketch (avr/Node/Node.ino) in your favorite IDE (Arduino IDE works fine for me).</p></li>
+<li><p>Go to the file Node_settings.ino</p></li>
+<li><p>First set up your Node configuration</p></li>
+<li>Set up the basics:</li>
+<li><ul>
+<li>Give the node a unique name, here: MYFIRSTNODE</li>
+</ul></li>
+<li><ul>
+<li>Define a unique ID inside the network, here: 200
+The result ooks like this:</li>
+</ul></li>
+</ul>
+
+<p>~~~c++
+//<strong><em>*</em><em>*</em><em>*</em><em>*</em><em>*</em><em>*</em><em>*</em><em>*</em><em>*</em><em>*</em><em>*</em><em>*</em><em>*</em><em>*</em>*</strong>
+//    Individual settings
+//-----------------------------------------------------</p>
+
+<h1>if defined(MYFIRSTNODE)</h1>
+
+<h1>define RF24NODE            200</h1>
+
+<h1>endif</h1>
+
+<p>//-----------------------------------------------------
+~~~</p>
+
+<ul>
+<li>Scroll down Node_settings.ino to check if a sensor is implemented.</li>
+</ul>
+
+<p>In this case we will add a temerature sensor 18b20</p>
+
+<p>Here is the definition from Node_settings.ino:</p>
+
+<p>~~~c++
+// Dallas 18B20 Sensor</p>
+
+<h1>ifdef SENSOR_18B20</h1>
+
+<p>// Resolution for DS18B20 sensor</p>
+
+<h1>ifndef SENSOR<em>18B20</em>RESOLUTION</h1>
+
+<h1>define SENSOR<em>18B20</em>RESOLUTION 9</h1>
+
+<h1>endif</h1>
+
+<p>// Delaytime for 18B20 measurement</p>
+
+<h1>ifndef SENSOR<em>18B20</em>DELAYTIME</h1>
+
+<h1>define SENSOR<em>18B20</em>DELAYTIME  100</h1>
+
+<h1>endif</h1>
+
+<p>// Channel for temperature</p>
+
+<h1>ifndef TEMP<em>18B20</em>CHANNEL</h1>
+
+<h1>define TEMP<em>18B20</em>CHANNEL     1</h1>
+
+<h1>endif</h1>
+
+<h1>endif</h1>
+
+<p>~~~</p>
+
+<p>So the only thing we have to add to the node definition is:</p>
+
+<p>~~~c++</p>
+
+<h1>define SENSOR_18B20</h1>
+
+<p>~~~</p>
+
+<p>Now we have configured the 18b20 sensor which will send the temperature on channel 1,has a resolution of 9 (see datasheet) and has a conversation delay of 100ms (see datasheet)</p>
+
+<p>The resulting node configuration is:</p>
+
+<p>~~~c++
+//<strong><em>*</em><em>*</em><em>*</em><em>*</em><em>*</em><em>*</em><em>*</em><em>*</em><em>*</em><em>*</em><em>*</em><em>*</em><em>*</em><em>*</em>*</strong>
+//    Individual settings
+//-----------------------------------------------------</p>
+
+<h1>if defined(MYFIRSTNODE)</h1>
+
+<h1>define RF24NODE            200</h1>
+
+<h1>define SENSOR_18B20</h1>
+
+<h1>endif</h1>
+
+<p>//-----------------------------------------------------
+~~~</p>
+
+<p>If you want to change the resulution or the delaytime just add the corespondending line from the configuratuin (#define ...) to your node configuration. This will overwrite the defaults!</p>
+
+<h3>Implementing a new sensor</h3>
+
+<p>In this step you should be able to programm in c++.</p>
+
+<p>You will need a library that can handle your sensor!</p>
+
+<p>Usually there are some steps that have to be programmed.</p>
+
+<p>In the following lines i show the steps for the 18b20 sensor.</p>
+
+<ol>
+<li>Define a name for your sensor and get it running on Arduino board</li>
+</ol>
+
+<p>The name will be <strong>SENSOR_18B20</strong></p>
+
+<ol>
+<li>Goto <strong>Node.ino</strong> and include the library</li>
+</ol>
+
+<p>~~~c++</p>
+
+<h1>if defined(SENSOR_18B20)</h1>
+
+<h1>include <OneWire.h></h1>
+
+<h1>include <DallasTemperature.h></h1>
+
+<h1>endif</h1>
+
+<p>~~~</p>
+
+<ol>
+<li>Define Initial treatment of the sensor at startup</li>
+</ol>
+
+<p>Define variables and objects:</p>
+
+<p>~~~c++</p>
+
+<h1>if defined(SENSOR_18B20)</h1>
+
+<p>OneWire oneWire(SENSOR<em>18B20); 
+DallasTemperature s</em>18b20(&amp;oneWire);
+DeviceAddress sensorAddress;
+float temp_18b20;</p>
+
+<h1>endif</h1>
+
+<p>~~~</p>
+
+<p>~~~c++
+void setup(void) {</p>
+
+<h1>if defined(SENSOR_18B20)</h1>
+
+<p>s<em>18b20.begin(); 
+  s</em>18b20.setWaitForConversion(false);
+  for(byte i=0; i<s<em>18b20.getDeviceCount(); i++) {
+      if(s</em>18b20.getAddress(sensorAddress, i)) {
+        s<em>18b20.setResolution(sensorAddress, SENSOR</em>18B20_RESOLUTION);
+      }
+    }</p>
+
+<h1>endif</h1>
+
+<p>}
+~~~</p>
+
+<ol>
+<li>Define cyclic actions</li>
+</ol>
+
+<p>~~~c++
+void get_sensordata(void) {</p>
+
+<p>// Sensor Dallas 18B20</p>
+
+<h1>if defined(SENSOR_18B20)</h1>
+
+<p>s<em>18b20.requestTemperatures(); // Send the command to get temperatures
+  sleep4ms(SENSOR</em>18B20<em>DELAYTIME);
+  delay(2);
+  temp</em>18b20=s_18b20.getTempCByIndex(0);</p>
+
+<h1>define DISPLAY<em>TEMP temp</em>18b20</h1>
+
+<h1>if defined(DEBUG<em>SERIAL</em>SENSOR)</h1>
+
+<pre><code>Serial.print("Temp: ");
+Serial.print(temp_18b20);
+</code></pre>
+
+<h1>endif</h1>
+
+<h1>endif</h1>
+
+<p>// ENDE: Sensor Dallas 18B20</p>
+
+<p>}
+~~~</p>
