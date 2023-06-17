@@ -1,0 +1,4 @@
+<map id="Bosch_Sensor" name="Bosch_Sensor">
+<area shape="rect" id="node1" title="Ein abgeleitetes Objekt für einen Bosch Sensor. Benötigt: https://github.com/wilmsn/BMX_sensor als Ge..." alt="" coords="5,80,117,107"/>
+<area shape="rect" id="node2" href="$class_gen___sensor.html" title="Ein generisches Objekt für einen Sensor. Nicht zum Einbau bestimmt, sondern nur als Vererbungsobjekt...." alt="" coords="12,5,111,32"/>
+</map>
