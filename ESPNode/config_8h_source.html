@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ESPNode: /home/norbert/projekte/ESPNode_ws/src/config.h Source File</title>
+<title>ESPNode: /home/norbert/projekte/ESPNode/src/config.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -74,43 +74,106 @@ $(function() {
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">// Hier wird der zu erzeugende Node aktiviert</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">// Achtung: Es darf nur ein Node ausgewählt werden!</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">//#define BOSCHNODE</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="config_8h.html#a6d3454deac1f9417772ed2c0aac9be3f">   13</a></span>&#160;<span class="preprocessor">#define WITTYNODE1</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">//---------------------------</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">// Hier werden die allgemeinen Parameter für den Einsatz festgelegt</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">// Alternativ können diese Einstellungen auch in der Konfiguration des Nodes </span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">// festgelegt werden.</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">// Achtung: Die Festlegung hier überschreibt die Festlegung im Node!</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="config_8h.html#a977bd2592e99309a86e7034189e9e62d">   19</a></span>&#160;<span class="preprocessor">#define MQTT_SERVER            &quot;rpi1.fritz.box&quot;</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">// Generic Settings for all Nodes</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">//#define DEBUG_ESP_UPDATER</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="config_8h.html#a0d75ac8aba80439ca9a30bdeba9da75e">   25</a></span>&#160;<span class="preprocessor">#define TOPIC_PART1_SIZE         10</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="config_8h.html#a46c4a5cf5d933e39d68023b957d0ec69">   26</a></span>&#160;<span class="preprocessor">#define TOPIC_PART2_SIZE         10</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="config_8h.html#a2d333b32d8eea189085d9ea31ecb6919">   27</a></span>&#160;<span class="preprocessor">#define TOPIC_PART3_SIZE         10</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="config_8h.html#a3708a441b69f6d11309d17a278a52c34">   28</a></span>&#160;<span class="preprocessor">#define TOPIC_BUFFER_SIZE        50</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="config_8h.html#a6659d57a08b7ed7d23133d6b0a7f0ecb">   29</a></span>&#160;<span class="preprocessor">#define STATINTERVAL             300000</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="config_8h.html#a54c3dbc872e633ba5a80ba8608d7e5f7">   30</a></span>&#160;<span class="preprocessor">#define TELEINTERVAL             900000</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="config_8h.html#ae17bab6962307a941b2f7b2a46d70671">   31</a></span>&#160;<span class="preprocessor">#define SENSINTERVAL             5000</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="config_8h.html#ae26a1d93fd76d4b1586b1847de831215">   32</a></span>&#160;<span class="preprocessor">#define MQTT_CMD                 &quot;cmnd&quot;</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="config_8h.html#ac2e8818e5eeef34b6fe74294bc9e31fa">   33</a></span>&#160;<span class="preprocessor">#define MQTT_TELE                &quot;tele&quot;</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="config_8h.html#aac979176e5cd948c9ef9ef6884cc7d73">   34</a></span>&#160;<span class="preprocessor">#define MQTT_STAT                &quot;stat&quot;</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="config_8h.html#a71866a530c7b08dbd92afbe1cff178c5">   35</a></span>&#160;<span class="preprocessor">#define DEBUGFILE                &quot;/logfile.txt&quot;</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="config_8h.html#abede7d6458d361a7b4795e217fe126f1">   36</a></span>&#160;<span class="preprocessor">#define LOGGER_NUMLINES         25</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="config_8h.html#a7a3cba24871429b1a37ba5072d387507">   37</a></span>&#160;<span class="preprocessor">#define LOGGER_LINESIZE         250</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="config_8h.html#a9ac1d4b8b1df18ab07c5a0d4fb7e1526">   38</a></span>&#160;<span class="preprocessor">#define INFOSIZE                1000</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="config_8h.html#af7bfeee0b1abe46a1b128c8fac79fc7c">   39</a></span>&#160;<span class="preprocessor">#define TMP_STR_SIZE            20</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="config_8h.html#a030de4f033221607739a15cb52508022">   40</a></span>&#160;<span class="preprocessor">#define NODE_DATTYPE            uint8_t</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="config_8h.html#a7b812a3117b75558d2da67f8ca3cf83a">   41</a></span>&#160;<span class="preprocessor">#define SERVERNAMESIZE          25</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">//#define NODESIMPLE</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">//#define NODE18B20</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">//#define NODEBOSCH</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">//#define NODESLIDER</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">//#define NODEMATRIX</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="config_8h.html#a6d3454deac1f9417772ed2c0aac9be3f">   17</a></span>&#160;<span class="preprocessor">#define WITTYNODE1</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">//#define NODE_WOHNZIMMER</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">//#define NODE_TERASSE</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">//#define NODE_TEICHPUMPE</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">//#define NODE_FLUR</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">//---------------------------</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="config_8h.html#a1c6b0e0bdbb8d14a494a629fdf871511">   25</a></span>&#160;<span class="preprocessor">#define SWVERSION   &quot;0.991&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">// Hier werden die allgemeinen Parameter für den Einsatz festgelegt</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">// Alternativ können diese Einstellungen auch in der Konfiguration des Nodes </span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment">// festgelegt werden.</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">// Achtung: Die Festlegung hier kann für jeden Node überschrieben werden!</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="config_8h.html#a977bd2592e99309a86e7034189e9e62d">   31</a></span>&#160;<span class="preprocessor">#define MQTT_SERVER                    &quot;rpi1.fritz.box&quot;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="config_8h.html#af129f59ba18b6c8180cc0a818705921c">   32</a></span>&#160;<span class="preprocessor">#define RF24GW_HUB_SERVER              &quot;rpi1.fritz.box&quot;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="config_8h.html#a41721e9fbc38e106158b1422408aa39d">   33</a></span>&#160;<span class="preprocessor">#define RF24GW_HUB_UDP_PORTNO          7004</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="config_8h.html#a21752b1132294611fcae3df493cbf52f">   34</a></span>&#160;<span class="preprocessor">#define RF24GW_GW_UDP_PORTNO           7003</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="config_8h.html#a679703aa051c503f2f50f2e75d32e321">   35</a></span>&#160;<span class="preprocessor">#define RF24_RADIO_CE_PIN              15</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="config_8h.html#a52e830042b458ebc97c2718f253d2617">   36</a></span>&#160;<span class="preprocessor">#define RF24_RADIO_CSN_PIN             16</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#define RF24_CHANNEL                   92</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#define RF24_SPEED                     RF24_250KBPS</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="config_8h.html#a08e8ecf2939d12dcc84a8f389762ebd2">   40</a></span>&#160;<span class="preprocessor">#define MAGICNO                        345</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">//Settings for mqtt topic</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="config_8h.html#a0a85e066b9ac968eab840d5a2a061ce0">   43</a></span>&#160;<span class="preprocessor">#define MQTT_STATUS                  &quot;stat&quot;</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="config_8h.html#a99b56b73ccdd039944554171cbe1d2af">   44</a></span>&#160;<span class="preprocessor">#define MQTT_TELEMETRIE              &quot;tele&quot;</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="config_8h.html#aaed3d35fb6d08524b23d9cf6b3716c92">   45</a></span>&#160;<span class="preprocessor">#define MQTT_COMMAND                 &quot;cmnd&quot;</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="config_8h.html#a0d75ac8aba80439ca9a30bdeba9da75e">   46</a></span>&#160;<span class="preprocessor">#define TOPIC_PART1_SIZE             5</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="config_8h.html#a46c4a5cf5d933e39d68023b957d0ec69">   47</a></span>&#160;<span class="preprocessor">#define TOPIC_PART2_SIZE             30</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="config_8h.html#a2d333b32d8eea189085d9ea31ecb6919">   48</a></span>&#160;<span class="preprocessor">#define TOPIC_PART3_SIZE             10</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="config_8h.html#a3708a441b69f6d11309d17a278a52c34">   49</a></span>&#160;<span class="preprocessor">#define TOPIC_BUFFER_SIZE            50</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="config_8h.html#a6659d57a08b7ed7d23133d6b0a7f0ecb">   54</a></span>&#160;<span class="preprocessor">#define STATINTERVAL                 300</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="config_8h.html#a5ed3fd0bb752da947d6336b2451db6d9">   58</a></span>&#160;<span class="preprocessor">#define MESSINTERVAL                 1</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="config_8h.html#a54c3dbc872e633ba5a80ba8608d7e5f7">   63</a></span>&#160;<span class="preprocessor">#define TELEINTERVAL                 1200</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="config_8h.html#a71866a530c7b08dbd92afbe1cff178c5">   65</a></span>&#160;<span class="preprocessor">#define DEBUGFILE                    &quot;/logfile.txt&quot;</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="config_8h.html#a7b812a3117b75558d2da67f8ca3cf83a">   66</a></span>&#160;<span class="preprocessor">#define SERVERNAMESIZE               25</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="config_8h.html#a79c4f3ace1ef49486708487f8c2ecd29">   69</a></span>&#160;<span class="preprocessor">#define RF24_CHANNEL        92</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="config_8h.html#a7a81650373c02155ba2adab775a611d9">   71</a></span>&#160;<span class="preprocessor">#define RF24_SPEED          RF24_250KBPS</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="config_8h.html#a09f69030b8d9ea328b68d9094f8fee10">   73</a></span>&#160;<span class="preprocessor">#define RF24_HUB2NODE       { 0xf0, 0xcc, 0xfc, 0xcc, 0xcc}</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="config_8h.html#a0d59bcd261338d1bef2ac25f7ce555ca">   75</a></span>&#160;<span class="preprocessor">#define RF24_NODE2HUB       { 0x33, 0xcc, 0xfc, 0xcc, 0xcc}</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="config_8h.html#a030de4f033221607739a15cb52508022">   77</a></span>&#160;<span class="preprocessor">#define NODE_DATTYPE        uint8_t</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="config_8h.html#ac284fce722a0be7bec73e511dc3f2bbd">   79</a></span>&#160;<span class="preprocessor">#define ONR_DATTYPE         uint8_t</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="structpayload__t.html">   81</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="structpayload__t.html#a3afa33b39f6de1877e858f9fb0b5f87a">   85</a></span>&#160;    <a class="code" href="config_8h.html#a030de4f033221607739a15cb52508022">NODE_DATTYPE</a>    <a class="code" href="structpayload__t.html#a3afa33b39f6de1877e858f9fb0b5f87a">node_id</a>;         </div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="structpayload__t.html#a6ea24ed09a51f607a1e2a1b0f2ade2cb">   88</a></span>&#160;    uint8_t         <a class="code" href="structpayload__t.html#a6ea24ed09a51f607a1e2a1b0f2ade2cb">msg_id</a>;          </div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="structpayload__t.html#a332fd1884f12dc0307317907cf57d4ea">   90</a></span>&#160;    uint8_t         <a class="code" href="structpayload__t.html#a332fd1884f12dc0307317907cf57d4ea">msg_type</a>;        </div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="structpayload__t.html#a1a9dfd6db5d1c123d2dccecceb14112e">   92</a></span>&#160;    uint8_t         <a class="code" href="structpayload__t.html#a1a9dfd6db5d1c123d2dccecceb14112e">msg_flags</a>;   </div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="structpayload__t.html#a5c24bc8a9f0e51a910baa9f8c4110fbc">   97</a></span>&#160;    <a class="code" href="config_8h.html#ac284fce722a0be7bec73e511dc3f2bbd">ONR_DATTYPE</a>     <a class="code" href="structpayload__t.html#a5c24bc8a9f0e51a910baa9f8c4110fbc">orderno</a>;         </div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="structpayload__t.html#a6097a5427f09fe70856fb44f916da240">  101</a></span>&#160;    uint8_t         <a class="code" href="structpayload__t.html#a6097a5427f09fe70856fb44f916da240">heartbeatno</a>;      </div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="structpayload__t.html#a096faffeae0d96e5040b348ab927f609">  103</a></span>&#160;    uint8_t         <a class="code" href="structpayload__t.html#a096faffeae0d96e5040b348ab927f609">reserved1</a>;      </div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="structpayload__t.html#a637f46e37304fb9a195ebb15091daf08">  105</a></span>&#160;    uint8_t         <a class="code" href="structpayload__t.html#a637f46e37304fb9a195ebb15091daf08">reserved2</a>;      </div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="structpayload__t.html#a18f328fa1c71e87663b30ed1fde701bb">  107</a></span>&#160;    uint32_t        <a class="code" href="structpayload__t.html#a18f328fa1c71e87663b30ed1fde701bb">data1</a>;         </div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="structpayload__t.html#a6a3bdd422de558f0762911297b8d6dfa">  109</a></span>&#160;    uint32_t        <a class="code" href="structpayload__t.html#a6a3bdd422de558f0762911297b8d6dfa">data2</a>;         </div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="structpayload__t.html#acf0a2b00de74d3cb536bf51a7ed05e57">  111</a></span>&#160;    uint32_t        <a class="code" href="structpayload__t.html#acf0a2b00de74d3cb536bf51a7ed05e57">data3</a>;         </div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="structpayload__t.html#a994342c5f4f30ab8e2219b5dabbcb4ac">  113</a></span>&#160;    uint32_t        <a class="code" href="structpayload__t.html#a994342c5f4f30ab8e2219b5dabbcb4ac">data4</a>;         </div>
+<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="structpayload__t.html#a92f6a3267ceb4b5cd05018d407d58afc">  115</a></span>&#160;    uint32_t        <a class="code" href="structpayload__t.html#a92f6a3267ceb4b5cd05018d407d58afc">data5</a>;         </div>
+<div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="structpayload__t.html#a123b9a41dc6fbff0b0c8aeed9e03a7d6">  117</a></span>&#160;    uint32_t        <a class="code" href="structpayload__t.html#a123b9a41dc6fbff0b0c8aeed9e03a7d6">data6</a>;         </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;} <a class="code" href="structpayload__t.html">payload_t</a>;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="structudpdata__t.html">  125</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a name="l00127"></a><span class="lineno"><a class="line" href="structudpdata__t.html#a01bf50b0c47eadbef0e1bc814b75630a">  127</a></span>&#160;  uint16_t          <a class="code" href="structudpdata__t.html#a01bf50b0c47eadbef0e1bc814b75630a">gw_no</a>;         <span class="comment">// the number of the sending gateway</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno"><a class="line" href="structudpdata__t.html#a1b63064045b272e47bf86c111e502394">  129</a></span>&#160;<span class="comment"></span>  <a class="code" href="structpayload__t.html">payload_t</a>         <a class="code" href="structudpdata__t.html#a1b63064045b272e47bf86c111e502394">payload</a>;      <span class="comment">// the payload to send forward</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;} <a class="code" href="structudpdata__t.html">udpdata_t</a>;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aconfig_8h_html_a030de4f033221607739a15cb52508022"><div class="ttname"><a href="config_8h.html#a030de4f033221607739a15cb52508022">NODE_DATTYPE</a></div><div class="ttdeci">#define NODE_DATTYPE</div><div class="ttdoc">Der Datentyp für die Node_ID. Ist aktuell auf 1...255 festgelegt. Werden mehr Nodes benötigt,...</div><div class="ttdef"><b>Definition:</b> config.h:77</div></div>
+<div class="ttc" id="aconfig_8h_html_ac284fce722a0be7bec73e511dc3f2bbd"><div class="ttname"><a href="config_8h.html#ac284fce722a0be7bec73e511dc3f2bbd">ONR_DATTYPE</a></div><div class="ttdeci">#define ONR_DATTYPE</div><div class="ttdoc">Der Datentyp für die Ordernummer. Auch hier eine zentrale Festlegung des Datentyps,...</div><div class="ttdef"><b>Definition:</b> config.h:79</div></div>
+<div class="ttc" id="astructpayload__t_html"><div class="ttname"><a href="structpayload__t.html">payload_t</a></div><div class="ttdef"><b>Definition:</b> config.h:81</div></div>
+<div class="ttc" id="astructpayload__t_html_a096faffeae0d96e5040b348ab927f609"><div class="ttname"><a href="structpayload__t.html#a096faffeae0d96e5040b348ab927f609">payload_t::reserved1</a></div><div class="ttdeci">uint8_t reserved1</div><div class="ttdoc">noch nicht genutzt</div><div class="ttdef"><b>Definition:</b> config.h:103</div></div>
+<div class="ttc" id="astructpayload__t_html_a123b9a41dc6fbff0b0c8aeed9e03a7d6"><div class="ttname"><a href="structpayload__t.html#a123b9a41dc6fbff0b0c8aeed9e03a7d6">payload_t::data6</a></div><div class="ttdeci">uint32_t data6</div><div class="ttdoc">Datenpaket 6 (32Bit)</div><div class="ttdef"><b>Definition:</b> config.h:117</div></div>
+<div class="ttc" id="astructpayload__t_html_a18f328fa1c71e87663b30ed1fde701bb"><div class="ttname"><a href="structpayload__t.html#a18f328fa1c71e87663b30ed1fde701bb">payload_t::data1</a></div><div class="ttdeci">uint32_t data1</div><div class="ttdoc">Datenpaket 1 (32Bit)</div><div class="ttdef"><b>Definition:</b> config.h:107</div></div>
+<div class="ttc" id="astructpayload__t_html_a1a9dfd6db5d1c123d2dccecceb14112e"><div class="ttname"><a href="structpayload__t.html#a1a9dfd6db5d1c123d2dccecceb14112e">payload_t::msg_flags</a></div><div class="ttdeci">uint8_t msg_flags</div><div class="ttdoc">Nachrichtenflag, Definition siehe Nachrichtenflags.</div><div class="ttdef"><b>Definition:</b> config.h:92</div></div>
+<div class="ttc" id="astructpayload__t_html_a332fd1884f12dc0307317907cf57d4ea"><div class="ttname"><a href="structpayload__t.html#a332fd1884f12dc0307317907cf57d4ea">payload_t::msg_type</a></div><div class="ttdeci">uint8_t msg_type</div><div class="ttdoc">Art der Nachricht, Definition siehe Nachrichtentyp.</div><div class="ttdef"><b>Definition:</b> config.h:90</div></div>
+<div class="ttc" id="astructpayload__t_html_a3afa33b39f6de1877e858f9fb0b5f87a"><div class="ttname"><a href="structpayload__t.html#a3afa33b39f6de1877e858f9fb0b5f87a">payload_t::node_id</a></div><div class="ttdeci">NODE_DATTYPE node_id</div><div class="ttdef"><b>Definition:</b> config.h:85</div></div>
+<div class="ttc" id="astructpayload__t_html_a5c24bc8a9f0e51a910baa9f8c4110fbc"><div class="ttname"><a href="structpayload__t.html#a5c24bc8a9f0e51a910baa9f8c4110fbc">payload_t::orderno</a></div><div class="ttdeci">ONR_DATTYPE orderno</div><div class="ttdef"><b>Definition:</b> config.h:97</div></div>
+<div class="ttc" id="astructpayload__t_html_a6097a5427f09fe70856fb44f916da240"><div class="ttname"><a href="structpayload__t.html#a6097a5427f09fe70856fb44f916da240">payload_t::heartbeatno</a></div><div class="ttdeci">uint8_t heartbeatno</div><div class="ttdef"><b>Definition:</b> config.h:101</div></div>
+<div class="ttc" id="astructpayload__t_html_a637f46e37304fb9a195ebb15091daf08"><div class="ttname"><a href="structpayload__t.html#a637f46e37304fb9a195ebb15091daf08">payload_t::reserved2</a></div><div class="ttdeci">uint8_t reserved2</div><div class="ttdoc">noch nicht genutzt</div><div class="ttdef"><b>Definition:</b> config.h:105</div></div>
+<div class="ttc" id="astructpayload__t_html_a6a3bdd422de558f0762911297b8d6dfa"><div class="ttname"><a href="structpayload__t.html#a6a3bdd422de558f0762911297b8d6dfa">payload_t::data2</a></div><div class="ttdeci">uint32_t data2</div><div class="ttdoc">Datenpaket 2 (32Bit)</div><div class="ttdef"><b>Definition:</b> config.h:109</div></div>
+<div class="ttc" id="astructpayload__t_html_a6ea24ed09a51f607a1e2a1b0f2ade2cb"><div class="ttname"><a href="structpayload__t.html#a6ea24ed09a51f607a1e2a1b0f2ade2cb">payload_t::msg_id</a></div><div class="ttdeci">uint8_t msg_id</div><div class="ttdef"><b>Definition:</b> config.h:88</div></div>
+<div class="ttc" id="astructpayload__t_html_a92f6a3267ceb4b5cd05018d407d58afc"><div class="ttname"><a href="structpayload__t.html#a92f6a3267ceb4b5cd05018d407d58afc">payload_t::data5</a></div><div class="ttdeci">uint32_t data5</div><div class="ttdoc">Datenpaket 5 (32Bit)</div><div class="ttdef"><b>Definition:</b> config.h:115</div></div>
+<div class="ttc" id="astructpayload__t_html_a994342c5f4f30ab8e2219b5dabbcb4ac"><div class="ttname"><a href="structpayload__t.html#a994342c5f4f30ab8e2219b5dabbcb4ac">payload_t::data4</a></div><div class="ttdeci">uint32_t data4</div><div class="ttdoc">Datenpaket 4 (32Bit)</div><div class="ttdef"><b>Definition:</b> config.h:113</div></div>
+<div class="ttc" id="astructpayload__t_html_acf0a2b00de74d3cb536bf51a7ed05e57"><div class="ttname"><a href="structpayload__t.html#acf0a2b00de74d3cb536bf51a7ed05e57">payload_t::data3</a></div><div class="ttdeci">uint32_t data3</div><div class="ttdoc">Datenpaket 3 (32Bit)</div><div class="ttdef"><b>Definition:</b> config.h:111</div></div>
+<div class="ttc" id="astructudpdata__t_html"><div class="ttname"><a href="structudpdata__t.html">udpdata_t</a></div><div class="ttdef"><b>Definition:</b> config.h:125</div></div>
+<div class="ttc" id="astructudpdata__t_html_a01bf50b0c47eadbef0e1bc814b75630a"><div class="ttname"><a href="structudpdata__t.html#a01bf50b0c47eadbef0e1bc814b75630a">udpdata_t::gw_no</a></div><div class="ttdeci">uint16_t gw_no</div><div class="ttdoc">Die eindeutige Gateway ID.</div><div class="ttdef"><b>Definition:</b> config.h:127</div></div>
+<div class="ttc" id="astructudpdata__t_html_a1b63064045b272e47bf86c111e502394"><div class="ttname"><a href="structudpdata__t.html#a1b63064045b272e47bf86c111e502394">udpdata_t::payload</a></div><div class="ttdeci">payload_t payload</div><div class="ttdoc">Die Payloadstruktur wie unter payload_t definiert.</div><div class="ttdef"><b>Definition:</b> config.h:129</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

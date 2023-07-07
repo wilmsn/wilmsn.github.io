@@ -1,0 +1,4 @@
+<map id="Sensor_18B20" name="Sensor_18B20">
+<area shape="rect" id="node1" title="Ein abgeleitetes Objekt für einen 18B20 Sensor. &#160;Benötigt: OneWire und DallasTemperature als Gerätetr..." alt="" coords="9,80,124,107"/>
+<area shape="rect" id="node2" href="$class_sensor___generic.html" title="Ein generisches Objekt für einen Sensor. Nicht zum Einbau bestimmt, sondern nur als Vererbungsobjekt...." alt="" coords="5,5,128,32"/>
+</map>

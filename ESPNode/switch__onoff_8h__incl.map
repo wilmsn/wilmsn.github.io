@@ -1,5 +1,5 @@
-<map id="/home/norbert/projekte/ESPNode_ws/src/switch_onoff.h" name="/home/norbert/projekte/ESPNode_ws/src/switch_onoff.h">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,184,61"/>
-<area shape="rect" id="node2" href="$sensor__generic_8h.html" title=" " alt="" coords="29,109,161,136"/>
-<area shape="rect" id="node3" title=" " alt="" coords="53,184,137,211"/>
+<map id="/home/norbert/projekte/ESPNode/src/switch_onoff.h" name="/home/norbert/projekte/ESPNode/src/switch_onoff.h">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,211,47"/>
+<area shape="rect" id="node2" href="$sensor__generic_8h.html" title=" " alt="" coords="42,95,174,121"/>
+<area shape="rect" id="node3" title=" " alt="" coords="66,169,150,196"/>
 </map>

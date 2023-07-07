@@ -1,4 +1,4 @@
 <map id="Switch_OnOff" name="Switch_OnOff">
-<area shape="rect" id="node1" title="Ein abgeleitetes Objekt für einen Ein&#45;Aus Schalter." alt="" coords="12,80,121,107"/>
+<area shape="rect" id="node1" title="Ein abgeleitetes Objekt für einen Ein&#45;Aus Schalter. &#160;Der Schalter reagiert nur wenn es in der set Fun..." alt="" coords="12,80,121,107"/>
 <area shape="rect" id="node2" href="$class_sensor___generic.html" title="Ein generisches Objekt für einen Sensor. Nicht zum Einbau bestimmt, sondern nur als Vererbungsobjekt...." alt="" coords="5,5,128,32"/>
 </map>

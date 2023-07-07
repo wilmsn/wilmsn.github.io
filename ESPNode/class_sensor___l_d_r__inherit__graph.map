@@ -1,4 +1,4 @@
 <map id="Sensor_LDR" name="Sensor_LDR">
-<area shape="rect" id="node1" title="Ein abgeleitetes Objekt um einen LDR auszulesen Achtung: Da der analoge Eingang hier genutzt wird mus..." alt="" coords="17,80,116,107"/>
+<area shape="rect" id="node1" title="Ein abgeleitetes Objekt um einen LDR auszulesen &#160;Achtung: Da der analoge Eingang hier genutzt wird mu..." alt="" coords="17,80,116,107"/>
 <area shape="rect" id="node2" href="$class_sensor___generic.html" title="Ein generisches Objekt für einen Sensor. Nicht zum Einbau bestimmt, sondern nur als Vererbungsobjekt...." alt="" coords="5,5,128,32"/>
 </map>
