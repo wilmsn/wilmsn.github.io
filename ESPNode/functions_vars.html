@@ -125,11 +125,17 @@ $(function() {
 <li>magicno
 : <a class="el" href="structprefs__t.html#ac40ccb168cf2861d7e77fac8eb0b13ec">prefs_t</a>
 </li>
-<li>mqttclient
-: <a class="el" href="structprefs__t.html#a2aecd95b1b07ba90083ee860e0c0435e">prefs_t</a>
+<li>mqtt_client
+: <a class="el" href="structprefs__t.html#a03b067cdfa617f9c42a82f962c257f3f">prefs_t</a>
 </li>
-<li>mqttserver
-: <a class="el" href="structprefs__t.html#a260bd39fc69ffe4cbbc2c44c4fabe036">prefs_t</a>
+<li>mqtt_enable
+: <a class="el" href="structprefs__t.html#a91b83e88da7a976aaabd018444441d7c">prefs_t</a>
+</li>
+<li>mqtt_server
+: <a class="el" href="structprefs__t.html#a89c9c3cda838c92355c37efb84208223">prefs_t</a>
+</li>
+<li>mqtt_topicP2
+: <a class="el" href="structprefs__t.html#ab7a7cf9188ddc96fcc71bd0e7d076f6d">prefs_t</a>
 </li>
 <li>msg_flags
 : <a class="el" href="structpayload__t.html#a1a9dfd6db5d1c123d2dccecceb14112e">payload_t</a>
@@ -152,43 +158,68 @@ $(function() {
 
 <h3><a id="index_o"></a>- o -</h3><ul>
 <li>obj_changed
-: <a class="el" href="class_sensor___generic.html#a5467554ccb88bc2be61574cfb4a322da">Sensor_Generic</a>
+: <a class="el" href="class_base___generic.html#a3380127dcb6fa6e49e08cacdb2d558ab">Base_Generic</a>
+, <a class="el" href="class_switch___on_off.html#ad76f2d519d83f5e2143bd254b25a91bb">Switch_OnOff</a>
 </li>
 <li>obj_html_place
-: <a class="el" href="class_sensor___generic.html#ae9d1fd11d684a71ed07198af91b0a4f4">Sensor_Generic</a>
+: <a class="el" href="class_base___generic.html#a98f23a130f364f27dcc9941e308402c4">Base_Generic</a>
 </li>
 <li>obj_html_stat_json
-: <a class="el" href="class_sensor___generic.html#ac6c82f9d35804db10c071d1dde8a39a5">Sensor_Generic</a>
+: <a class="el" href="class_base___generic.html#a10c4876c1b75de6881da625d5ae65386">Base_Generic</a>
 </li>
 <li>obj_hw_pin1
-: <a class="el" href="class_sensor___generic.html#a1c5889f7cb48812b57438492cb4f7037">Sensor_Generic</a>
+: <a class="el" href="class_base___generic.html#a53129dbe07b811d92097bc887ef5b858">Base_Generic</a>
 </li>
 <li>obj_hw_pin1_used
-: <a class="el" href="class_sensor___generic.html#a8ca622aedae7341689948d56634db4b4">Sensor_Generic</a>
+: <a class="el" href="class_base___generic.html#accf86a3c26614983302d9387e29d719b">Base_Generic</a>
 </li>
 <li>obj_hw_pin2
-: <a class="el" href="class_sensor___generic.html#aadf103e686bfe4e7b3fff52003bddbac">Sensor_Generic</a>
+: <a class="el" href="class_base___generic.html#a877a1cc83f6e036332fdf8604801b410">Base_Generic</a>
 </li>
 <li>obj_hw_pin2_used
-: <a class="el" href="class_sensor___generic.html#ad6569976b1a477fadfce2a5ffa4378fb">Sensor_Generic</a>
+: <a class="el" href="class_base___generic.html#a249c379aa0bb33248b86096c07de1fef">Base_Generic</a>
 </li>
 <li>obj_keyword
-: <a class="el" href="class_sensor___generic.html#a299ec1e2ed4aad16de3fbd8c715ca60c">Sensor_Generic</a>
+: <a class="el" href="class_base___generic.html#abcc2fbc942b62523b7aab47167017690">Base_Generic</a>
 </li>
 <li>obj_label
-: <a class="el" href="class_sensor___generic.html#ab082a1dd4b4455cdf1244387658de8a8">Sensor_Generic</a>
+: <a class="el" href="class_base___generic.html#a6c4207f1f5899592c9a206c4d37d7c1f">Base_Generic</a>
 </li>
 <li>obj_mqtt_json
-: <a class="el" href="class_sensor___generic.html#ab2508b83aa660238767f12c76e97d2cb">Sensor_Generic</a>
+: <a class="el" href="class_base___generic.html#afbc2c3659a7ac1d68c93191056acb19d">Base_Generic</a>
 </li>
 <li>obj_mqtt_name
-: <a class="el" href="class_sensor___generic.html#a67c54f3e2758d131d72172f6c61f0f2d">Sensor_Generic</a>
+: <a class="el" href="class_base___generic.html#ad92d9da9ad72f390d7a9207c9a25e24d">Base_Generic</a>
 </li>
-<li>obj_sensorinfo
-: <a class="el" href="class_sensor___generic.html#ac44fba5673a94d3f7761881d15f53b05">Sensor_Generic</a>
+<li>obj_on_value
+: <a class="el" href="class_switch___on_off.html#a15d57e33ed298bce1c704178247cebd3">Switch_OnOff</a>
+</li>
+<li>obj_sensorinfo_html
+: <a class="el" href="class_sensor___generic.html#a3d775e63aa6d7e0b6d039496e9c6cfc9">Sensor_Generic</a>
+</li>
+<li>obj_sensorinfo_mqtt
+: <a class="el" href="class_sensor___generic.html#af9c5bb97a32f7dda0ded4e2ea5573f2b">Sensor_Generic</a>
+</li>
+<li>obj_slider_mqtt_name
+: <a class="el" href="class_switch___on_off.html#aca4de3fd3ba0efe0b157540745644f3d">Switch_OnOff</a>
+</li>
+<li>obj_slider_no
+: <a class="el" href="class_switch___on_off.html#a7acf4309559a1a2413c82e1b3497a11c">Switch_OnOff</a>
+</li>
+<li>obj_slider_used
+: <a class="el" href="class_switch___on_off.html#a74fdd8750f67ebd2c3bd70e5dffa9819">Switch_OnOff</a>
+</li>
+<li>obj_slider_val
+: <a class="el" href="class_switch___on_off.html#ae2479fa5a154cc7c855e8b76e272eaf9">Switch_OnOff</a>
+</li>
+<li>obj_start_value
+: <a class="el" href="class_switch___on_off.html#a7773855c300873c3acc63bd6131b4c2b">Switch_OnOff</a>
+</li>
+<li>obj_value
+: <a class="el" href="class_switch___on_off.html#a4491cb3a59cf2efca73f7a5b3a063748">Switch_OnOff</a>
 </li>
 <li>obj_values_str
-: <a class="el" href="class_sensor___generic.html#a3e850c4b0b4f1d4b5a22259dff26f4f6">Sensor_Generic</a>
+: <a class="el" href="class_base___generic.html#ad80416f2a7132bf9c40d5d23b8fae553">Base_Generic</a>
 </li>
 <li>orderno
 : <a class="el" href="structpayload__t.html#a5c24bc8a9f0e51a910baa9f8c4110fbc">payload_t</a>
@@ -224,27 +255,6 @@ $(function() {
 </li>
 <li>rf24gw_hub_port
 : <a class="el" href="structprefs__t.html#a5940f76dc3326438763fcb024c4ecf32">prefs_t</a>
-</li>
-<li>rf24node_enable
-: <a class="el" href="structprefs__t.html#a7d2e7427a037e3ce675747b6f59112dc">prefs_t</a>
-</li>
-<li>rf24node_node_id
-: <a class="el" href="structprefs__t.html#a533d29bd2908707f44ce3e465f5b097a">prefs_t</a>
-</li>
-<li>rf24node_val1_channel
-: <a class="el" href="structprefs__t.html#ac5af43e543c9b48e4175daf3e930bce1">prefs_t</a>
-</li>
-<li>rf24node_val2_channel
-: <a class="el" href="structprefs__t.html#a0611761e6dff07bad6aa8def636a5281">prefs_t</a>
-</li>
-<li>rf24node_val2_enable
-: <a class="el" href="structprefs__t.html#aee9ee8a5b67e7bd710dbc80289c3035d">prefs_t</a>
-</li>
-<li>rf24node_val3_channel
-: <a class="el" href="structprefs__t.html#adf101898d1af31bacc7583b669dca39e">prefs_t</a>
-</li>
-<li>rf24node_val3_enable
-: <a class="el" href="structprefs__t.html#a86021d9fe7e98f9a240272667daa50c2">prefs_t</a>
 </li>
 </ul>
 </div><!-- contents -->

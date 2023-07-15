@@ -88,16 +88,18 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpayload__t.html">payload_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Die Datenstruktur des payloads in dem RF24 Netzwerk. Sie wird nur benötigt wenn der RF24Gateway genutzt wird und auch dies nur damit LOginformationen angezeigt werden können.  <a href="structpayload__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structudpdata__t.html">udpdata_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Die Datenstructur zur Übertragung der Daten zwischen Gateway und Hub Im Prinzig ebtspricht diese Struktur der <a class="el" href="structpayload__t.html" title="Die Datenstruktur des payloads in dem RF24 Netzwerk. Sie wird nur benötigt wenn der RF24Gateway genut...">payload_t</a> Struktur erweitert um ein Feld zur Aufnahme der Gateway_id.  <a href="structudpdata__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a6d3454deac1f9417772ed2c0aac9be3f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a6d3454deac1f9417772ed2c0aac9be3f">WITTYNODE1</a></td></tr>
-<tr class="memdesc:a6d3454deac1f9417772ed2c0aac9be3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">In der Datei "config.h" wird: 1) der zu erzeugende Node ausgewählt 2) grundlegende Konfigurationen festgelegt.  <a href="config_8h.html#a6d3454deac1f9417772ed2c0aac9be3f">More...</a><br /></td></tr>
-<tr class="separator:a6d3454deac1f9417772ed2c0aac9be3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c6b0e0bdbb8d14a494a629fdf871511"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a1c6b0e0bdbb8d14a494a629fdf871511">SWVERSION</a>&#160;&#160;&#160;&quot;0.991&quot;</td></tr>
+<tr class="memitem:a1bff45248ebb4c5fa8e2301f5ebc4a9a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a1bff45248ebb4c5fa8e2301f5ebc4a9a">NODE_FLUR</a></td></tr>
+<tr class="memdesc:a1bff45248ebb4c5fa8e2301f5ebc4a9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">In der Datei "config.h" wird: 1) der zu erzeugende Node ausgewählt 2) grundlegende Konfigurationen festgelegt.  <a href="config_8h.html#a1bff45248ebb4c5fa8e2301f5ebc4a9a">More...</a><br /></td></tr>
+<tr class="separator:a1bff45248ebb4c5fa8e2301f5ebc4a9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c6b0e0bdbb8d14a494a629fdf871511"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a1c6b0e0bdbb8d14a494a629fdf871511">SWVERSION</a>&#160;&#160;&#160;&quot;0.992&quot;</td></tr>
 <tr class="separator:a1c6b0e0bdbb8d14a494a629fdf871511"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a977bd2592e99309a86e7034189e9e62d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a977bd2592e99309a86e7034189e9e62d">MQTT_SERVER</a>&#160;&#160;&#160;&quot;rpi1.fritz.box&quot;</td></tr>
 <tr class="separator:a977bd2592e99309a86e7034189e9e62d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -117,7 +119,7 @@ Macros</h2></td></tr>
 <tr class="memitem:a7a81650373c02155ba2adab775a611d9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a7a81650373c02155ba2adab775a611d9">RF24_SPEED</a>&#160;&#160;&#160;RF24_250KBPS</td></tr>
 <tr class="memdesc:a7a81650373c02155ba2adab775a611d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Die Übertragungsgeschwindigkeit.  <a href="config_8h.html#a7a81650373c02155ba2adab775a611d9">More...</a><br /></td></tr>
 <tr class="separator:a7a81650373c02155ba2adab775a611d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08e8ecf2939d12dcc84a8f389762ebd2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a08e8ecf2939d12dcc84a8f389762ebd2">MAGICNO</a>&#160;&#160;&#160;345</td></tr>
+<tr class="memitem:a08e8ecf2939d12dcc84a8f389762ebd2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a08e8ecf2939d12dcc84a8f389762ebd2">MAGICNO</a>&#160;&#160;&#160;657</td></tr>
 <tr class="separator:a08e8ecf2939d12dcc84a8f389762ebd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a85e066b9ac968eab840d5a2a061ce0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a0a85e066b9ac968eab840d5a2a061ce0">MQTT_STATUS</a>&#160;&#160;&#160;&quot;stat&quot;</td></tr>
 <tr class="separator:a0a85e066b9ac968eab840d5a2a061ce0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -131,8 +133,6 @@ Macros</h2></td></tr>
 <tr class="separator:a46c4a5cf5d933e39d68023b957d0ec69"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d333b32d8eea189085d9ea31ecb6919"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a2d333b32d8eea189085d9ea31ecb6919">TOPIC_PART3_SIZE</a>&#160;&#160;&#160;10</td></tr>
 <tr class="separator:a2d333b32d8eea189085d9ea31ecb6919"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3708a441b69f6d11309d17a278a52c34"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a3708a441b69f6d11309d17a278a52c34">TOPIC_BUFFER_SIZE</a>&#160;&#160;&#160;50</td></tr>
-<tr class="separator:a3708a441b69f6d11309d17a278a52c34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6659d57a08b7ed7d23133d6b0a7f0ecb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a6659d57a08b7ed7d23133d6b0a7f0ecb">STATINTERVAL</a>&#160;&#160;&#160;300</td></tr>
 <tr class="separator:a6659d57a08b7ed7d23133d6b0a7f0ecb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ed3fd0bb752da947d6336b2451db6d9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a5ed3fd0bb752da947d6336b2451db6d9">MESSINTERVAL</a>&#160;&#160;&#160;1</td></tr>
@@ -141,7 +141,7 @@ Macros</h2></td></tr>
 <tr class="separator:a54c3dbc872e633ba5a80ba8608d7e5f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71866a530c7b08dbd92afbe1cff178c5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a71866a530c7b08dbd92afbe1cff178c5">DEBUGFILE</a>&#160;&#160;&#160;&quot;/logfile.txt&quot;</td></tr>
 <tr class="separator:a71866a530c7b08dbd92afbe1cff178c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b812a3117b75558d2da67f8ca3cf83a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a7b812a3117b75558d2da67f8ca3cf83a">SERVERNAMESIZE</a>&#160;&#160;&#160;25</td></tr>
+<tr class="memitem:a7b812a3117b75558d2da67f8ca3cf83a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a7b812a3117b75558d2da67f8ca3cf83a">SERVERNAMESIZE</a>&#160;&#160;&#160;30</td></tr>
 <tr class="separator:a7b812a3117b75558d2da67f8ca3cf83a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79c4f3ace1ef49486708487f8c2ecd29"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a79c4f3ace1ef49486708487f8c2ecd29">RF24_CHANNEL</a>&#160;&#160;&#160;92</td></tr>
 <tr class="memdesc:a79c4f3ace1ef49486708487f8c2ecd29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Der verwendete RF24 Funkkanal.  <a href="config_8h.html#a79c4f3ace1ef49486708487f8c2ecd29">More...</a><br /></td></tr>
@@ -184,7 +184,7 @@ Macros</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define MAGICNO&#160;&#160;&#160;345</td>
+          <td class="memname">#define MAGICNO&#160;&#160;&#160;657</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -275,6 +275,22 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Der Datentyp für die Node_ID. Ist aktuell auf 1...255 festgelegt. Werden mehr Nodes benötigt, kann der Datentyp hier zentral umgestellt werden. </p>
+
+</div>
+</div>
+<a id="a1bff45248ebb4c5fa8e2301f5ebc4a9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bff45248ebb4c5fa8e2301f5ebc4a9a">&#9670;&nbsp;</a></span>NODE_FLUR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NODE_FLUR</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>In der Datei "config.h" wird: 1) der zu erzeugende Node ausgewählt 2) grundlegende Konfigurationen festgelegt. </p>
 
 </div>
 </div>
@@ -467,7 +483,7 @@ Macros</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define SERVERNAMESIZE&#160;&#160;&#160;25</td>
+          <td class="memname">#define SERVERNAMESIZE&#160;&#160;&#160;30</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -496,7 +512,7 @@ Macros</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define SWVERSION&#160;&#160;&#160;&quot;0.991&quot;</td>
+          <td class="memname">#define SWVERSION&#160;&#160;&#160;&quot;0.992&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -515,20 +531,6 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Telemetrieinterval: Definiert den Abstand (in Sekunden) zwischen 2 Telemetrieübertragungen. Hierzu gehören: Serverdaten, Netzwerkdaten, ... </p>
-
-</div>
-</div>
-<a id="a3708a441b69f6d11309d17a278a52c34"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3708a441b69f6d11309d17a278a52c34">&#9670;&nbsp;</a></span>TOPIC_BUFFER_SIZE</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define TOPIC_BUFFER_SIZE&#160;&#160;&#160;50</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
 
 </div>
 </div>
@@ -571,22 +573,6 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-</div>
-</div>
-<a id="a6d3454deac1f9417772ed2c0aac9be3f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6d3454deac1f9417772ed2c0aac9be3f">&#9670;&nbsp;</a></span>WITTYNODE1</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define WITTYNODE1</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>In der Datei "config.h" wird: 1) der zu erzeugende Node ausgewählt 2) grundlegende Konfigurationen festgelegt. </p>
 
 </div>
 </div>

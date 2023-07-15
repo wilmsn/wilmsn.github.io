@@ -1,7 +1,8 @@
 <map id="/home/norbert/projekte/ESPNode/src/actor_ledmatrix.h" name="/home/norbert/projekte/ESPNode/src/actor_ledmatrix.h">
-<area shape="rect" id="node1" title=" " alt="" coords="26,5,253,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="25,5,252,47"/>
 <area shape="rect" id="node2" href="$switch__onoff_8h.html" title=" " alt="" coords="13,95,129,121"/>
-<area shape="rect" id="node5" title=" " alt="" coords="153,95,261,121"/>
-<area shape="rect" id="node3" href="$sensor__generic_8h.html" title=" " alt="" coords="5,169,137,196"/>
-<area shape="rect" id="node4" title=" " alt="" coords="29,244,113,271"/>
+<area shape="rect" id="node6" title=" " alt="" coords="153,95,261,121"/>
+<area shape="rect" id="node3" href="$switch__generic_8h.html" title=" " alt="" coords="5,169,136,196"/>
+<area shape="rect" id="node4" href="$base__generic_8h.html" title=" " alt="" coords="11,244,131,271"/>
+<area shape="rect" id="node5" title=" " alt="" coords="29,319,113,345"/>
 </map>

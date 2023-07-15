@@ -77,17 +77,41 @@ Features:</h3>
 <li>Web Interface (based on J-Query and Websockets)</li>
 <li>Written in C++ for Arduino</li>
 </ul>
-<p><img src="http://wilmsn.github.io/ESPNode/espnode.png" alt=" " title="ESPNode Komponenten" class="inline"/></p>
+<p>&lt;img src="https://wilmsn.github.io/ESPNode/espnode.png" alt=""ESPNode Komponenten""/&gt;</p>
 <p>ESPNode as a part of RF24Hub</p>
-<p><img src="http://wilmsn.github.io/ESPNode/einbindung.png" alt=" " title="Einbindung des ESPNode in den RF24Hub" class="inline"/> <a href="https://wilmsn.github.io/ESPNode/espnode
-.png">Komponenten des ESPNode</a></p>
+<p>&lt;img src="https://wilmsn.github.io/ESPNode/einbindung.png" alt=""Einbindung des ESPNode in den RF24Hub""/&gt;</p>
 <p>The main documentation of this projekt is in german language.</p>
-<p><a href="#sensormodule">Infos zu Sensormodulen</a></p>
-<p><a href="http://wilmsn.github.io/ESPNode/index.html">Programmdoku</a></p>
+<p><a href="http://wilmsn.github.io/ESPNode/index.html">Programmdoku auf wilmsn.github.io/ESPNode</a></p>
 <h1><a class="anchor" id="autotoc_md3"></a>
 Hauptprogramm</h1>
-<p>Example text blah. Example text blah. Example text blah. Example text blah. Example text blah. Example text blah. Example text blah. Example text blah. Example text blah. Example text blah. Example text blah. Example text blah. Example text blah. Example text blah.</p>
-<p>Example text blah. Example text blah. Example text blah. Example text blah. Example text blah. Example text blah. Example text blah. Example text blah. Example text blah. Example text blah. Example text blah. Example text blah. Example text blah. Example text blah.</p>
+<p>Details zum Hauptprogramm gibt es in der <a href="http://wilmsn.github.io/ESPNode/index.html">Programmdoku</a>, hier wird nur das zugrundeliegende Konzept beschrieben. Im Hauptprogramm sind folgende Komponenten vorgesehen:</p>
+<ul>
+<li>Einbau von bis zu 4 Schaltern</li>
+<li>Einbau von bis zu 2 Sensoren (Hardware) mit bis zu 4 Messwerten in Summe</li>
+</ul>
+<p>Sofern die Module/Objektdefinitionen bereits vorhanden sind, kann das Programm einfach durch Konfiguration angepasst werden. Ohne Konfiguration sind alle Elemente deaktiviert. Details über die Konfiguration sind <a href="#konfiguration">hier</a> zu finden</p>
+<p>Initialisierung des Hauptprogrammes: Hier werden nacheinander folgende Dinge erledigt:</p>
+<ul>
+<li>Verbindung mit dem WLAN (es werden die 2 konfigurierten Netze getestet)</li>
+<li>Öffnen des internen Filesystems</li>
+<li>Starten des Webservers</li>
+<li>Starten des RF24 Gateways (falls aktiviert)</li>
+<li>Ausführen der BEGIN Staements aller Sensoren und Switches</li>
+<li>Starten des Messvorgangs aller Sensoren</li>
+<li>Start des MQTT Clients</li>
+</ul>
+<p>Danach ist das Programm initialisiert und läuft in einer Endlosschleife. Innerhalb der Schleife finden (zum Teil zeitgesteuert) folgende Aktionen statt:</p>
+<ul>
+<li>RF24 Gateway (falls aktiviert): Prüfen ob neue Datenpakete anliegen, wenn ja dann an den Hub weiterleiten</li>
+<li>MQTT auf Pakete prüfen und veraarbeiten</li>
+<li><a class="el" href="main_8cpp.html#afe461d27b9c48d5921c00d521181f12f" title="Die Hauptschleife.">loop()</a> Funktion aller Sensoren und Switches bedienen</li>
+</ul>
+<p>Zeitabhängige Aktionen:</p>
+<ul>
+<li>Telemetriedaten senden (var: TELEINTERVAL)</li>
+<li>Messungen starten (var: STATINTERVAL)</li>
+<li>Statusdaten und Messwerte senden (var: MESSINTERVAL)</li>
+</ul>
 <h1><a class="anchor" id="autotoc_md4"></a>
 Sensormodule</h1>
 <p>Sensormodule beschreiben bzw erzeugen eigene Objekte. Die Einbindung erfolgt über die Datei **"Node_settings.h"**. Dort müssen die nachfolgenden Funktionen vorhanden und mit Inhalt gefüllt sein. Zur Kompatibilität sind die Funktionen als Leerfunktion im Grundobjekt **"Sensor_Generic"** bereits vorhanden. Alle neuen Objekte für Sensoren und Aktoren werden von **"Sensor_Generic"** abgeleitet.</p>
@@ -97,7 +121,7 @@ Funktion "begin()"</h2>
 #define SENSOR1_DEFINITION       Sensor_18B20 sensor1;
 #define SENSOR1_BEGIN_STATEMENT  sensor1.begin("sens1","Temperatur","Temperatur");
 </pre><p> In der ersten Zeile wird die Headerdatei für die Objektdefinition eingebunden. In der zweiten Zeile das Objekt definiert. Die Direktive **"SENSOR1_DEFINITION"** MUSS für den ersten Sensor verwendet werden. Gibt es weitere Sensoren, gibt es im Programm eine Vorbereitung für 3 Sensoren (SENSOR1 bis SENSOR3) und 4 Aktoren (SWITCH1 bis SWITCH4). Liefert eine Hardware mehrere Messwerte, wird diese als ein Sensor implementiert (siehe "sensor_bosch.h/cpp". Die Objektdefinition ist hier "Sensor_18B20". Dieser Ausdruck ist variabel und entspricht dem der Definition. Das erzeugte Objekt heist "sensor1".</p>
-<p>In die Variable <b>obj_sensorinfo</b> wird ein Teil-JSON mit allenunter Sysinfo anzuzeigenden Sensorinfos angelegt.</p>
+<p>In die Variable <b>obj_sensorinfo</b> wird ein Teil-JSON mit allen unter Sysinfo anzuzeigenden Sensorinfos angelegt.</p>
 <p>Syntax: **"sensorinfo1 : Sensordetails linke Spalte # Sensordetails rechte Spalte"**</p>
 <p>In der Webseite ist Platz für **"sensorinfo1"** bis **"sensorinfo5"** vorgesehen</p>
 <p>Innerhalb des Programmes wird in diesem Schritt alles nötige getan um das Objekt zu initalisieren und alle Werte auf Startwerte gesetzt.</p>
@@ -124,7 +148,9 @@ Funktion "html_create_json_part(json)"</h2>
 <p>b) Schalter mit Regler</p>
 <p>Codesegment: **"sw1 : 0 , sw1_label : Lichtschalter , sw1_format : x, slider1 : 1 , slider1label : Helligkeit , slider1val : 54"**</p>
 <p>c) Jede andere Kombination die nach Änderung der HTML Seite benötigt wird</p>
-<p>Beispiele dazu in der Datei <a class="el" href="switch__onoff_8h.html">switch_onoff.h</a>/cpp </p>
+<p>Beispiele dazu in der Datei <a class="el" href="switch__onoff_8h.html">switch_onoff.h</a>/cpp</p>
+<h1><a class="anchor" id="autotoc_md9"></a>
+Konfiguration</h1>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- start footer part -->

@@ -69,54 +69,65 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Eine Struktur um die Voreinstellungen aufzunehmen und im EEPROM abzulegen.  
+ <a href="structprefs__t.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="main_8h_source.html">main.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:ac40ccb168cf2861d7e77fac8eb0b13ec"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprefs__t.html#ac40ccb168cf2861d7e77fac8eb0b13ec">magicno</a></td></tr>
+<tr class="memdesc:ac40ccb168cf2861d7e77fac8eb0b13ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Über die magicno wird bestimmt ob bei einem Softwareupdate die Voreinstellungen überschrieben werden (magigno im Programm und Speicher unterschiedlich) oder ob sie erhalten bleiben (magicno gleich)  <a href="structprefs__t.html#ac40ccb168cf2861d7e77fac8eb0b13ec">More...</a><br /></td></tr>
 <tr class="separator:ac40ccb168cf2861d7e77fac8eb0b13ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a260bd39fc69ffe4cbbc2c44c4fabe036"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprefs__t.html#a260bd39fc69ffe4cbbc2c44c4fabe036">mqttserver</a> [<a class="el" href="config_8h.html#a7b812a3117b75558d2da67f8ca3cf83a">SERVERNAMESIZE</a>]</td></tr>
-<tr class="separator:a260bd39fc69ffe4cbbc2c44c4fabe036"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2aecd95b1b07ba90083ee860e0c0435e"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprefs__t.html#a2aecd95b1b07ba90083ee860e0c0435e">mqttclient</a> [<a class="el" href="config_8h.html#a7b812a3117b75558d2da67f8ca3cf83a">SERVERNAMESIZE</a>]</td></tr>
-<tr class="separator:a2aecd95b1b07ba90083ee860e0c0435e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91b83e88da7a976aaabd018444441d7c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprefs__t.html#a91b83e88da7a976aaabd018444441d7c">mqtt_enable</a></td></tr>
+<tr class="memdesc:a91b83e88da7a976aaabd018444441d7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag ob der MQTT Gateway aktiviert ist (=true) oder nicht (=false)  <a href="structprefs__t.html#a91b83e88da7a976aaabd018444441d7c">More...</a><br /></td></tr>
+<tr class="separator:a91b83e88da7a976aaabd018444441d7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89c9c3cda838c92355c37efb84208223"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprefs__t.html#a89c9c3cda838c92355c37efb84208223">mqtt_server</a> [<a class="el" href="config_8h.html#a7b812a3117b75558d2da67f8ca3cf83a">SERVERNAMESIZE</a>]</td></tr>
+<tr class="memdesc:a89c9c3cda838c92355c37efb84208223"><td class="mdescLeft">&#160;</td><td class="mdescRight">Der Servername des MQTT Servers.  <a href="structprefs__t.html#a89c9c3cda838c92355c37efb84208223">More...</a><br /></td></tr>
+<tr class="separator:a89c9c3cda838c92355c37efb84208223"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03b067cdfa617f9c42a82f962c257f3f"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprefs__t.html#a03b067cdfa617f9c42a82f962c257f3f">mqtt_client</a> [<a class="el" href="config_8h.html#a46c4a5cf5d933e39d68023b957d0ec69">TOPIC_PART2_SIZE</a>]</td></tr>
+<tr class="memdesc:a03b067cdfa617f9c42a82f962c257f3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Der Clientname dieses Nodes.  <a href="structprefs__t.html#a03b067cdfa617f9c42a82f962c257f3f">More...</a><br /></td></tr>
+<tr class="separator:a03b067cdfa617f9c42a82f962c257f3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7a7cf9188ddc96fcc71bd0e7d076f6d"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprefs__t.html#ab7a7cf9188ddc96fcc71bd0e7d076f6d">mqtt_topicP2</a> [<a class="el" href="config_8h.html#a46c4a5cf5d933e39d68023b957d0ec69">TOPIC_PART2_SIZE</a>]</td></tr>
+<tr class="memdesc:ab7a7cf9188ddc96fcc71bd0e7d076f6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Der mittlere Teil des Topics, idR. identisch mit mqtt_client.  <a href="structprefs__t.html#ab7a7cf9188ddc96fcc71bd0e7d076f6d">More...</a><br /></td></tr>
+<tr class="separator:ab7a7cf9188ddc96fcc71bd0e7d076f6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a186ab60040b7aa98a043e20b1e424bc9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprefs__t.html#a186ab60040b7aa98a043e20b1e424bc9">log_sensor</a></td></tr>
+<tr class="memdesc:a186ab60040b7aa98a043e20b1e424bc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">true: Sensor-informationen werden geloged; false kein logging  <a href="structprefs__t.html#a186ab60040b7aa98a043e20b1e424bc9">More...</a><br /></td></tr>
 <tr class="separator:a186ab60040b7aa98a043e20b1e424bc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad52b020bab961a12f8657c0876df9e51"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprefs__t.html#ad52b020bab961a12f8657c0876df9e51">log_mqtt</a></td></tr>
+<tr class="memdesc:ad52b020bab961a12f8657c0876df9e51"><td class="mdescLeft">&#160;</td><td class="mdescRight">true: MQTT-informationen werden geloged; false kein logging  <a href="structprefs__t.html#ad52b020bab961a12f8657c0876df9e51">More...</a><br /></td></tr>
 <tr class="separator:ad52b020bab961a12f8657c0876df9e51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1a62c068f6e22e5b6c7b99dae61d8e7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprefs__t.html#ab1a62c068f6e22e5b6c7b99dae61d8e7">log_webcmd</a></td></tr>
+<tr class="memdesc:ab1a62c068f6e22e5b6c7b99dae61d8e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">true: WebKomando-informationen werden geloged; false kein logging  <a href="structprefs__t.html#ab1a62c068f6e22e5b6c7b99dae61d8e7">More...</a><br /></td></tr>
 <tr class="separator:ab1a62c068f6e22e5b6c7b99dae61d8e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a17bebb1841d04b6b05951f244b8c0e98"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprefs__t.html#a17bebb1841d04b6b05951f244b8c0e98">log_sysinfo</a></td></tr>
+<tr class="memdesc:a17bebb1841d04b6b05951f244b8c0e98"><td class="mdescLeft">&#160;</td><td class="mdescRight">true: System-informationen werden geloged; false kein logging  <a href="structprefs__t.html#a17bebb1841d04b6b05951f244b8c0e98">More...</a><br /></td></tr>
 <tr class="separator:a17bebb1841d04b6b05951f244b8c0e98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5149a80ebc141b3c7904a462b9c0713"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprefs__t.html#ac5149a80ebc141b3c7904a462b9c0713">log_fs_sysinfo</a></td></tr>
+<tr class="memdesc:ac5149a80ebc141b3c7904a462b9c0713"><td class="mdescLeft">&#160;</td><td class="mdescRight">true: Systeminformationen werden in einer Datei im Filesystem geloged; false kein logging  <a href="structprefs__t.html#ac5149a80ebc141b3c7904a462b9c0713">More...</a><br /></td></tr>
 <tr class="separator:ac5149a80ebc141b3c7904a462b9c0713"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27713f17ab07c38aae0e3e0b42b267a7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprefs__t.html#a27713f17ab07c38aae0e3e0b42b267a7">log_rf24</a></td></tr>
+<tr class="memdesc:a27713f17ab07c38aae0e3e0b42b267a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">true: RF24-informationen werden geloged; false kein logging  <a href="structprefs__t.html#a27713f17ab07c38aae0e3e0b42b267a7">More...</a><br /></td></tr>
 <tr class="separator:a27713f17ab07c38aae0e3e0b42b267a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adcdb81b3fffe50f743df903fa114abb2"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprefs__t.html#adcdb81b3fffe50f743df903fa114abb2">rf24gw_hub_name</a> [<a class="el" href="config_8h.html#a7b812a3117b75558d2da67f8ca3cf83a">SERVERNAMESIZE</a>]</td></tr>
+<tr class="memdesc:adcdb81b3fffe50f743df903fa114abb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Servername des RF24Hub.  <a href="structprefs__t.html#adcdb81b3fffe50f743df903fa114abb2">More...</a><br /></td></tr>
 <tr class="separator:adcdb81b3fffe50f743df903fa114abb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5940f76dc3326438763fcb024c4ecf32"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprefs__t.html#a5940f76dc3326438763fcb024c4ecf32">rf24gw_hub_port</a></td></tr>
+<tr class="memdesc:a5940f76dc3326438763fcb024c4ecf32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Port für eingehende udp Informationen auf dem Hub Server.  <a href="structprefs__t.html#a5940f76dc3326438763fcb024c4ecf32">More...</a><br /></td></tr>
 <tr class="separator:a5940f76dc3326438763fcb024c4ecf32"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa44f73238ef03014642eea171fd076dc"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprefs__t.html#aa44f73238ef03014642eea171fd076dc">rf24gw_gw_port</a></td></tr>
+<tr class="memdesc:aa44f73238ef03014642eea171fd076dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Port für udp Informationen vom Hub Server auf dem lokalen System.  <a href="structprefs__t.html#aa44f73238ef03014642eea171fd076dc">More...</a><br /></td></tr>
 <tr class="separator:aa44f73238ef03014642eea171fd076dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a616bed7b13613d6e992e6844405e3779"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprefs__t.html#a616bed7b13613d6e992e6844405e3779">rf24gw_gw_no</a></td></tr>
+<tr class="memdesc:a616bed7b13613d6e992e6844405e3779"><td class="mdescLeft">&#160;</td><td class="mdescRight">Die Nummer des Gateways.  <a href="structprefs__t.html#a616bed7b13613d6e992e6844405e3779">More...</a><br /></td></tr>
 <tr class="separator:a616bed7b13613d6e992e6844405e3779"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a037e76ff416f5775bcc1ed13b8967203"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprefs__t.html#a037e76ff416f5775bcc1ed13b8967203">rf24gw_enable</a></td></tr>
+<tr class="memdesc:a037e76ff416f5775bcc1ed13b8967203"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag ob der RF24 Gateway aktiviert ist (=true) oder nicht (=false)  <a href="structprefs__t.html#a037e76ff416f5775bcc1ed13b8967203">More...</a><br /></td></tr>
 <tr class="separator:a037e76ff416f5775bcc1ed13b8967203"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d2e7427a037e3ce675747b6f59112dc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprefs__t.html#a7d2e7427a037e3ce675747b6f59112dc">rf24node_enable</a></td></tr>
-<tr class="separator:a7d2e7427a037e3ce675747b6f59112dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a533d29bd2908707f44ce3e465f5b097a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="config_8h.html#a030de4f033221607739a15cb52508022">NODE_DATTYPE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprefs__t.html#a533d29bd2908707f44ce3e465f5b097a">rf24node_node_id</a></td></tr>
-<tr class="separator:a533d29bd2908707f44ce3e465f5b097a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5af43e543c9b48e4175daf3e930bce1"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprefs__t.html#ac5af43e543c9b48e4175daf3e930bce1">rf24node_val1_channel</a></td></tr>
-<tr class="separator:ac5af43e543c9b48e4175daf3e930bce1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee9ee8a5b67e7bd710dbc80289c3035d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprefs__t.html#aee9ee8a5b67e7bd710dbc80289c3035d">rf24node_val2_enable</a></td></tr>
-<tr class="separator:aee9ee8a5b67e7bd710dbc80289c3035d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0611761e6dff07bad6aa8def636a5281"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprefs__t.html#a0611761e6dff07bad6aa8def636a5281">rf24node_val2_channel</a></td></tr>
-<tr class="separator:a0611761e6dff07bad6aa8def636a5281"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86021d9fe7e98f9a240272667daa50c2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprefs__t.html#a86021d9fe7e98f9a240272667daa50c2">rf24node_val3_enable</a></td></tr>
-<tr class="separator:a86021d9fe7e98f9a240272667daa50c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf101898d1af31bacc7583b669dca39e"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprefs__t.html#adf101898d1af31bacc7583b669dca39e">rf24node_val3_channel</a></td></tr>
-<tr class="separator:adf101898d1af31bacc7583b669dca39e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Data Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Eine Struktur um die Voreinstellungen aufzunehmen und im EEPROM abzulegen. </p>
+</div><h2 class="groupheader">Member Data Documentation</h2>
 <a id="ac5149a80ebc141b3c7904a462b9c0713"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac5149a80ebc141b3c7904a462b9c0713">&#9670;&nbsp;</a></span>log_fs_sysinfo</h2>
 
@@ -128,6 +139,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>true: Systeminformationen werden in einer Datei im Filesystem geloged; false kein logging </p>
 
 </div>
 </div>
@@ -143,6 +156,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>true: MQTT-informationen werden geloged; false kein logging </p>
+
 </div>
 </div>
 <a id="a27713f17ab07c38aae0e3e0b42b267a7"></a>
@@ -156,6 +171,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>true: RF24-informationen werden geloged; false kein logging </p>
 
 </div>
 </div>
@@ -171,6 +188,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>true: Sensor-informationen werden geloged; false kein logging </p>
+
 </div>
 </div>
 <a id="a17bebb1841d04b6b05951f244b8c0e98"></a>
@@ -184,6 +203,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>true: System-informationen werden geloged; false kein logging </p>
 
 </div>
 </div>
@@ -199,6 +220,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>true: WebKomando-informationen werden geloged; false kein logging </p>
+
 </div>
 </div>
 <a id="ac40ccb168cf2861d7e77fac8eb0b13ec"></a>
@@ -213,33 +236,71 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Über die magicno wird bestimmt ob bei einem Softwareupdate die Voreinstellungen überschrieben werden (magigno im Programm und Speicher unterschiedlich) oder ob sie erhalten bleiben (magicno gleich) </p>
+
 </div>
 </div>
-<a id="a2aecd95b1b07ba90083ee860e0c0435e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2aecd95b1b07ba90083ee860e0c0435e">&#9670;&nbsp;</a></span>mqttclient</h2>
+<a id="a03b067cdfa617f9c42a82f962c257f3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03b067cdfa617f9c42a82f962c257f3f">&#9670;&nbsp;</a></span>mqtt_client</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">char prefs_t::mqttclient[<a class="el" href="config_8h.html#a7b812a3117b75558d2da67f8ca3cf83a">SERVERNAMESIZE</a>]</td>
+          <td class="memname">char prefs_t::mqtt_client[<a class="el" href="config_8h.html#a46c4a5cf5d933e39d68023b957d0ec69">TOPIC_PART2_SIZE</a>]</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Der Clientname dieses Nodes. </p>
+
 </div>
 </div>
-<a id="a260bd39fc69ffe4cbbc2c44c4fabe036"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a260bd39fc69ffe4cbbc2c44c4fabe036">&#9670;&nbsp;</a></span>mqttserver</h2>
+<a id="a91b83e88da7a976aaabd018444441d7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91b83e88da7a976aaabd018444441d7c">&#9670;&nbsp;</a></span>mqtt_enable</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">char prefs_t::mqttserver[<a class="el" href="config_8h.html#a7b812a3117b75558d2da67f8ca3cf83a">SERVERNAMESIZE</a>]</td>
+          <td class="memname">bool prefs_t::mqtt_enable</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Flag ob der MQTT Gateway aktiviert ist (=true) oder nicht (=false) </p>
+
+</div>
+</div>
+<a id="a89c9c3cda838c92355c37efb84208223"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89c9c3cda838c92355c37efb84208223">&#9670;&nbsp;</a></span>mqtt_server</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char prefs_t::mqtt_server[<a class="el" href="config_8h.html#a7b812a3117b75558d2da67f8ca3cf83a">SERVERNAMESIZE</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Der Servername des MQTT Servers. </p>
+
+</div>
+</div>
+<a id="ab7a7cf9188ddc96fcc71bd0e7d076f6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7a7cf9188ddc96fcc71bd0e7d076f6d">&#9670;&nbsp;</a></span>mqtt_topicP2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char prefs_t::mqtt_topicP2[<a class="el" href="config_8h.html#a46c4a5cf5d933e39d68023b957d0ec69">TOPIC_PART2_SIZE</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Der mittlere Teil des Topics, idR. identisch mit mqtt_client. </p>
 
 </div>
 </div>
@@ -255,6 +316,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Flag ob der RF24 Gateway aktiviert ist (=true) oder nicht (=false) </p>
+
 </div>
 </div>
 <a id="a616bed7b13613d6e992e6844405e3779"></a>
@@ -268,6 +331,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Die Nummer des Gateways. </p>
 
 </div>
 </div>
@@ -283,6 +348,8 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Port für udp Informationen vom Hub Server auf dem lokalen System. </p>
+
 </div>
 </div>
 <a id="adcdb81b3fffe50f743df903fa114abb2"></a>
@@ -296,6 +363,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Servername des RF24Hub. </p>
 
 </div>
 </div>
@@ -311,103 +380,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="a7d2e7427a037e3ce675747b6f59112dc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7d2e7427a037e3ce675747b6f59112dc">&#9670;&nbsp;</a></span>rf24node_enable</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool prefs_t::rf24node_enable</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a533d29bd2908707f44ce3e465f5b097a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a533d29bd2908707f44ce3e465f5b097a">&#9670;&nbsp;</a></span>rf24node_node_id</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="config_8h.html#a030de4f033221607739a15cb52508022">NODE_DATTYPE</a> prefs_t::rf24node_node_id</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ac5af43e543c9b48e4175daf3e930bce1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac5af43e543c9b48e4175daf3e930bce1">&#9670;&nbsp;</a></span>rf24node_val1_channel</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint8_t prefs_t::rf24node_val1_channel</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a0611761e6dff07bad6aa8def636a5281"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0611761e6dff07bad6aa8def636a5281">&#9670;&nbsp;</a></span>rf24node_val2_channel</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint8_t prefs_t::rf24node_val2_channel</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aee9ee8a5b67e7bd710dbc80289c3035d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aee9ee8a5b67e7bd710dbc80289c3035d">&#9670;&nbsp;</a></span>rf24node_val2_enable</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool prefs_t::rf24node_val2_enable</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="adf101898d1af31bacc7583b669dca39e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adf101898d1af31bacc7583b669dca39e">&#9670;&nbsp;</a></span>rf24node_val3_channel</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint8_t prefs_t::rf24node_val3_channel</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a86021d9fe7e98f9a240272667daa50c2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a86021d9fe7e98f9a240272667daa50c2">&#9670;&nbsp;</a></span>rf24node_val3_enable</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool prefs_t::rf24node_val3_enable</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<p>Port für eingehende udp Informationen auf dem Hub Server. </p>
 
 </div>
 </div>

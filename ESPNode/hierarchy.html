@@ -68,10 +68,8 @@ $(function() {
 <div class="textblock">
 <p><a href="inherits.html">Go to the graphical class hierarchy</a></p>
 This inheritance list is sorted roughly, but not completely, alphabetically:</div><div class="directory">
-<div class="levels">[detail level <span onclick="javascript:toggleLevel(1);">1</span><span onclick="javascript:toggleLevel(2);">2</span><span onclick="javascript:toggleLevel(3);">3</span>]</div><table class="directory">
-<tr id="row_0_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structpayload__t.html" target="_self">payload_t</a></td><td class="desc"></td></tr>
-<tr id="row_1_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structprefs__t.html" target="_self">prefs_t</a></td><td class="desc"></td></tr>
-<tr id="row_2_" class="even"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_2_" class="arrow" onclick="toggleFolder('2_')">&#9660;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_sensor___generic.html" target="_self">Sensor_Generic</a></td><td class="desc">Ein generisches Objekt für einen Sensor. Nicht zum Einbau bestimmt, sondern nur als Vererbungsobjekt.<br  />
+<div class="levels">[detail level <span onclick="javascript:toggleLevel(1);">1</span><span onclick="javascript:toggleLevel(2);">2</span><span onclick="javascript:toggleLevel(3);">3</span><span onclick="javascript:toggleLevel(4);">4</span>]</div><table class="directory">
+<tr id="row_0_" class="even"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_0_" class="arrow" onclick="toggleFolder('0_')">&#9660;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_base___generic.html" target="_self">Base_Generic</a></td><td class="desc">Ein generisches Objekt für einen Sensor. Nicht zum Einbau bestimmt, sondern nur als Vererbungsobjekt.<br  />
  Hier werden Grundfähigkeiten für jeden Sensor oder Switch erstellt.<br  />
  <br  />
  Funktionsfähig sind folgende Funktionen:<br  />
@@ -90,18 +88,28 @@ This inheritance list is sorted roughly, but not completely, alphabetically:</di
  <b>web_create_json</b> Hier wird durch das abgeleitete Objekt das JSON zur Erzeugung des Sensors/Actors auf der Webseite erstellt.<br  />
  <br  />
  </td></tr>
-<tr id="row_2_0_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_sensor__18_b20.html" target="_self">Sensor_18B20</a></td><td class="desc">Ein abgeleitetes Objekt für einen 18B20 Sensor.<br  />
+<tr id="row_0_0_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span id="arr_0_0_" class="arrow" onclick="toggleFolder('0_0_')">&#9660;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_sensor___generic.html" target="_self">Sensor_Generic</a></td><td class="desc">Ein generisches Objekt für einen Sensor. Nicht zum Einbau bestimmt, sondern nur als Vererbungsobjekt.<br  />
+ Hier werden Grundfähigkeiten für jeden Sensor erstellt.<br  />
+ <br  />
+ <br  />
+ </td></tr>
+<tr id="row_0_0_0_" class="even"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_sensor__18_b20.html" target="_self">Sensor_18B20</a></td><td class="desc">Ein abgeleitetes Objekt für einen 18B20 Sensor.<br  />
  Benötigt: OneWire und DallasTemperature als Gerätetreiber.<br  />
  <br  />
  </td></tr>
-<tr id="row_2_1_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_sensor___bosch.html" target="_self">Sensor_Bosch</a></td><td class="desc">Ein abgeleitetes Objekt für einen Bosch Sensor.<br  />
+<tr id="row_0_0_1_"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_sensor___bosch.html" target="_self">Sensor_Bosch</a></td><td class="desc">Ein abgeleitetes Objekt für einen Bosch Sensor.<br  />
  Benötigt: <a href="https://github.com/wilmsn/BMX_sensor">https://github.com/wilmsn/BMX_sensor</a> als Gerätetreiber.<br  />
  Das Objekt kann entweder für 2 Meßwerte (Temperatur und Luftdruck) beim BMP180/BMP280 oder für 3 Meßwerte (+ Luftfeuchte) beim BME280 initialisiert werden.<br  />
  <br  />
  </td></tr>
-<tr id="row_2_2_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_sensor___l_d_r.html" target="_self">Sensor_LDR</a></td><td class="desc">Ein abgeleitetes Objekt um einen LDR auszulesen<br  />
+<tr id="row_0_0_2_" class="even"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_sensor___l_d_r.html" target="_self">Sensor_LDR</a></td><td class="desc">Ein abgeleitetes Objekt um einen LDR auszulesen<br  />
  Achtung: Da der analoge Eingang hier genutzt wird muss die Nutzung der Spannungüberwachung im Hauptprogramm ausgeschaltet werden. Dies geschieht durch **#define ANALOGINPUT** </td></tr>
-<tr id="row_2_3_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span id="arr_2_3_" class="arrow" onclick="toggleFolder('2_3_')">&#9660;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_switch___on_off.html" target="_self">Switch_OnOff</a></td><td class="desc">Ein abgeleitetes Objekt für einen Ein-Aus Schalter.<br  />
+<tr id="row_0_1_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span id="arr_0_1_" class="arrow" onclick="toggleFolder('0_1_')">&#9660;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_switch___generic.html" target="_self">Switch_Generic</a></td><td class="desc">Ein generisches Objekt für einen Sensor. Nicht zum Einbau bestimmt, sondern nur als Vererbungsobjekt.<br  />
+ Hier werden Grundfähigkeiten für jeden Sensor erstellt.<br  />
+ <br  />
+ <br  />
+ </td></tr>
+<tr id="row_0_1_0_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><span id="arr_0_1_0_" class="arrow" onclick="toggleFolder('0_1_0_')">&#9660;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_switch___on_off.html" target="_self">Switch_OnOff</a></td><td class="desc">Ein abgeleitetes Objekt für einen Ein-Aus Schalter.<br  />
  Der Schalter reagiert nur wenn es in der <b>set</b> Funktion mit dem Schlüsselwort aufgerufen wurde das bei der Initialisierung hinterlegt wurde.<br  />
  Folgende Strings als <b>value</b> übergeben schalten <b>aus</b>:<br  />
  <b>0</b> <b>aus</b> <b>Aus</b> <b>off</b> <b>Off</b><br  />
@@ -111,8 +119,13 @@ This inheritance list is sorted roughly, but not completely, alphabetically:</di
  <b>2</b> <b>umschalten</b> <b>Umschalten</b> <b>toggle</b> <b>Toggle</b><br  />
  <br  />
  </td></tr>
-<tr id="row_2_3_0_"><td class="entry"><span style="width:48px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_actor___l_e_d_matrix.html" target="_self">Actor_LEDMatrix</a></td><td class="desc"></td></tr>
-<tr id="row_3_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structudpdata__t.html" target="_self">udpdata_t</a></td><td class="desc"></td></tr>
+<tr id="row_0_1_0_0_"><td class="entry"><span style="width:64px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_actor___l_e_d_matrix.html" target="_self">Actor_LEDMatrix</a></td><td class="desc">Ein abgeleitetes Objekt für eine eine LED Matrix.<br  />
+ Benötigt: <a href="https://github.com/wilmsn/LED_Matrix">https://github.com/wilmsn/LED_Matrix</a> als Gerätetreiber.<br  />
+ <br  />
+ </td></tr>
+<tr id="row_1_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structpayload__t.html" target="_self">payload_t</a></td><td class="desc">Die Datenstruktur des payloads in dem RF24 Netzwerk. Sie wird nur benötigt wenn der RF24Gateway genutzt wird und auch dies nur damit LOginformationen angezeigt werden können </td></tr>
+<tr id="row_2_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structprefs__t.html" target="_self">prefs_t</a></td><td class="desc">Eine Struktur um die Voreinstellungen aufzunehmen und im EEPROM abzulegen </td></tr>
+<tr id="row_3_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structudpdata__t.html" target="_self">udpdata_t</a></td><td class="desc">Die Datenstructur zur Übertragung der Daten zwischen Gateway und Hub Im Prinzig ebtspricht diese Struktur der <a class="el" href="structpayload__t.html" title="Die Datenstruktur des payloads in dem RF24 Netzwerk. Sie wird nur benötigt wenn der RF24Gateway genut...">payload_t</a> Struktur erweitert um ein Feld zur Aufnahme der Gateway_id </td></tr>
 </table>
 </div><!-- directory -->
 </div><!-- contents -->
