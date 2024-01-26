@@ -1,10 +1,10 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$class_base___generic.html" title="Ein generisches Objekt für einen Sensor. Nicht zum Einbau bestimmt, sondern nur als Vererbungsobjekt...." alt="" coords="5,107,116,133"/>
-<area shape="rect" id="node2" href="$class_sensor___generic.html" title="Ein generisches Objekt für einen Sensor. Nicht zum Einbau bestimmt, sondern nur als Vererbungsobjekt...." alt="" coords="164,69,287,96"/>
-<area shape="rect" id="node6" href="$class_switch___generic.html" title="Ein generisches Objekt für einen Sensor. Nicht zum Einbau bestimmt, sondern nur als Vererbungsobjekt...." alt="" coords="164,132,287,159"/>
-<area shape="rect" id="node3" href="$class_sensor__18_b20.html" title="Ein abgeleitetes Objekt für einen 18B20 Sensor. &#160;Benötigt: OneWire und DallasTemperature als Gerätetr..." alt="" coords="335,5,449,32"/>
-<area shape="rect" id="node4" href="$class_sensor___bosch.html" title="Ein abgeleitetes Objekt für einen Bosch Sensor. &#160;Benötigt: https://github.com/wilmsn/BMX_sensor als G..." alt="" coords="336,56,448,83"/>
-<area shape="rect" id="node5" href="$class_sensor___l_d_r.html" title="Ein abgeleitetes Objekt um einen LDR auszulesen &#160;Achtung: Da der analoge Eingang hier genutzt wird mu..." alt="" coords="343,107,441,133"/>
-<area shape="rect" id="node7" href="$class_switch___on_off.html" title="Ein abgeleitetes Objekt für einen Ein&#45;Aus Schalter. &#160;Der Schalter reagiert nur wenn es in der set Fun..." alt="" coords="337,157,447,184"/>
-<area shape="rect" id="node8" href="$class_actor___l_e_d_matrix.html" title="Ein abgeleitetes Objekt für eine eine LED Matrix. &#160;Benötigt: https://github.com/wilmsn/LED_Matrix als..." alt="" coords="497,157,628,184"/>
+<area shape="rect" id="node1" href="$class_base___generic.html" title="Ein generisches Objekt für einen Sensor. Nicht zum Einbau bestimmt, sondern nur als Vererbungsobjekt...." alt="" coords="5,56,116,83"/>
+<area shape="rect" id="node2" href="$class_actor___generic.html" title="Ein generisches Objekt für einen Actor. Nicht zum Einbau bestimmt, sondern nur als Vererbungsobjekt...." alt="" coords="169,19,282,45"/>
+<area shape="rect" id="node5" href="$class_sensor___generic.html" title="Ein generisches Objekt für einen Sensor. Nicht zum Einbau bestimmt, sondern nur als Vererbungsobjekt...." alt="" coords="164,81,287,108"/>
+<area shape="rect" id="node3" href="$class_switch___on_off.html" title="Ein abgeleitetes Objekt für einen Ein&#45;Aus Schalter. &#160;Der Schalter reagiert nur wenn es in der set Fun..." alt="" coords="337,5,447,32"/>
+<area shape="rect" id="node4" href="$class_actor___l_e_d_matrix.html" title="Ein abgeleitetes Objekt für eine eine LED Matrix. &#160;Benötigt: https://github.com/wilmsn/LED_Matrix als..." alt="" coords="497,5,628,32"/>
+<area shape="rect" id="node6" href="$class_sensor__18_b20.html" title="Ein abgeleitetes Objekt für einen 18B20 Sensor. &#160;Benötigt: OneWire und DallasTemperature als Gerätetr..." alt="" coords="335,56,449,83"/>
+<area shape="rect" id="node7" href="$class_sensor___bosch.html" title="Ein abgeleitetes Objekt für einen Bosch Sensor. &#160;Benötigt: https://github.com/wilmsn/BMX_sensor als G..." alt="" coords="336,107,448,133"/>
+<area shape="rect" id="node8" href="$class_sensor___l_d_r.html" title="Ein abgeleitetes Objekt um einen LDR auszulesen &#160;Achtung: Da der analoge Eingang hier genutzt wird mu..." alt="" coords="343,157,441,184"/>
 </map>

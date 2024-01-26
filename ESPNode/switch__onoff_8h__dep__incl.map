@@ -1,6 +1,5 @@
 <map id="/home/norbert/projekte/ESPNode/src/switch_onoff.h" name="/home/norbert/projekte/ESPNode/src/switch_onoff.h">
-<area shape="rect" id="node1" title=" " alt="" coords="147,5,353,47"/>
-<area shape="rect" id="node2" href="$actor__ledmatrix_8h.html" title=" " alt="" coords="13,95,239,136"/>
-<area shape="rect" id="node4" href="$switch__onoff_8cpp.html" title=" " alt="" coords="264,95,484,136"/>
-<area shape="rect" id="node3" href="$actor__ledmatrix_8cpp.html" title=" " alt="" coords="5,184,247,225"/>
+<area shape="rect" id="node1" title=" " alt="" coords="140,5,345,47"/>
+<area shape="rect" id="node2" href="$actor__ledmatrix_8h.html" title=" " alt="" coords="5,95,232,136"/>
+<area shape="rect" id="node3" href="$switch__onoff_8cpp.html" title=" " alt="" coords="257,95,477,136"/>
 </map>
