@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html">home</a></li><li class="navelem"><a class="el" href="dir_e2b89583dd3e2ccb87a3e781f1b2cf3c.html">norbert</a></li><li class="navelem"><a class="el" href="dir_d70675e9df893608174271638fdfea48.html">projekte</a></li><li class="navelem"><a class="el" href="dir_2375302becbe26f0fe3b934c33ed0c60.html">ESPNode</a></li><li class="navelem"><a class="el" href="dir_18bf5b004a41c97496e49e1fff028668.html">src</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -71,39 +71,39 @@ $(function() {
 <div class="contents">
 <a href="sensor__bosch_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef _SENSOR_BOSCH_H_</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define _SENSOR_BOSCH_H_</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//#define DEBUG_SERIAL_MODULE</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="sensor__bosch_8h.html#a6f811d031816f5e38b1c43dd48a744bb">    3</a></span>&#160;<span class="preprocessor">#define DEBUG_SERIAL_MODULE</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;BMX_sensor.h&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="sensor__generic_8h.html">sensor_generic.h</a>&quot;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_sensor___bosch.html">   13</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_sensor___bosch.html">Sensor_Bosch</a> : <span class="keyword">public</span> <a class="code" href="class_sensor___generic.html">Sensor_Generic</a> {</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_sensor___bosch.html#a1e52c17b5cf5cb6c6baa4730cbe6f871">begin</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* html_place, <span class="keyword">const</span> <span class="keywordtype">char</span>* label, <span class="keyword">const</span> <span class="keywordtype">char</span>* mqtt_name,</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;               <span class="keyword">const</span> <span class="keywordtype">char</span>* html_place2, <span class="keyword">const</span> <span class="keywordtype">char</span>* label2, <span class="keyword">const</span> <span class="keywordtype">char</span>* mqtt_name2);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_sensor___bosch.html#a1e52c17b5cf5cb6c6baa4730cbe6f871">begin</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* html_place, <span class="keyword">const</span> <span class="keywordtype">char</span>* label, <span class="keyword">const</span> <span class="keywordtype">char</span>* mqtt_name,</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;               <span class="keyword">const</span> <span class="keywordtype">char</span>* html_place2, <span class="keyword">const</span> <span class="keywordtype">char</span>* label2, <span class="keyword">const</span> <span class="keywordtype">char</span>* mqtt_name2,</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;               <span class="keyword">const</span> <span class="keywordtype">char</span>* html_place3, <span class="keyword">const</span> <span class="keywordtype">char</span>* label3, <span class="keyword">const</span> <span class="keywordtype">char</span>* mqtt_name3);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_sensor___bosch.html#ad3d78bcc0f7c77d694a5a47c7460ae5d">start_measure</a>();</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    String     obj_label2;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    String     obj_html_place2;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    String     obj_mqtt_name2;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    String     obj_label3;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    String     obj_html_place3;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    String     obj_mqtt_name3;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;};</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclass_sensor___bosch_html"><div class="ttname"><a href="class_sensor___bosch.html">Sensor_Bosch</a></div><div class="ttdoc">Ein abgeleitetes Objekt für einen Bosch Sensor.  Benötigt: https://github.com/wilmsn/BMX_sensor als G...</div><div class="ttdef"><b>Definition:</b> sensor_bosch.h:13</div></div>
-<div class="ttc" id="aclass_sensor___bosch_html_a1e52c17b5cf5cb6c6baa4730cbe6f871"><div class="ttname"><a href="class_sensor___bosch.html#a1e52c17b5cf5cb6c6baa4730cbe6f871">Sensor_Bosch::begin</a></div><div class="ttdeci">void begin(const char *html_place, const char *label, const char *mqtt_name, const char *html_place2, const char *label2, const char *mqtt_name2)</div><div class="ttdoc">Initialisierung für 2 Messwerte (inkl. Luftfeuchte)</div><div class="ttdef"><b>Definition:</b> sensor_bosch.cpp:14</div></div>
-<div class="ttc" id="aclass_sensor___bosch_html_ad3d78bcc0f7c77d694a5a47c7460ae5d"><div class="ttname"><a href="class_sensor___bosch.html#ad3d78bcc0f7c77d694a5a47c7460ae5d">Sensor_Bosch::start_measure</a></div><div class="ttdeci">void start_measure()</div><div class="ttdoc">Startet den Bosch Sensor im single Measure Mode. Nach der Erzeugung der Messwerte wird das Changed Fl...</div><div class="ttdef"><b>Definition:</b> sensor_bosch.cpp:59</div></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="sensor__generic_8h.html">sensor_generic.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_sensor___bosch.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_sensor___bosch.html">Sensor_Bosch</a> : <span class="keyword">public</span> <a class="code" href="class_sensor___generic.html">Sensor_Generic</a> {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_sensor___bosch.html#a1e52c17b5cf5cb6c6baa4730cbe6f871">   22</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_sensor___bosch.html#a1e52c17b5cf5cb6c6baa4730cbe6f871">begin</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* html_place, <span class="keyword">const</span> <span class="keywordtype">char</span>* label, <span class="keyword">const</span> <span class="keywordtype">char</span>* mqtt_name,</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;               <span class="keyword">const</span> <span class="keywordtype">char</span>* html_place2, <span class="keyword">const</span> <span class="keywordtype">char</span>* label2, <span class="keyword">const</span> <span class="keywordtype">char</span>* mqtt_name2);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_sensor___bosch.html#ab222b5983072f691df1598d855e8d818">   35</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_sensor___bosch.html#ab222b5983072f691df1598d855e8d818">begin</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* html_place, <span class="keyword">const</span> <span class="keywordtype">char</span>* label, <span class="keyword">const</span> <span class="keywordtype">char</span>* mqtt_name,</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;               <span class="keyword">const</span> <span class="keywordtype">char</span>* html_place2, <span class="keyword">const</span> <span class="keywordtype">char</span>* label2, <span class="keyword">const</span> <span class="keywordtype">char</span>* mqtt_name2,</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;               <span class="keyword">const</span> <span class="keywordtype">char</span>* html_place3, <span class="keyword">const</span> <span class="keywordtype">char</span>* label3, <span class="keyword">const</span> <span class="keywordtype">char</span>* mqtt_name3);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_sensor___bosch.html#ad3d78bcc0f7c77d694a5a47c7460ae5d">   40</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_sensor___bosch.html#ad3d78bcc0f7c77d694a5a47c7460ae5d">start_measure</a>();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    String     obj_label2;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    String     obj_html_place2;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    String     obj_mqtt_name2;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    String     obj_label3;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    String     obj_html_place3;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    String     obj_mqtt_name3;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;};</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclass_sensor___bosch_html"><div class="ttname"><a href="class_sensor___bosch.html">Sensor_Bosch</a></div><div class="ttdoc">Ein abgeleitetes Objekt für einen Bosch Sensor.  Benötigt: https://github.com/wilmsn/BMX_sensor als G...</div><div class="ttdef"><b>Definition:</b> sensor_bosch.h:12</div></div>
+<div class="ttc" id="aclass_sensor___bosch_html_a1e52c17b5cf5cb6c6baa4730cbe6f871"><div class="ttname"><a href="class_sensor___bosch.html#a1e52c17b5cf5cb6c6baa4730cbe6f871">Sensor_Bosch::begin</a></div><div class="ttdeci">void begin(const char *html_place, const char *label, const char *mqtt_name, const char *html_place2, const char *label2, const char *mqtt_name2)</div><div class="ttdoc">Initialisierung für 2 Messwerte (inkl. Luftfeuchte)</div></div>
+<div class="ttc" id="aclass_sensor___bosch_html_ab222b5983072f691df1598d855e8d818"><div class="ttname"><a href="class_sensor___bosch.html#ab222b5983072f691df1598d855e8d818">Sensor_Bosch::begin</a></div><div class="ttdeci">void begin(const char *html_place, const char *label, const char *mqtt_name, const char *html_place2, const char *label2, const char *mqtt_name2, const char *html_place3, const char *label3, const char *mqtt_name3)</div><div class="ttdoc">Initialisierung für 3 Messwerte (inkl. Luftfeuchte)</div></div>
+<div class="ttc" id="aclass_sensor___bosch_html_ad3d78bcc0f7c77d694a5a47c7460ae5d"><div class="ttname"><a href="class_sensor___bosch.html#ad3d78bcc0f7c77d694a5a47c7460ae5d">Sensor_Bosch::start_measure</a></div><div class="ttdeci">void start_measure()</div><div class="ttdoc">Startet den Bosch Sensor im single Measure Mode. Nach der Erzeugung der Messwerte wird das Changed Fl...</div></div>
 <div class="ttc" id="aclass_sensor___generic_html"><div class="ttname"><a href="class_sensor___generic.html">Sensor_Generic</a></div><div class="ttdoc">Ein generisches Objekt für einen Sensor. Nicht zum Einbau bestimmt, sondern nur als Vererbungsobjekt....</div><div class="ttdef"><b>Definition:</b> sensor_generic.h:13</div></div>
 <div class="ttc" id="asensor__generic_8h_html"><div class="ttname"><a href="sensor__generic_8h.html">sensor_generic.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

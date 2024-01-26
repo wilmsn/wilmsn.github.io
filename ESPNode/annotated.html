@@ -67,11 +67,16 @@ $(function() {
 <div class="contents">
 <div class="textblock">Here are the classes, structs, unions and interfaces with brief descriptions:</div><div class="directory">
 <table class="directory">
-<tr id="row_0_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_actor___l_e_d_matrix.html" target="_self">Actor_LEDMatrix</a></td><td class="desc">Ein abgeleitetes Objekt für eine eine LED Matrix.<br  />
+<tr id="row_0_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_actor___generic.html" target="_self">Actor_Generic</a></td><td class="desc">Ein generisches Objekt für einen Actor. Nicht zum Einbau bestimmt, sondern nur als Vererbungsobjekt.<br  />
+ Hier werden Grundfähigkeiten für jeden Actor erstellt.<br  />
+ <br  />
+ <br  />
+ </td></tr>
+<tr id="row_1_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_actor___l_e_d_matrix.html" target="_self">Actor_LEDMatrix</a></td><td class="desc">Ein abgeleitetes Objekt für eine eine LED Matrix.<br  />
  Benötigt: <a href="https://github.com/wilmsn/LED_Matrix">https://github.com/wilmsn/LED_Matrix</a> als Gerätetreiber.<br  />
  <br  />
  </td></tr>
-<tr id="row_1_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_base___generic.html" target="_self">Base_Generic</a></td><td class="desc">Ein generisches Objekt für einen Sensor. Nicht zum Einbau bestimmt, sondern nur als Vererbungsobjekt.<br  />
+<tr id="row_2_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_base___generic.html" target="_self">Base_Generic</a></td><td class="desc">Ein generisches Objekt für einen Sensor. Nicht zum Einbau bestimmt, sondern nur als Vererbungsobjekt.<br  />
  Hier werden Grundfähigkeiten für jeden Sensor oder Switch erstellt.<br  />
  <br  />
  Funktionsfähig sind folgende Funktionen:<br  />
@@ -90,15 +95,15 @@ $(function() {
  <b>web_create_json</b> Hier wird durch das abgeleitete Objekt das JSON zur Erzeugung des Sensors/Actors auf der Webseite erstellt.<br  />
  <br  />
  </td></tr>
-<tr id="row_2_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structpayload__t.html" target="_self">payload_t</a></td><td class="desc">Die Datenstruktur des payloads in dem RF24 Netzwerk. Sie wird nur benötigt wenn der RF24Gateway genutzt wird und auch dies nur damit LOginformationen angezeigt werden können </td></tr>
-<tr id="row_3_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structprefs__t.html" target="_self">prefs_t</a></td><td class="desc">Eine Struktur um die Voreinstellungen aufzunehmen und im EEPROM abzulegen </td></tr>
+<tr id="row_3_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structpayload__t.html" target="_self">payload_t</a></td><td class="desc">Die Datenstruktur des payloads in dem RF24 Netzwerk. Sie wird nur benötigt wenn der RF24Gateway genutzt wird und auch dies nur damit LOginformationen angezeigt werden können </td></tr>
 <tr id="row_4_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_sensor__18_b20.html" target="_self">Sensor_18B20</a></td><td class="desc">Ein abgeleitetes Objekt für einen 18B20 Sensor.<br  />
  Benötigt: OneWire und DallasTemperature als Gerätetreiber.<br  />
  <br  />
  </td></tr>
 <tr id="row_5_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_sensor___bosch.html" target="_self">Sensor_Bosch</a></td><td class="desc">Ein abgeleitetes Objekt für einen Bosch Sensor.<br  />
  Benötigt: <a href="https://github.com/wilmsn/BMX_sensor">https://github.com/wilmsn/BMX_sensor</a> als Gerätetreiber.<br  />
- Das Objekt kann entweder für 2 Meßwerte (Temperatur und Luftdruck) beim BMP180/BMP280 oder für 3 Meßwerte (+ Luftfeuchte) beim BME280 initialisiert werden.<br  />
+ Das Objekt kann entweder für 2 Meßwerte (Temperatur und Luftdruck) beim BMP180/BMP280 <br  />
+oder für 3 Meßwerte (+ Luftfeuchte) beim BME280 initialisiert werden.<br  />
  <br  />
  </td></tr>
 <tr id="row_6_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_sensor___generic.html" target="_self">Sensor_Generic</a></td><td class="desc">Ein generisches Objekt für einen Sensor. Nicht zum Einbau bestimmt, sondern nur als Vererbungsobjekt.<br  />
@@ -108,12 +113,7 @@ $(function() {
  </td></tr>
 <tr id="row_7_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_sensor___l_d_r.html" target="_self">Sensor_LDR</a></td><td class="desc">Ein abgeleitetes Objekt um einen LDR auszulesen<br  />
  Achtung: Da der analoge Eingang hier genutzt wird muss die Nutzung der Spannungüberwachung im Hauptprogramm ausgeschaltet werden. Dies geschieht durch **#define ANALOGINPUT** </td></tr>
-<tr id="row_8_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_switch___generic.html" target="_self">Switch_Generic</a></td><td class="desc">Ein generisches Objekt für einen Sensor. Nicht zum Einbau bestimmt, sondern nur als Vererbungsobjekt.<br  />
- Hier werden Grundfähigkeiten für jeden Sensor erstellt.<br  />
- <br  />
- <br  />
- </td></tr>
-<tr id="row_9_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_switch___on_off.html" target="_self">Switch_OnOff</a></td><td class="desc">Ein abgeleitetes Objekt für einen Ein-Aus Schalter.<br  />
+<tr id="row_8_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="class_switch___on_off.html" target="_self">Switch_OnOff</a></td><td class="desc">Ein abgeleitetes Objekt für einen Ein-Aus Schalter.<br  />
  Der Schalter reagiert nur wenn es in der <b>set</b> Funktion mit dem Schlüsselwort aufgerufen wurde das bei der Initialisierung hinterlegt wurde.<br  />
  Folgende Strings als <b>value</b> übergeben schalten <b>aus</b>:<br  />
  <b>0</b> <b>aus</b> <b>Aus</b> <b>off</b> <b>Off</b><br  />
@@ -123,7 +123,7 @@ $(function() {
  <b>2</b> <b>umschalten</b> <b>Umschalten</b> <b>toggle</b> <b>Toggle</b><br  />
  <br  />
  </td></tr>
-<tr id="row_10_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structudpdata__t.html" target="_self">udpdata_t</a></td><td class="desc">Die Datenstructur zur Übertragung der Daten zwischen Gateway und Hub Im Prinzig ebtspricht diese Struktur der <a class="el" href="structpayload__t.html" title="Die Datenstruktur des payloads in dem RF24 Netzwerk. Sie wird nur benötigt wenn der RF24Gateway genut...">payload_t</a> Struktur erweitert um ein Feld zur Aufnahme der Gateway_id </td></tr>
+<tr id="row_9_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><span class="icona"><span class="icon">C</span></span><a class="el" href="structudpdata__t.html" target="_self">udpdata_t</a></td><td class="desc">Die Datenstructur zur Übertragung der Daten zwischen Gateway und Hub Im Prinzig ebtspricht diese Struktur der <a class="el" href="structpayload__t.html" title="Die Datenstruktur des payloads in dem RF24 Netzwerk. Sie wird nur benötigt wenn der RF24Gateway genut...">payload_t</a> Struktur erweitert um ein Feld zur Aufnahme der Gateway_id </td></tr>
 </table>
 </div><!-- directory -->
 </div><!-- contents -->

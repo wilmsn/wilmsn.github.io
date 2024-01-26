@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html">home</a></li><li class="navelem"><a class="el" href="dir_e2b89583dd3e2ccb87a3e781f1b2cf3c.html">norbert</a></li><li class="navelem"><a class="el" href="dir_d70675e9df893608174271638fdfea48.html">projekte</a></li><li class="navelem"><a class="el" href="dir_2375302becbe26f0fe3b934c33ed0c60.html">ESPNode</a></li><li class="navelem"><a class="el" href="dir_18bf5b004a41c97496e49e1fff028668.html">src</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -72,7 +72,14 @@ $(function() {
 <div class="title">config.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><div class="dynheader">
+<div class="textblock"><code>#include &lt;Arduino.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="_node__settings_8h_source.html">Node_settings.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for config.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="config_8h__incl.png" border="0" usemap="#a_2home_2norbert_2projekte_2_e_s_p_node_2src_2config_8h" alt=""/></div>
+</div>
+</div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="config_8h__dep__incl.png" border="0" usemap="#a_2home_2norbert_2projekte_2_e_s_p_node_2src_2config_8hdep" alt=""/></div>
@@ -96,11 +103,15 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a1bff45248ebb4c5fa8e2301f5ebc4a9a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a1bff45248ebb4c5fa8e2301f5ebc4a9a">NODE_FLUR</a></td></tr>
-<tr class="memdesc:a1bff45248ebb4c5fa8e2301f5ebc4a9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">In der Datei "config.h" wird: 1) der zu erzeugende Node ausgewählt 2) grundlegende Konfigurationen festgelegt.  <a href="config_8h.html#a1bff45248ebb4c5fa8e2301f5ebc4a9a">More...</a><br /></td></tr>
-<tr class="separator:a1bff45248ebb4c5fa8e2301f5ebc4a9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c6b0e0bdbb8d14a494a629fdf871511"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a1c6b0e0bdbb8d14a494a629fdf871511">SWVERSION</a>&#160;&#160;&#160;&quot;0.992&quot;</td></tr>
+<tr class="memitem:a63f3993a89ff5bcffb85fc2c5fa16fb6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a63f3993a89ff5bcffb85fc2c5fa16fb6">ESP32SIMPLE</a></td></tr>
+<tr class="memdesc:a63f3993a89ff5bcffb85fc2c5fa16fb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">In der Datei "config.h" wird: 1) der zu erzeugende Node ausgewählt 2) grundlegende Konfigurationen festgelegt.  <a href="config_8h.html#a63f3993a89ff5bcffb85fc2c5fa16fb6">More...</a><br /></td></tr>
+<tr class="separator:a63f3993a89ff5bcffb85fc2c5fa16fb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c6b0e0bdbb8d14a494a629fdf871511"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a1c6b0e0bdbb8d14a494a629fdf871511">SWVERSION</a>&#160;&#160;&#160;&quot;0.997&quot;</td></tr>
 <tr class="separator:a1c6b0e0bdbb8d14a494a629fdf871511"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a751e3f85cd240e89d390d18996089cd0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a751e3f85cd240e89d390d18996089cd0">NTP_SERVER</a>&#160;&#160;&#160;&quot;de.pool.ntp.org&quot;</td></tr>
+<tr class="separator:a751e3f85cd240e89d390d18996089cd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72adf0fcd77d9e3dd17e2e5a5c90397c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a72adf0fcd77d9e3dd17e2e5a5c90397c">TZ_INFO</a>&#160;&#160;&#160;&quot;CET-1CEST-2,M3.5.0/02:00:00,M10.5.0/03:00:00&quot;</td></tr>
+<tr class="separator:a72adf0fcd77d9e3dd17e2e5a5c90397c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a977bd2592e99309a86e7034189e9e62d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a977bd2592e99309a86e7034189e9e62d">MQTT_SERVER</a>&#160;&#160;&#160;&quot;rpi1.fritz.box&quot;</td></tr>
 <tr class="separator:a977bd2592e99309a86e7034189e9e62d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af129f59ba18b6c8180cc0a818705921c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#af129f59ba18b6c8180cc0a818705921c">RF24GW_HUB_SERVER</a>&#160;&#160;&#160;&quot;rpi1.fritz.box&quot;</td></tr>
@@ -109,40 +120,51 @@ Macros</h2></td></tr>
 <tr class="separator:a41721e9fbc38e106158b1422408aa39d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a21752b1132294611fcae3df493cbf52f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a21752b1132294611fcae3df493cbf52f">RF24GW_GW_UDP_PORTNO</a>&#160;&#160;&#160;7003</td></tr>
 <tr class="separator:a21752b1132294611fcae3df493cbf52f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a679703aa051c503f2f50f2e75d32e321"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a679703aa051c503f2f50f2e75d32e321">RF24_RADIO_CE_PIN</a>&#160;&#160;&#160;15</td></tr>
-<tr class="separator:a679703aa051c503f2f50f2e75d32e321"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52e830042b458ebc97c2718f253d2617"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a52e830042b458ebc97c2718f253d2617">RF24_RADIO_CSN_PIN</a>&#160;&#160;&#160;16</td></tr>
-<tr class="separator:a52e830042b458ebc97c2718f253d2617"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a79c4f3ace1ef49486708487f8c2ecd29"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a79c4f3ace1ef49486708487f8c2ecd29">RF24_CHANNEL</a>&#160;&#160;&#160;92</td></tr>
-<tr class="memdesc:a79c4f3ace1ef49486708487f8c2ecd29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Der verwendete RF24 Funkkanal.  <a href="config_8h.html#a79c4f3ace1ef49486708487f8c2ecd29">More...</a><br /></td></tr>
-<tr class="separator:a79c4f3ace1ef49486708487f8c2ecd29"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a81650373c02155ba2adab775a611d9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a7a81650373c02155ba2adab775a611d9">RF24_SPEED</a>&#160;&#160;&#160;RF24_250KBPS</td></tr>
-<tr class="memdesc:a7a81650373c02155ba2adab775a611d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Die Übertragungsgeschwindigkeit.  <a href="config_8h.html#a7a81650373c02155ba2adab775a611d9">More...</a><br /></td></tr>
-<tr class="separator:a7a81650373c02155ba2adab775a611d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08e8ecf2939d12dcc84a8f389762ebd2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a08e8ecf2939d12dcc84a8f389762ebd2">MAGICNO</a>&#160;&#160;&#160;657</td></tr>
-<tr class="separator:a08e8ecf2939d12dcc84a8f389762ebd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad793c3625f729e5f4f8c7bfdb6536d83"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#ad793c3625f729e5f4f8c7bfdb6536d83">AP_SERVICE_TIME</a>&#160;&#160;&#160;300000</td></tr>
+<tr class="separator:ad793c3625f729e5f4f8c7bfdb6536d83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82976b4cd240bba493f2ae1be710351d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a82976b4cd240bba493f2ae1be710351d">LOG_WEB</a>&#160;&#160;&#160;false</td></tr>
+<tr class="separator:a82976b4cd240bba493f2ae1be710351d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76447b0968a131d6715d355e9f5b3f76"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a76447b0968a131d6715d355e9f5b3f76">LOG_SENSOR</a>&#160;&#160;&#160;false</td></tr>
+<tr class="separator:a76447b0968a131d6715d355e9f5b3f76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab560156b26843bf19b329edfc9e01a14"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#ab560156b26843bf19b329edfc9e01a14">LOG_MQTT</a>&#160;&#160;&#160;false</td></tr>
+<tr class="separator:ab560156b26843bf19b329edfc9e01a14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ac2bf0e0689b88037503a7cd4fd513b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a9ac2bf0e0689b88037503a7cd4fd513b">LOG_RF24</a>&#160;&#160;&#160;false</td></tr>
+<tr class="separator:a9ac2bf0e0689b88037503a7cd4fd513b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab62af997ebb13f48b08850fd761d67aa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#ab62af997ebb13f48b08850fd761d67aa">LOG_CRITICAL</a>&#160;&#160;&#160;false</td></tr>
+<tr class="separator:ab62af997ebb13f48b08850fd761d67aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d75ac8aba80439ca9a30bdeba9da75e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a0d75ac8aba80439ca9a30bdeba9da75e">TOPIC_PART1_SIZE</a>&#160;&#160;&#160;5</td></tr>
+<tr class="memdesc:a0d75ac8aba80439ca9a30bdeba9da75e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Settings for mqtt topic Der Part1 des MQTT Topics nimmt nur einen der 3 vordefinierten Werte auf. Deshalb sind hier 5 Zeichen hinreichend.  <a href="config_8h.html#a0d75ac8aba80439ca9a30bdeba9da75e">More...</a><br /></td></tr>
+<tr class="separator:a0d75ac8aba80439ca9a30bdeba9da75e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a85e066b9ac968eab840d5a2a061ce0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a0a85e066b9ac968eab840d5a2a061ce0">MQTT_STATUS</a>&#160;&#160;&#160;&quot;stat&quot;</td></tr>
 <tr class="separator:a0a85e066b9ac968eab840d5a2a061ce0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a99b56b73ccdd039944554171cbe1d2af"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a99b56b73ccdd039944554171cbe1d2af">MQTT_TELEMETRIE</a>&#160;&#160;&#160;&quot;tele&quot;</td></tr>
 <tr class="separator:a99b56b73ccdd039944554171cbe1d2af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaed3d35fb6d08524b23d9cf6b3716c92"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#aaed3d35fb6d08524b23d9cf6b3716c92">MQTT_COMMAND</a>&#160;&#160;&#160;&quot;cmnd&quot;</td></tr>
 <tr class="separator:aaed3d35fb6d08524b23d9cf6b3716c92"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d75ac8aba80439ca9a30bdeba9da75e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a0d75ac8aba80439ca9a30bdeba9da75e">TOPIC_PART1_SIZE</a>&#160;&#160;&#160;5</td></tr>
-<tr class="separator:a0d75ac8aba80439ca9a30bdeba9da75e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46c4a5cf5d933e39d68023b957d0ec69"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a46c4a5cf5d933e39d68023b957d0ec69">TOPIC_PART2_SIZE</a>&#160;&#160;&#160;30</td></tr>
 <tr class="separator:a46c4a5cf5d933e39d68023b957d0ec69"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d333b32d8eea189085d9ea31ecb6919"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a2d333b32d8eea189085d9ea31ecb6919">TOPIC_PART3_SIZE</a>&#160;&#160;&#160;10</td></tr>
 <tr class="separator:a2d333b32d8eea189085d9ea31ecb6919"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77b8f1f7489ef61a8df24f32e6b30559"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a77b8f1f7489ef61a8df24f32e6b30559">MQTT_QOS</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:a77b8f1f7489ef61a8df24f32e6b30559"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4cf6ef6d2c406890de1d3eb5c1c1cd4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#ab4cf6ef6d2c406890de1d3eb5c1c1cd4">MQTT_WILLRETAIN</a>&#160;&#160;&#160;true</td></tr>
+<tr class="separator:ab4cf6ef6d2c406890de1d3eb5c1c1cd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6659d57a08b7ed7d23133d6b0a7f0ecb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a6659d57a08b7ed7d23133d6b0a7f0ecb">STATINTERVAL</a>&#160;&#160;&#160;300</td></tr>
 <tr class="separator:a6659d57a08b7ed7d23133d6b0a7f0ecb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ed3fd0bb752da947d6336b2451db6d9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a5ed3fd0bb752da947d6336b2451db6d9">MESSINTERVAL</a>&#160;&#160;&#160;1</td></tr>
 <tr class="separator:a5ed3fd0bb752da947d6336b2451db6d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54c3dbc872e633ba5a80ba8608d7e5f7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a54c3dbc872e633ba5a80ba8608d7e5f7">TELEINTERVAL</a>&#160;&#160;&#160;1200</td></tr>
 <tr class="separator:a54c3dbc872e633ba5a80ba8608d7e5f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a71866a530c7b08dbd92afbe1cff178c5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a71866a530c7b08dbd92afbe1cff178c5">DEBUGFILE</a>&#160;&#160;&#160;&quot;/logfile.txt&quot;</td></tr>
+<tr class="memitem:aa3266d12a3d05f05b2e559599e039edd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#aa3266d12a3d05f05b2e559599e039edd">LOOP_TIME_ALARM</a>&#160;&#160;&#160;1000</td></tr>
+<tr class="separator:aa3266d12a3d05f05b2e559599e039edd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71866a530c7b08dbd92afbe1cff178c5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a71866a530c7b08dbd92afbe1cff178c5">DEBUGFILE</a>&#160;&#160;&#160;&quot;/debugfile.txt&quot;</td></tr>
 <tr class="separator:a71866a530c7b08dbd92afbe1cff178c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b812a3117b75558d2da67f8ca3cf83a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a7b812a3117b75558d2da67f8ca3cf83a">SERVERNAMESIZE</a>&#160;&#160;&#160;30</td></tr>
-<tr class="separator:a7b812a3117b75558d2da67f8ca3cf83a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a679703aa051c503f2f50f2e75d32e321"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a679703aa051c503f2f50f2e75d32e321">RF24_RADIO_CE_PIN</a>&#160;&#160;&#160;15</td></tr>
+<tr class="memdesc:a679703aa051c503f2f50f2e75d32e321"><td class="mdescLeft">&#160;</td><td class="mdescRight">Anschlusspin für den CE Pin des Funkmodules.  <a href="config_8h.html#a679703aa051c503f2f50f2e75d32e321">More...</a><br /></td></tr>
+<tr class="separator:a679703aa051c503f2f50f2e75d32e321"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52e830042b458ebc97c2718f253d2617"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a52e830042b458ebc97c2718f253d2617">RF24_RADIO_CSN_PIN</a>&#160;&#160;&#160;16</td></tr>
+<tr class="memdesc:a52e830042b458ebc97c2718f253d2617"><td class="mdescLeft">&#160;</td><td class="mdescRight">Anschlusspin für den CSN Pin des Funkmodules.  <a href="config_8h.html#a52e830042b458ebc97c2718f253d2617">More...</a><br /></td></tr>
+<tr class="separator:a52e830042b458ebc97c2718f253d2617"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a79c4f3ace1ef49486708487f8c2ecd29"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="config_8h.html#a79c4f3ace1ef49486708487f8c2ecd29">RF24_CHANNEL</a>&#160;&#160;&#160;92</td></tr>
 <tr class="memdesc:a79c4f3ace1ef49486708487f8c2ecd29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Der verwendete RF24 Funkkanal.  <a href="config_8h.html#a79c4f3ace1ef49486708487f8c2ecd29">More...</a><br /></td></tr>
 <tr class="separator:a79c4f3ace1ef49486708487f8c2ecd29"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -163,6 +185,20 @@ Macros</h2></td></tr>
 <tr class="separator:ac284fce722a0be7bec73e511dc3f2bbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ad793c3625f729e5f4f8c7bfdb6536d83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad793c3625f729e5f4f8c7bfdb6536d83">&#9670;&nbsp;</a></span>AP_SERVICE_TIME</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AP_SERVICE_TIME&#160;&#160;&#160;300000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a71866a530c7b08dbd92afbe1cff178c5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a71866a530c7b08dbd92afbe1cff178c5">&#9670;&nbsp;</a></span>DEBUGFILE</h2>
 
@@ -170,24 +206,111 @@ Macros</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define DEBUGFILE&#160;&#160;&#160;&quot;/logfile.txt&quot;</td>
+          <td class="memname">#define DEBUGFILE&#160;&#160;&#160;&quot;/debugfile.txt&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a08e8ecf2939d12dcc84a8f389762ebd2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a08e8ecf2939d12dcc84a8f389762ebd2">&#9670;&nbsp;</a></span>MAGICNO</h2>
+<a id="a63f3993a89ff5bcffb85fc2c5fa16fb6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63f3993a89ff5bcffb85fc2c5fa16fb6">&#9670;&nbsp;</a></span>ESP32SIMPLE</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define MAGICNO&#160;&#160;&#160;657</td>
+          <td class="memname">#define ESP32SIMPLE</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>In der Datei "config.h" wird: 1) der zu erzeugende Node ausgewählt 2) grundlegende Konfigurationen festgelegt. </p>
+
+</div>
+</div>
+<a id="ab62af997ebb13f48b08850fd761d67aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab62af997ebb13f48b08850fd761d67aa">&#9670;&nbsp;</a></span>LOG_CRITICAL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LOG_CRITICAL&#160;&#160;&#160;false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab560156b26843bf19b329edfc9e01a14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab560156b26843bf19b329edfc9e01a14">&#9670;&nbsp;</a></span>LOG_MQTT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LOG_MQTT&#160;&#160;&#160;false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9ac2bf0e0689b88037503a7cd4fd513b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ac2bf0e0689b88037503a7cd4fd513b">&#9670;&nbsp;</a></span>LOG_RF24</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LOG_RF24&#160;&#160;&#160;false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a76447b0968a131d6715d355e9f5b3f76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76447b0968a131d6715d355e9f5b3f76">&#9670;&nbsp;</a></span>LOG_SENSOR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LOG_SENSOR&#160;&#160;&#160;false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a82976b4cd240bba493f2ae1be710351d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82976b4cd240bba493f2ae1be710351d">&#9670;&nbsp;</a></span>LOG_WEB</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LOG_WEB&#160;&#160;&#160;false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa3266d12a3d05f05b2e559599e039edd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3266d12a3d05f05b2e559599e039edd">&#9670;&nbsp;</a></span>LOOP_TIME_ALARM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LOOP_TIME_ALARM&#160;&#160;&#160;1000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Loop Time Alarm Definiert das Zeitintervall (in Millisekunden) für einen Loop Durchgang das nicht überschritten werden sollte. Bei Überschreitung erfolgt ein Eintrag in die Datei Debugfile.txt (falls aktiviert) </p>
 
 </div>
 </div>
@@ -214,6 +337,20 @@ Macros</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">#define MQTT_COMMAND&#160;&#160;&#160;&quot;cmnd&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a77b8f1f7489ef61a8df24f32e6b30559"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77b8f1f7489ef61a8df24f32e6b30559">&#9670;&nbsp;</a></span>MQTT_QOS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MQTT_QOS&#160;&#160;&#160;0</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -262,6 +399,20 @@ Macros</h2></td></tr>
 
 </div>
 </div>
+<a id="ab4cf6ef6d2c406890de1d3eb5c1c1cd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4cf6ef6d2c406890de1d3eb5c1c1cd4">&#9670;&nbsp;</a></span>MQTT_WILLRETAIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MQTT_WILLRETAIN&#160;&#160;&#160;true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a030de4f033221607739a15cb52508022"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a030de4f033221607739a15cb52508022">&#9670;&nbsp;</a></span>NODE_DATTYPE</h2>
 
@@ -278,19 +429,17 @@ Macros</h2></td></tr>
 
 </div>
 </div>
-<a id="a1bff45248ebb4c5fa8e2301f5ebc4a9a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1bff45248ebb4c5fa8e2301f5ebc4a9a">&#9670;&nbsp;</a></span>NODE_FLUR</h2>
+<a id="a751e3f85cd240e89d390d18996089cd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a751e3f85cd240e89d390d18996089cd0">&#9670;&nbsp;</a></span>NTP_SERVER</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define NODE_FLUR</td>
+          <td class="memname">#define NTP_SERVER&#160;&#160;&#160;&quot;de.pool.ntp.org&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>In der Datei "config.h" wird: 1) der zu erzeugende Node ausgewählt 2) grundlegende Konfigurationen festgelegt. </p>
 
 </div>
 </div>
@@ -311,23 +460,7 @@ Macros</h2></td></tr>
 </div>
 </div>
 <a id="a79c4f3ace1ef49486708487f8c2ecd29"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a79c4f3ace1ef49486708487f8c2ecd29">&#9670;&nbsp;</a></span>RF24_CHANNEL <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define RF24_CHANNEL&#160;&#160;&#160;92</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Der verwendete RF24 Funkkanal. </p>
-
-</div>
-</div>
-<a id="a79c4f3ace1ef49486708487f8c2ecd29"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a79c4f3ace1ef49486708487f8c2ecd29">&#9670;&nbsp;</a></span>RF24_CHANNEL <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a79c4f3ace1ef49486708487f8c2ecd29">&#9670;&nbsp;</a></span>RF24_CHANNEL</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -386,6 +519,8 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Anschlusspin für den CE Pin des Funkmodules. </p>
+
 </div>
 </div>
 <a id="a52e830042b458ebc97c2718f253d2617"></a>
@@ -400,26 +535,12 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="a7a81650373c02155ba2adab775a611d9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7a81650373c02155ba2adab775a611d9">&#9670;&nbsp;</a></span>RF24_SPEED <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define RF24_SPEED&#160;&#160;&#160;RF24_250KBPS</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Die Übertragungsgeschwindigkeit. </p>
+<p>Anschlusspin für den CSN Pin des Funkmodules. </p>
 
 </div>
 </div>
 <a id="a7a81650373c02155ba2adab775a611d9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7a81650373c02155ba2adab775a611d9">&#9670;&nbsp;</a></span>RF24_SPEED <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a81650373c02155ba2adab775a611d9">&#9670;&nbsp;</a></span>RF24_SPEED</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -476,20 +597,6 @@ Macros</h2></td></tr>
 
 </div>
 </div>
-<a id="a7b812a3117b75558d2da67f8ca3cf83a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7b812a3117b75558d2da67f8ca3cf83a">&#9670;&nbsp;</a></span>SERVERNAMESIZE</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define SERVERNAMESIZE&#160;&#160;&#160;30</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a6659d57a08b7ed7d23133d6b0a7f0ecb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6659d57a08b7ed7d23133d6b0a7f0ecb">&#9670;&nbsp;</a></span>STATINTERVAL</h2>
 
@@ -512,7 +619,7 @@ Macros</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define SWVERSION&#160;&#160;&#160;&quot;0.992&quot;</td>
+          <td class="memname">#define SWVERSION&#160;&#160;&#160;&quot;0.997&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -546,6 +653,8 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Settings for mqtt topic Der Part1 des MQTT Topics nimmt nur einen der 3 vordefinierten Werte auf. Deshalb sind hier 5 Zeichen hinreichend. </p>
+
 </div>
 </div>
 <a id="a46c4a5cf5d933e39d68023b957d0ec69"></a>
@@ -570,6 +679,20 @@ Macros</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">#define TOPIC_PART3_SIZE&#160;&#160;&#160;10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a72adf0fcd77d9e3dd17e2e5a5c90397c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72adf0fcd77d9e3dd17e2e5a5c90397c">&#9670;&nbsp;</a></span>TZ_INFO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TZ_INFO&#160;&#160;&#160;&quot;CET-1CEST-2,M3.5.0/02:00:00,M10.5.0/03:00:00&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">

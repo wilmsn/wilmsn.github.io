@@ -1,0 +1,13 @@
+digraph "Actor_Generic"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="Actor_Generic",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Ein generisches Objekt für einen Actor. Nicht zum Einbau bestimmt, sondern nur als Vererbungsobjekt...."];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Base_Generic",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_base___generic.html",tooltip="Ein generisches Objekt für einen Sensor. Nicht zum Einbau bestimmt, sondern nur als Vererbungsobjekt...."];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Switch_OnOff",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_switch___on_off.html",tooltip="Ein abgeleitetes Objekt für einen Ein-Aus Schalter.  Der Schalter reagiert nur wenn es in der set Fun..."];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Actor_LEDMatrix",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_actor___l_e_d_matrix.html",tooltip="Ein abgeleitetes Objekt für eine eine LED Matrix.  Benötigt: https://github.com/wilmsn/LED_Matrix als..."];
+}

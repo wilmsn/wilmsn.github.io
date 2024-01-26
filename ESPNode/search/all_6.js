@@ -1,10 +1,9 @@
 var searchData=
 [
-  ['get_5fslider_5fval_25',['get_slider_val',['../class_switch___on_off.html#a93d6348e4156daed87374234bdf8d667',1,'Switch_OnOff']]],
-  ['get_5fswitch_5fval_26',['get_switch_val',['../class_switch___on_off.html#ad2df0ea2e36cb06e96de6b8de33dabe1',1,'Switch_OnOff']]],
-  ['getmatrixfb_27',['getMatrixFB',['../class_actor___l_e_d_matrix.html#a70e3a2c85056151a2b6e9333c76b501c',1,'Actor_LEDMatrix']]],
-  ['getntptime_28',['getNTPtime',['../main_8cpp.html#a842468116f22581693ff26314ac776c5',1,'getNTPtime(long unsigned int sec):&#160;main.cpp'],['../main_8h.html#a842468116f22581693ff26314ac776c5',1,'getNTPtime(long unsigned int sec):&#160;main.cpp']]],
-  ['getresetreason_29',['getResetReason',['../main_8h.html#afa73ae560fb6d0382204c47ab715bfce',1,'main.h']]],
-  ['getvcc_30',['getVcc',['../main_8cpp.html#a29dba412d2f02d9ffe984132d584ee3a',1,'getVcc(String &amp;json):&#160;main.cpp'],['../main_8h.html#a29dba412d2f02d9ffe984132d584ee3a',1,'getVcc(String &amp;json):&#160;main.cpp']]],
-  ['gw_5fno_31',['gw_no',['../structudpdata__t.html#a01bf50b0c47eadbef0e1bc814b75630a',1,'udpdata_t']]]
+  ['handlewebsocketmessage_53',['handleWebSocketMessage',['../webserver_8cpp.html#a0be75b75b82f96e18d5c695059a67a63',1,'handleWebSocketMessage(void *arg, uint8_t *data, size_t len):&#160;webserver.cpp'],['../webserver_8h.html#a0be75b75b82f96e18d5c695059a67a63',1,'handleWebSocketMessage(void *arg, uint8_t *data, size_t len):&#160;webserver.cpp']]],
+  ['heartbeatno_54',['heartbeatno',['../structpayload__t.html#a6097a5427f09fe70856fb44f916da240',1,'payload_t']]],
+  ['html_5fcreate_5fjson_5fpart_55',['html_create_json_part',['../class_actor___l_e_d_matrix.html#a3463a03f0f89281cfe0d4f6074e01907',1,'Actor_LEDMatrix::html_create_json_part()'],['../class_base___generic.html#a9239b52ee9066b623e9da9c2b6fd0138',1,'Base_Generic::html_create_json_part()'],['../class_switch___on_off.html#a874aa4b7b706dfc77b72d7d24adf0b70',1,'Switch_OnOff::html_create_json_part()']]],
+  ['html_5fjson_56',['html_json',['../common_8h.html#aba630d94d296afc022dce35602321c15',1,'html_json():&#160;main.h'],['../main_8h.html#aba630d94d296afc022dce35602321c15',1,'html_json():&#160;main.h']]],
+  ['html_5fstat_5fjson_57',['html_stat_json',['../class_base___generic.html#a9f916fcd98475e89c1f8908612566d35',1,'Base_Generic']]],
+  ['httpserver_58',['httpServer',['../webserver_8h.html#a95b2f5915497a4d5134f364c78e2b773',1,'webserver.h']]]
 ];

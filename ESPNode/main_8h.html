@@ -61,35 +61,19 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2.html">home</a></li><li class="navelem"><a class="el" href="dir_e2b89583dd3e2ccb87a3e781f1b2cf3c.html">norbert</a></li><li class="navelem"><a class="el" href="dir_d70675e9df893608174271638fdfea48.html">projekte</a></li><li class="navelem"><a class="el" href="dir_2375302becbe26f0fe3b934c33ed0c60.html">ESPNode</a></li><li class="navelem"><a class="el" href="dir_18bf5b004a41c97496e49e1fff028668.html">src</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">main.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;Arduino.h&gt;</code><br />
-<code>#include &lt;stdlib.h&gt;</code><br />
-<code>#include &lt;string.h&gt;</code><br />
-<code>#include &lt;stdint.h&gt;</code><br />
-<code>#include &lt;ESP8266WiFi.h&gt;</code><br />
-<code>#include &quot;ESPAsyncTCP.h&quot;</code><br />
-<code>#include &lt;LittleFS.h&gt;</code><br />
-<code>#include &lt;WiFiUdp.h&gt;</code><br />
-<code>#include &lt;time.h&gt;</code><br />
-<code>#include &lt;ESPAsyncWebServer.h&gt;</code><br />
-<code>#include &lt;Uptime.h&gt;</code><br />
-<code>#include &quot;<a class="el" href="config_8h_source.html">config.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="_node__settings_8h_source.html">Node_settings.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="common_8h_source.html">common.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="secrets_8h_source.html">secrets.h</a>&quot;</code><br />
-<code>#include &lt;PubSubClient.h&gt;</code><br />
-<code>#include &lt;RF24.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for main.h:</div>
 <div class="dyncontent">
@@ -126,115 +110,37 @@ This graph shows which files directly or indirectly include this file:</div>
 </div>
 <p><a href="main_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structprefs__t.html">prefs_t</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Eine Struktur um die Voreinstellungen aufzunehmen und im EEPROM abzulegen.  <a href="structprefs__t.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
-Enumerations</h2></td></tr>
-<tr class="memitem:a5cae2fb7fec0dd9e63cf2d755642cd9d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#a5cae2fb7fec0dd9e63cf2d755642cd9d">log_t</a> { <br />
-&#160;&#160;<a class="el" href="main_8h.html#a5cae2fb7fec0dd9e63cf2d755642cd9dac485f57511b95cf2bcc7a998db1a3776">log_rf24</a> = 0
-, <a class="el" href="main_8h.html#a5cae2fb7fec0dd9e63cf2d755642cd9da4ca727b87ed47043075ad233f0fe337d">log_sys</a>
-, <a class="el" href="main_8h.html#a5cae2fb7fec0dd9e63cf2d755642cd9da3ba073e468b71202f1fd7f6a1ee909e9">log_mqtt</a>
-, <a class="el" href="main_8h.html#a5cae2fb7fec0dd9e63cf2d755642cd9da361e3204c071b89506e3d751585ed344">log_sens</a>
-, <br />
-&#160;&#160;<a class="el" href="main_8h.html#a5cae2fb7fec0dd9e63cf2d755642cd9daae18f0225d5b003dc8b16204dc27b207">log_web</a>
-, <a class="el" href="main_8h.html#a5cae2fb7fec0dd9e63cf2d755642cd9da6505034df32bb48fb0b1ed32ee980c2b">log_critical</a>
-<br />
- }</td></tr>
-<tr class="memdesc:a5cae2fb7fec0dd9e63cf2d755642cd9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ein emum für den Logtype. Dieser wird bei write2log übergeben und dort gegen die Voreinstellungen geprüft.  <a href="main_8h.html#a5cae2fb7fec0dd9e63cf2d755642cd9d">More...</a><br /></td></tr>
-<tr class="separator:a5cae2fb7fec0dd9e63cf2d755642cd9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ad4407547625c19c85b1f3abd751f1e83"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#ad4407547625c19c85b1f3abd751f1e83">ADC_MODE</a> (ADC_VCC)</td></tr>
 <tr class="separator:ad4407547625c19c85b1f3abd751f1e83"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a95b2f5915497a4d5134f364c78e2b773"><td class="memItemLeft" align="right" valign="top">AsyncWebServer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#a95b2f5915497a4d5134f364c78e2b773">httpServer</a> (80)</td></tr>
-<tr class="memdesc:a95b2f5915497a4d5134f364c78e2b773"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create AsyncWebServer object on port 80.  <a href="main_8h.html#a95b2f5915497a4d5134f364c78e2b773">More...</a><br /></td></tr>
-<tr class="separator:a95b2f5915497a4d5134f364c78e2b773"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a12b97dd15b0118cb30b85286f7c4b3c9"><td class="memItemLeft" align="right" valign="top">AsyncWebSocket&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#a12b97dd15b0118cb30b85286f7c4b3c9">ws</a> (&quot;/ws&quot;)</td></tr>
-<tr class="memdesc:a12b97dd15b0118cb30b85286f7c4b3c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ein Server für die Websockets.  <a href="main_8h.html#a12b97dd15b0118cb30b85286f7c4b3c9">More...</a><br /></td></tr>
-<tr class="separator:a12b97dd15b0118cb30b85286f7c4b3c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a33a2605722b34208ce855c85580af0"><td class="memItemLeft" align="right" valign="top">RF24&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#a0a33a2605722b34208ce855c85580af0">radio</a> (<a class="el" href="config_8h.html#a679703aa051c503f2f50f2e75d32e321">RF24_RADIO_CE_PIN</a>, <a class="el" href="config_8h.html#a52e830042b458ebc97c2718f253d2617">RF24_RADIO_CSN_PIN</a>)</td></tr>
-<tr class="memdesc:a0a33a2605722b34208ce855c85580af0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ein Objekt zur Verwaltung des RF24 Interfaces.  <a href="main_8h.html#a0a33a2605722b34208ce855c85580af0">More...</a><br /></td></tr>
-<tr class="separator:a0a33a2605722b34208ce855c85580af0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a49f065914a9c8d2c91e0f939f27875eb"><td class="memItemLeft" align="right" valign="top">PubSubClient&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#a49f065914a9c8d2c91e0f939f27875eb">mqttClient</a> (<a class="el" href="main_8h.html#a7148b45af03aadced9fb23eb73812860">mqtt_wifi_client</a>)</td></tr>
-<tr class="memdesc:a49f065914a9c8d2c91e0f939f27875eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ein Objekt als MQTT Client.  <a href="main_8h.html#a49f065914a9c8d2c91e0f939f27875eb">More...</a><br /></td></tr>
-<tr class="separator:a49f065914a9c8d2c91e0f939f27875eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abeeac6b88d51da37d662d5d23dc357e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#abeeac6b88d51da37d662d5d23dc357e7">callback_mqtt</a> (char *topic, byte *<a class="el" href="rf24gw_8h.html#a9ab81a7ae17f3497b23bbccb020c3308">payload</a>, unsigned int length)</td></tr>
+<tr class="separator:abeeac6b88d51da37d662d5d23dc357e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a576824f862b84e4cab7c44dd194a3b30"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#a576824f862b84e4cab7c44dd194a3b30">send_mqtt_stat</a> ()</td></tr>
+<tr class="separator:a576824f862b84e4cab7c44dd194a3b30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a081b7f9f84758166e4abc19227deed52"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#a081b7f9f84758166e4abc19227deed52">send_mqtt_tele</a> ()</td></tr>
+<tr class="separator:a081b7f9f84758166e4abc19227deed52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36c917f8a7a7142669385533300ada1a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#a36c917f8a7a7142669385533300ada1a">reconnect_mqtt</a> ()</td></tr>
+<tr class="separator:a36c917f8a7a7142669385533300ada1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ab4ec5234d5d10aec36d3a7f0d5878f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#a4ab4ec5234d5d10aec36d3a7f0d5878f">setup_webserver</a> ()</td></tr>
+<tr class="separator:a4ab4ec5234d5d10aec36d3a7f0d5878f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a621194b1a7cef4dca87f2d3511517e69"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#a621194b1a7cef4dca87f2d3511517e69">setup_APserver</a> ()</td></tr>
+<tr class="separator:a621194b1a7cef4dca87f2d3511517e69"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab194d6a1222672c314ea39b78aad8fd0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#ab194d6a1222672c314ea39b78aad8fd0">noop</a> ()</td></tr>
 <tr class="memdesc:ab194d6a1222672c314ea39b78aad8fd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Eine Funktion als Dummy die nichts macht.  <a href="main_8h.html#ab194d6a1222672c314ea39b78aad8fd0">More...</a><br /></td></tr>
 <tr class="separator:ab194d6a1222672c314ea39b78aad8fd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25f9d4781873f4e42425716e120eeb81"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#a25f9d4781873f4e42425716e120eeb81">fill_timeStr</a> ()</td></tr>
-<tr class="memdesc:a25f9d4781873f4e42425716e120eeb81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Füllt den "timeStr" mit der aktuellen Zeit.  <a href="main_8h.html#a25f9d4781873f4e42425716e120eeb81">More...</a><br /></td></tr>
-<tr class="separator:a25f9d4781873f4e42425716e120eeb81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29dba412d2f02d9ffe984132d584ee3a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#a29dba412d2f02d9ffe984132d584ee3a">getVcc</a> (String &amp;json)</td></tr>
 <tr class="memdesc:a29dba412d2f02d9ffe984132d584ee3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fügt die gemessene Betriebsspannung dem übergebenen String hinzu. Achtung: ESP32 noch nicht implementiert.  <a href="main_8h.html#a29dba412d2f02d9ffe984132d584ee3a">More...</a><br /></td></tr>
 <tr class="separator:a29dba412d2f02d9ffe984132d584ee3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a250df2128921785bb553932d5b0c35"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#a1a250df2128921785bb553932d5b0c35">write2log</a> (<a class="el" href="main_8h.html#a5cae2fb7fec0dd9e63cf2d755642cd9d">log_t</a> kat, int count,...)</td></tr>
+<tr class="memitem:a1a250df2128921785bb553932d5b0c35"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#a1a250df2128921785bb553932d5b0c35">write2log</a> (<a class="el" href="common_8h.html#a5cae2fb7fec0dd9e63cf2d755642cd9d">log_t</a> kat, int count,...)</td></tr>
 <tr class="memdesc:a1a250df2128921785bb553932d5b0c35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Schreibt Dateien in die LogKanäle.  <a href="main_8h.html#a1a250df2128921785bb553932d5b0c35">More...</a><br /></td></tr>
 <tr class="separator:a1a250df2128921785bb553932d5b0c35"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0be75b75b82f96e18d5c695059a67a63"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#a0be75b75b82f96e18d5c695059a67a63">handleWebSocketMessage</a> (void *arg, uint8_t *data, size_t len)</td></tr>
-<tr class="memdesc:a0be75b75b82f96e18d5c695059a67a63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Der Handler für Websocket Messages.  <a href="main_8h.html#a0be75b75b82f96e18d5c695059a67a63">More...</a><br /></td></tr>
-<tr class="separator:a0be75b75b82f96e18d5c695059a67a63"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c9d566780491f75b0bc3156069d5e98"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#a7c9d566780491f75b0bc3156069d5e98">ws_onEvent</a> (AsyncWebSocket *server, AsyncWebSocketClient *client, AwsEventType type, void *arg, uint8_t *data, size_t len)</td></tr>
-<tr class="memdesc:a7c9d566780491f75b0bc3156069d5e98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Eventhandler für die Websockets.  <a href="main_8h.html#a7c9d566780491f75b0bc3156069d5e98">More...</a><br /></td></tr>
-<tr class="separator:a7c9d566780491f75b0bc3156069d5e98"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2333f25c6f394c305cbe53136efd8b3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#ad2333f25c6f394c305cbe53136efd8b3">initWebSocket</a> ()</td></tr>
-<tr class="memdesc:ad2333f25c6f394c305cbe53136efd8b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inittialisierung des WebSockets.  <a href="main_8h.html#ad2333f25c6f394c305cbe53136efd8b3">More...</a><br /></td></tr>
-<tr class="separator:ad2333f25c6f394c305cbe53136efd8b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf96fc0645a3af24f296d734829a176c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#acf96fc0645a3af24f296d734829a176c">serveFile</a> (AsyncWebServerRequest *request)</td></tr>
-<tr class="memdesc:acf96fc0645a3af24f296d734829a176c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sendet die angeforderte Seite inkl mime Kodierung an den Webserver.  <a href="main_8h.html#acf96fc0645a3af24f296d734829a176c">More...</a><br /></td></tr>
-<tr class="separator:acf96fc0645a3af24f296d734829a176c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a842468116f22581693ff26314ac776c5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#a842468116f22581693ff26314ac776c5">getNTPtime</a> (long unsigned int sec)</td></tr>
 <tr class="memdesc:a842468116f22581693ff26314ac776c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Beziehen der Netzzeit.  <a href="main_8h.html#a842468116f22581693ff26314ac776c5">More...</a><br /></td></tr>
 <tr class="separator:a842468116f22581693ff26314ac776c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d73d137c2f25e5ffce5887666f7062e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#a8d73d137c2f25e5ffce5887666f7062e">wifi_con</a> (void)</td></tr>
 <tr class="memdesc:a8d73d137c2f25e5ffce5887666f7062e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connect or reconnect to WIFI.  <a href="main_8h.html#a8d73d137c2f25e5ffce5887666f7062e">More...</a><br /></td></tr>
 <tr class="separator:a8d73d137c2f25e5ffce5887666f7062e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d6bd9381b4219883fda23f6f5b9a5a0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#a0d6bd9381b4219883fda23f6f5b9a5a0">read_preferences</a> (void)</td></tr>
-<tr class="memdesc:a0d6bd9381b4219883fda23f6f5b9a5a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Liest die Voreinstellungen aus dem Filesystem ein.  <a href="main_8h.html#a0d6bd9381b4219883fda23f6f5b9a5a0">More...</a><br /></td></tr>
-<tr class="separator:a0d6bd9381b4219883fda23f6f5b9a5a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a2fcd0038f18b9441abe7eea45be09d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#a2a2fcd0038f18b9441abe7eea45be09d">save_preferences</a> (void)</td></tr>
-<tr class="memdesc:a2a2fcd0038f18b9441abe7eea45be09d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sichert die Voreinstellungen ins Filesystem.  <a href="main_8h.html#a2a2fcd0038f18b9441abe7eea45be09d">More...</a><br /></td></tr>
-<tr class="separator:a2a2fcd0038f18b9441abe7eea45be09d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5fa4362e9e501432f7db1bf47c2de6f3"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#a5fa4362e9e501432f7db1bf47c2de6f3">mk_cmd</a> (AsyncWebServerRequest *request)</td></tr>
-<tr class="memdesc:a5fa4362e9e501432f7db1bf47c2de6f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verarbeitung der Webserveraufrufe "/cmd?[cmd]=[value]".  <a href="main_8h.html#a5fa4362e9e501432f7db1bf47c2de6f3">More...</a><br /></td></tr>
-<tr class="separator:a5fa4362e9e501432f7db1bf47c2de6f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55201b86f0d8a2bcd07a82ac997b6e6f"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#a55201b86f0d8a2bcd07a82ac997b6e6f">mk_wifiscan</a> (void)</td></tr>
-<tr class="memdesc:a55201b86f0d8a2bcd07a82ac997b6e6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Startet einen Scan nach verfügbaren Wifi Netzwerken.  <a href="main_8h.html#a55201b86f0d8a2bcd07a82ac997b6e6f">More...</a><br /></td></tr>
-<tr class="separator:a55201b86f0d8a2bcd07a82ac997b6e6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ad3c24f961d9fedd1cc38938291f367"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#a3ad3c24f961d9fedd1cc38938291f367">mk_wifishow</a> (void)</td></tr>
-<tr class="memdesc:a3ad3c24f961d9fedd1cc38938291f367"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erzeugt ein JSON zur Anzeige der gefundenen Netzwerke.  <a href="main_8h.html#a3ad3c24f961d9fedd1cc38938291f367">More...</a><br /></td></tr>
-<tr class="separator:a3ad3c24f961d9fedd1cc38938291f367"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade3d1a75d42e96dc643cfb27cfbb69b7"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#ade3d1a75d42e96dc643cfb27cfbb69b7">mk_sysinfo1</a> (String &amp;info_str)</td></tr>
-<tr class="memdesc:ade3d1a75d42e96dc643cfb27cfbb69b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erzeugt ein JSON mit Informationen über das System (Teil1) Es wird für die Webseite und für MQTT genutzt.  <a href="main_8h.html#ade3d1a75d42e96dc643cfb27cfbb69b7">More...</a><br /></td></tr>
-<tr class="separator:ade3d1a75d42e96dc643cfb27cfbb69b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e2c4bd4758573fdd71fcdd96ac6aae6"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#a8e2c4bd4758573fdd71fcdd96ac6aae6">mk_sysinfo2</a> (String &amp;info_str)</td></tr>
-<tr class="memdesc:a8e2c4bd4758573fdd71fcdd96ac6aae6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erzeugt ein JSON mit Informationen über das System (Teil2) Es wird für die Webseite und für MQTT genutzt.  <a href="main_8h.html#a8e2c4bd4758573fdd71fcdd96ac6aae6">More...</a><br /></td></tr>
-<tr class="separator:a8e2c4bd4758573fdd71fcdd96ac6aae6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea23fe1aefa77240f895260898969aa4"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#aea23fe1aefa77240f895260898969aa4">mk_sysinfo3</a> (String &amp;info_str, bool do_mqtt)</td></tr>
-<tr class="memdesc:aea23fe1aefa77240f895260898969aa4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erzeugt ein JSON mit Informationen über das System (Teil3) Es wird für die Webseite und für MQTT genutzt.  <a href="main_8h.html#aea23fe1aefa77240f895260898969aa4">More...</a><br /></td></tr>
-<tr class="separator:aea23fe1aefa77240f895260898969aa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a73b040c1af0b850b8cf53a91bd326bb5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#a73b040c1af0b850b8cf53a91bd326bb5">prozess_cmd</a> (const String cmd, const String value)</td></tr>
-<tr class="memdesc:a73b040c1af0b850b8cf53a91bd326bb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Der Komandoprozessor. Hier werden alle Befehle in der Form "Kommando = Wert" abgearbeitet.  <a href="main_8h.html#a73b040c1af0b850b8cf53a91bd326bb5">More...</a><br /></td></tr>
-<tr class="separator:a73b040c1af0b850b8cf53a91bd326bb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab493426912a21c3814290b82845981c5"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#ab493426912a21c3814290b82845981c5">mk_topic</a> (const char *part1, const char *part3)</td></tr>
-<tr class="memdesc:ab493426912a21c3814290b82845981c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erzeugt das MQTT-Topic aus den übergebenen Teilen Part1, dem MQTT-Client Namen und dem Part3.  <a href="main_8h.html#ab493426912a21c3814290b82845981c5">More...</a><br /></td></tr>
-<tr class="separator:ab493426912a21c3814290b82845981c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a36c917f8a7a7142669385533300ada1a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#a36c917f8a7a7142669385533300ada1a">reconnect_mqtt</a> ()</td></tr>
-<tr class="memdesc:a36c917f8a7a7142669385533300ada1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prüft ob MQTT noch verbunden ist, wenn nicht wird verbunden.  <a href="main_8h.html#a36c917f8a7a7142669385533300ada1a">More...</a><br /></td></tr>
-<tr class="separator:a36c917f8a7a7142669385533300ada1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a576824f862b84e4cab7c44dd194a3b30"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#a576824f862b84e4cab7c44dd194a3b30">send_mqtt_stat</a> ()</td></tr>
-<tr class="memdesc:a576824f862b84e4cab7c44dd194a3b30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erzeugt die Statusdaten und verschickt sie.  <a href="main_8h.html#a576824f862b84e4cab7c44dd194a3b30">More...</a><br /></td></tr>
-<tr class="separator:a576824f862b84e4cab7c44dd194a3b30"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a081b7f9f84758166e4abc19227deed52"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#a081b7f9f84758166e4abc19227deed52">send_mqtt_tele</a> ()</td></tr>
-<tr class="memdesc:a081b7f9f84758166e4abc19227deed52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erzeugt die Telemetriedaten und verschickt sie.  <a href="main_8h.html#a081b7f9f84758166e4abc19227deed52">More...</a><br /></td></tr>
-<tr class="separator:a081b7f9f84758166e4abc19227deed52"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abeeac6b88d51da37d662d5d23dc357e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#abeeac6b88d51da37d662d5d23dc357e7">callback_mqtt</a> (char *topic, byte *<a class="el" href="main_8h.html#a9ab81a7ae17f3497b23bbccb020c3308">payload</a>, unsigned int length)</td></tr>
-<tr class="memdesc:abeeac6b88d51da37d662d5d23dc357e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Die Callbackfunktion wird immer dann angesprochen wenn Meldungen für diesen Clienten vorliegen.  <a href="main_8h.html#abeeac6b88d51da37d662d5d23dc357e7">More...</a><br /></td></tr>
-<tr class="separator:abeeac6b88d51da37d662d5d23dc357e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:accf9a44d9536b06762b3485179f9219b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#accf9a44d9536b06762b3485179f9219b">writeRf242log</a> (const char *senddir, <a class="el" href="structpayload__t.html">payload_t</a> pl)</td></tr>
 <tr class="memdesc:accf9a44d9536b06762b3485179f9219b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logfunktion für RF24 Daten.  <a href="main_8h.html#accf9a44d9536b06762b3485179f9219b">More...</a><br /></td></tr>
 <tr class="separator:accf9a44d9536b06762b3485179f9219b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -244,81 +150,73 @@ Functions</h2></td></tr>
 <tr class="memitem:afe461d27b9c48d5921c00d521181f12f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#afe461d27b9c48d5921c00d521181f12f">loop</a> ()</td></tr>
 <tr class="memdesc:afe461d27b9c48d5921c00d521181f12f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Die Hauptschleife.  <a href="main_8h.html#afe461d27b9c48d5921c00d521181f12f">More...</a><br /></td></tr>
 <tr class="separator:afe461d27b9c48d5921c00d521181f12f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa73ae560fb6d0382204c47ab715bfce"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#afa73ae560fb6d0382204c47ab715bfce">getResetReason</a> ()</td></tr>
-<tr class="memdesc:afa73ae560fb6d0382204c47ab715bfce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ermittlung des Resetgrundes für den ESP32, da der ESP Core keine ResetReason zurückgibt wird diese hier nachgebildet.  <a href="main_8h.html#afa73ae560fb6d0382204c47ab715bfce">More...</a><br /></td></tr>
-<tr class="separator:afa73ae560fb6d0382204c47ab715bfce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a845f7355547e93bbff2ae671111faf0d"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#a845f7355547e93bbff2ae671111faf0d">getResetReason</a> (char *)</td></tr>
+<tr class="memdesc:a845f7355547e93bbff2ae671111faf0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ermittlung des Resetgrundes für den ESP32, da der ESP Core keine ResetReason zurückgibt wird diese hier nachgebildet.  <a href="main_8h.html#a845f7355547e93bbff2ae671111faf0d">More...</a><br /></td></tr>
+<tr class="separator:a845f7355547e93bbff2ae671111faf0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a9ab81a7ae17f3497b23bbccb020c3308"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structpayload__t.html">payload_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#a9ab81a7ae17f3497b23bbccb020c3308">payload</a></td></tr>
-<tr class="memdesc:a9ab81a7ae17f3497b23bbccb020c3308"><td class="mdescLeft">&#160;</td><td class="mdescRight">Der Payload vom Typ <a class="el" href="structpayload__t.html" title="Die Datenstruktur des payloads in dem RF24 Netzwerk. Sie wird nur benötigt wenn der RF24Gateway genut...">payload_t</a>.  <a href="main_8h.html#a9ab81a7ae17f3497b23bbccb020c3308">More...</a><br /></td></tr>
-<tr class="separator:a9ab81a7ae17f3497b23bbccb020c3308"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a15ff746156b815912cf60f830cb3df41"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#a15ff746156b815912cf60f830cb3df41">rf24_node2hub</a> [] = <a class="el" href="config_8h.html#a0d59bcd261338d1bef2ac25f7ce555ca">RF24_NODE2HUB</a></td></tr>
-<tr class="memdesc:a15ff746156b815912cf60f830cb3df41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funkkennung Node in Richtung Hub.  <a href="main_8h.html#a15ff746156b815912cf60f830cb3df41">More...</a><br /></td></tr>
-<tr class="separator:a15ff746156b815912cf60f830cb3df41"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ef8eab3ddeba431e8d6f28a5c2e41e3"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#a5ef8eab3ddeba431e8d6f28a5c2e41e3">rf24_hub2node</a> [] = <a class="el" href="config_8h.html#a09f69030b8d9ea328b68d9094f8fee10">RF24_HUB2NODE</a></td></tr>
-<tr class="memdesc:a5ef8eab3ddeba431e8d6f28a5c2e41e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funkkennung Hub in Richtung Node.  <a href="main_8h.html#a5ef8eab3ddeba431e8d6f28a5c2e41e3">More...</a><br /></td></tr>
-<tr class="separator:a5ef8eab3ddeba431e8d6f28a5c2e41e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7148b45af03aadced9fb23eb73812860"><td class="memItemLeft" align="right" valign="top">WiFiClient&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#a7148b45af03aadced9fb23eb73812860">mqtt_wifi_client</a></td></tr>
-<tr class="memdesc:a7148b45af03aadced9fb23eb73812860"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ein Objekt für den MQTT Wifi Client.  <a href="main_8h.html#a7148b45af03aadced9fb23eb73812860">More...</a><br /></td></tr>
-<tr class="separator:a7148b45af03aadced9fb23eb73812860"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b74c1af3bb822c6325257093b992336"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#a2b74c1af3bb822c6325257093b992336">mqtt_topic</a></td></tr>
-<tr class="memdesc:a2b74c1af3bb822c6325257093b992336"><td class="mdescLeft">&#160;</td><td class="mdescRight">In diesem String wird der Topic der aktuellen MQTT Message gespeichert.  <a href="main_8h.html#a2b74c1af3bb822c6325257093b992336">More...</a><br /></td></tr>
-<tr class="separator:a2b74c1af3bb822c6325257093b992336"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8c9b2605cd129bb316c6642074c9d92"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#ad8c9b2605cd129bb316c6642074c9d92">mqtt_json</a></td></tr>
-<tr class="memdesc:ad8c9b2605cd129bb316c6642074c9d92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ein String zur Aufnahme der Informationen die als JSON übertragen werden.  <a href="main_8h.html#ad8c9b2605cd129bb316c6642074c9d92">More...</a><br /></td></tr>
-<tr class="separator:ad8c9b2605cd129bb316c6642074c9d92"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aded783a5118be81032c5c3735e7bb8d3"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#aded783a5118be81032c5c3735e7bb8d3">mqtt_json_length_old</a></td></tr>
-<tr class="memdesc:aded783a5118be81032c5c3735e7bb8d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variable zur Zwischenspeicherung der aktuellen JSON Länge.  <a href="main_8h.html#aded783a5118be81032c5c3735e7bb8d3">More...</a><br /></td></tr>
-<tr class="separator:aded783a5118be81032c5c3735e7bb8d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a46b48e04b347d8c6d55433b1f1dcc5b1"><td class="memItemLeft" align="right" valign="top">WiFiUDP&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#a46b48e04b347d8c6d55433b1f1dcc5b1">udp</a></td></tr>
-<tr class="memdesc:a46b48e04b347d8c6d55433b1f1dcc5b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ein Objekt für udp Daten.  <a href="main_8h.html#a46b48e04b347d8c6d55433b1f1dcc5b1">More...</a><br /></td></tr>
-<tr class="separator:a46b48e04b347d8c6d55433b1f1dcc5b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1482a749745edd9075ded3b6189c23e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structprefs__t.html">prefs_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#a1482a749745edd9075ded3b6189c23e8">preference</a></td></tr>
-<tr class="memdesc:a1482a749745edd9075ded3b6189c23e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Eine Variable zur Aufnahme der Preferences Struktur.  <a href="main_8h.html#a1482a749745edd9075ded3b6189c23e8">More...</a><br /></td></tr>
-<tr class="separator:a1482a749745edd9075ded3b6189c23e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1931a85867fcdd2b4874aa50223cfc0"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#aa1931a85867fcdd2b4874aa50223cfc0">mqtt_topicP2</a></td></tr>
+<tr class="separator:aa1931a85867fcdd2b4874aa50223cfc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b25b86bb2ceb20fbb1c227ce85c0482"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#a4b25b86bb2ceb20fbb1c227ce85c0482">ntp_server</a> = <a class="el" href="config_8h.html#a751e3f85cd240e89d390d18996089cd0">NTP_SERVER</a></td></tr>
+<tr class="memdesc:a4b25b86bb2ceb20fbb1c227ce85c0482"><td class="mdescLeft">&#160;</td><td class="mdescRight">Der NTP Server.  <a href="main_8h.html#a4b25b86bb2ceb20fbb1c227ce85c0482">More...</a><br /></td></tr>
+<tr class="separator:a4b25b86bb2ceb20fbb1c227ce85c0482"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ea06cf7b8092a0adaf07614d7ece59d"><td class="memItemLeft" align="right" valign="top">Preferences&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#a6ea06cf7b8092a0adaf07614d7ece59d">preferences</a></td></tr>
+<tr class="memdesc:a6ea06cf7b8092a0adaf07614d7ece59d"><td class="mdescLeft">&#160;</td><td class="mdescRight">TimeZone Info.  <a href="main_8h.html#a6ea06cf7b8092a0adaf07614d7ece59d">More...</a><br /></td></tr>
+<tr class="separator:a6ea06cf7b8092a0adaf07614d7ece59d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c55b49f260ee5dcac52d076a4b794ab"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#a7c55b49f260ee5dcac52d076a4b794ab">magicno</a></td></tr>
+<tr class="separator:a7c55b49f260ee5dcac52d076a4b794ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2aacd4ccebd00465b52aeb92d94cf2f5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#a2aacd4ccebd00465b52aeb92d94cf2f5">rebootflag</a> = false</td></tr>
-<tr class="memdesc:a2aacd4ccebd00465b52aeb92d94cf2f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Das reboot Flag, ist es auf "true" wird im nächsten Loop Durchgang der Node neu gestartet.  <a href="main_8h.html#a2aacd4ccebd00465b52aeb92d94cf2f5">More...</a><br /></td></tr>
+<tr class="memdesc:a2aacd4ccebd00465b52aeb92d94cf2f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Eine Variable zur Aufnahme der Preferences Struktur.  <a href="main_8h.html#a2aacd4ccebd00465b52aeb92d94cf2f5">More...</a><br /></td></tr>
 <tr class="separator:a2aacd4ccebd00465b52aeb92d94cf2f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba630d94d296afc022dce35602321c15"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#aba630d94d296afc022dce35602321c15">html_json</a></td></tr>
 <tr class="memdesc:aba630d94d296afc022dce35602321c15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variablen zur Nutzung im Umfeld der HTML Seite.  <a href="main_8h.html#aba630d94d296afc022dce35602321c15">More...</a><br /></td></tr>
 <tr class="separator:aba630d94d296afc022dce35602321c15"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1690fb28f24b7095a247cf48613a7451"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#a1690fb28f24b7095a247cf48613a7451">debug_str</a></td></tr>
-<tr class="memdesc:a1690fb28f24b7095a247cf48613a7451"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ein String zum Einsatz in der Funktion write2log. Darf nicht genutzt werden wenn diese Funktion mit gefülltem String aufgerufen wird!  <a href="main_8h.html#a1690fb28f24b7095a247cf48613a7451">More...</a><br /></td></tr>
-<tr class="separator:a1690fb28f24b7095a247cf48613a7451"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb585f6ad22b9a69cf709368bba0d7f2"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#acb585f6ad22b9a69cf709368bba0d7f2">wifi_ssid</a></td></tr>
+<tr class="separator:acb585f6ad22b9a69cf709368bba0d7f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abec13d15bcf746ef1ad2f3a1a78eaa08"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#abec13d15bcf746ef1ad2f3a1a78eaa08">wifi_pass</a></td></tr>
+<tr class="separator:abec13d15bcf746ef1ad2f3a1a78eaa08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff9e15ae2a2e93c6ee031d9b9af89450"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#aff9e15ae2a2e93c6ee031d9b9af89450">ap_mode</a> = false</td></tr>
+<tr class="separator:aff9e15ae2a2e93c6ee031d9b9af89450"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5892bca4cbbfbac12d1ea66cbde6118"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#ab5892bca4cbbfbac12d1ea66cbde6118">do_log_sensor</a></td></tr>
+<tr class="separator:ab5892bca4cbbfbac12d1ea66cbde6118"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe67641ba4c2a833c65754b9a96447a5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#abe67641ba4c2a833c65754b9a96447a5">do_log_sys</a></td></tr>
+<tr class="separator:abe67641ba4c2a833c65754b9a96447a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade347deddfb1dbd3ef4ff0cc4f609149"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#ade347deddfb1dbd3ef4ff0cc4f609149">do_log_critical</a></td></tr>
+<tr class="separator:ade347deddfb1dbd3ef4ff0cc4f609149"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70422909ac61fb4f4a49b9dbe7304270"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#a70422909ac61fb4f4a49b9dbe7304270">log_str</a></td></tr>
+<tr class="memdesc:a70422909ac61fb4f4a49b9dbe7304270"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ein String zum Einsatz in der Funktion write2log. Darf nicht genutzt werden wenn diese Funktion mit gefülltem String aufgerufen wird!  <a href="main_8h.html#a70422909ac61fb4f4a49b9dbe7304270">More...</a><br /></td></tr>
+<tr class="separator:a70422909ac61fb4f4a49b9dbe7304270"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38f4c6b6174d54e0e55182804ce2c488"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#a38f4c6b6174d54e0e55182804ce2c488">tmp_str</a></td></tr>
 <tr class="memdesc:a38f4c6b6174d54e0e55182804ce2c488"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ein String zur temporären Nutzung im Programm.  <a href="main_8h.html#a38f4c6b6174d54e0e55182804ce2c488">More...</a><br /></td></tr>
 <tr class="separator:a38f4c6b6174d54e0e55182804ce2c488"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8cae9cf2b3fe65745398e2d2dfc7e3e0"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#a8cae9cf2b3fe65745398e2d2dfc7e3e0">timeStr</a> [12]</td></tr>
-<tr class="memdesc:a8cae9cf2b3fe65745398e2d2dfc7e3e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ein fixes Array zur Aufnahme des Zeitstempels.  <a href="main_8h.html#a8cae9cf2b3fe65745398e2d2dfc7e3e0">More...</a><br /></td></tr>
-<tr class="separator:a8cae9cf2b3fe65745398e2d2dfc7e3e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad73edb2daeced57717ef3b709bbadc81"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#ad73edb2daeced57717ef3b709bbadc81">last_stat</a> = 0</td></tr>
-<tr class="memdesc:ad73edb2daeced57717ef3b709bbadc81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zeitpunkt der letzten Statusdatenerstellung.  <a href="main_8h.html#ad73edb2daeced57717ef3b709bbadc81">More...</a><br /></td></tr>
-<tr class="separator:ad73edb2daeced57717ef3b709bbadc81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d06d6a83f2f21cc0f87171e205af5ec"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#a7d06d6a83f2f21cc0f87171e205af5ec">timeStr</a> [16]</td></tr>
+<tr class="memdesc:a7d06d6a83f2f21cc0f87171e205af5ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ein fixes Array zur Aufnahme des Zeitstempels.  <a href="main_8h.html#a7d06d6a83f2f21cc0f87171e205af5ec">More...</a><br /></td></tr>
+<tr class="separator:a7d06d6a83f2f21cc0f87171e205af5ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb14d59135ff35a33381e579da2efd46"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#acb14d59135ff35a33381e579da2efd46">mqtt_last_stat</a> = 0</td></tr>
+<tr class="memdesc:acb14d59135ff35a33381e579da2efd46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zeitpunkt der letzten Statusdatenerstellung.  <a href="main_8h.html#acb14d59135ff35a33381e579da2efd46">More...</a><br /></td></tr>
+<tr class="separator:acb14d59135ff35a33381e579da2efd46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf2228e134162e1a2754d70164645eae"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#acf2228e134162e1a2754d70164645eae">mqtt_last_tele</a> = 0</td></tr>
 <tr class="memdesc:acf2228e134162e1a2754d70164645eae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zeitpunkt der letzten Telemetriedatenübertragung.  <a href="main_8h.html#acf2228e134162e1a2754d70164645eae">More...</a><br /></td></tr>
 <tr class="separator:acf2228e134162e1a2754d70164645eae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa053c32a85c8ef91f29424da3328c506"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#aa053c32a85c8ef91f29424da3328c506">measure_starttime</a> = 0</td></tr>
 <tr class="memdesc:aa053c32a85c8ef91f29424da3328c506"><td class="mdescLeft">&#160;</td><td class="mdescRight">Startzeitpunkt des Messvorgangs.  <a href="main_8h.html#aa053c32a85c8ef91f29424da3328c506">More...</a><br /></td></tr>
 <tr class="separator:aa053c32a85c8ef91f29424da3328c506"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae072a0be82996e0ee3ee56674f33a4db"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#ae072a0be82996e0ee3ee56674f33a4db">loopcount</a> = 0</td></tr>
-<tr class="memdesc:ae072a0be82996e0ee3ee56674f33a4db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Anzahl der Loopschleifendurchgänge werden hier festgehalten.  <a href="main_8h.html#ae072a0be82996e0ee3ee56674f33a4db">More...</a><br /></td></tr>
-<tr class="separator:ae072a0be82996e0ee3ee56674f33a4db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a48b3909d3c8695112a1cf1eb6f6765c9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#a48b3909d3c8695112a1cf1eb6f6765c9">do_send_mqtt_stat</a> = false</td></tr>
-<tr class="memdesc:a48b3909d3c8695112a1cf1eb6f6765c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ein Flag zur Triggerung der MQTT Status Daten.  <a href="main_8h.html#a48b3909d3c8695112a1cf1eb6f6765c9">More...</a><br /></td></tr>
-<tr class="separator:a48b3909d3c8695112a1cf1eb6f6765c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21f645b1d19ab9bef104ca32797d0867"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#a21f645b1d19ab9bef104ca32797d0867">loop_starttime</a> = 0</td></tr>
+<tr class="separator:a21f645b1d19ab9bef104ca32797d0867"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a052c54f9087030f8d09e47f261ff8cdb"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#a052c54f9087030f8d09e47f261ff8cdb">wifi_ap_starttime</a> = 0</td></tr>
+<tr class="separator:a052c54f9087030f8d09e47f261ff8cdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a25d93e106e1cf6666ad2ba6417d3ed8d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#a25d93e106e1cf6666ad2ba6417d3ed8d">measure_started</a> = false</td></tr>
 <tr class="memdesc:a25d93e106e1cf6666ad2ba6417d3ed8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ein Flag der anzeigt ob die Messdatengenerierung gestartet ist.  <a href="main_8h.html#a25d93e106e1cf6666ad2ba6417d3ed8d">More...</a><br /></td></tr>
 <tr class="separator:a25d93e106e1cf6666ad2ba6417d3ed8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae53ff54a40d030d008ae7bbba79f1a0d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#ae53ff54a40d030d008ae7bbba79f1a0d">preferencechange</a> = false</td></tr>
-<tr class="memdesc:ae53ff54a40d030d008ae7bbba79f1a0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">"true" bei Veränderung der Preferences, sonst "false"  <a href="main_8h.html#ae53ff54a40d030d008ae7bbba79f1a0d">More...</a><br /></td></tr>
-<tr class="separator:ae53ff54a40d030d008ae7bbba79f1a0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19d9a19b02203cf83a5ae87a3bf3f427"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#a19d9a19b02203cf83a5ae87a3bf3f427">NTP_SERVER</a> = &quot;de.pool.ntp.org&quot;</td></tr>
-<tr class="memdesc:a19d9a19b02203cf83a5ae87a3bf3f427"><td class="mdescLeft">&#160;</td><td class="mdescRight">Der NTP Server.  <a href="main_8h.html#a19d9a19b02203cf83a5ae87a3bf3f427">More...</a><br /></td></tr>
-<tr class="separator:a19d9a19b02203cf83a5ae87a3bf3f427"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86743b683b9cb5f40d7894f943802013"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#a86743b683b9cb5f40d7894f943802013">TZ_INFO</a> = &quot;CET-1CEST-2,M3.5.0/02:00:00,M10.5.0/03:00:00&quot;</td></tr>
-<tr class="memdesc:a86743b683b9cb5f40d7894f943802013"><td class="mdescLeft">&#160;</td><td class="mdescRight">TimeZone Info.  <a href="main_8h.html#a86743b683b9cb5f40d7894f943802013">More...</a><br /></td></tr>
-<tr class="separator:a86743b683b9cb5f40d7894f943802013"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabbd4877b1894aa57dc8bad7f55fc192"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#aabbd4877b1894aa57dc8bad7f55fc192">lastHour</a> = 0</td></tr>
+<tr class="separator:aabbd4877b1894aa57dc8bad7f55fc192"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a268f8be4745cc8d28746db7336c8e3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#a0a268f8be4745cc8d28746db7336c8e3">lastDay</a> = 0</td></tr>
+<tr class="separator:a0a268f8be4745cc8d28746db7336c8e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade105261091596e62ac218789edefc38"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#ade105261091596e62ac218789edefc38">loop_time_alarm</a></td></tr>
+<tr class="separator:ade105261091596e62ac218789edefc38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedb487fe0dda41747092f641fb94cea5"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#aedb487fe0dda41747092f641fb94cea5">loopmsg</a> [30]</td></tr>
+<tr class="separator:aedb487fe0dda41747092f641fb94cea5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50e57bf0f05333a4871a10f3268672bf"><td class="memItemLeft" align="right" valign="top">Uptime&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#a50e57bf0f05333a4871a10f3268672bf">uptime</a></td></tr>
 <tr class="memdesc:a50e57bf0f05333a4871a10f3268672bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ein Objekt zur Verwaltung der uptime.  <a href="main_8h.html#a50e57bf0f05333a4871a10f3268672bf">More...</a><br /></td></tr>
 <tr class="separator:a50e57bf0f05333a4871a10f3268672bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -328,35 +226,7 @@ Variables</h2></td></tr>
 <tr class="memitem:a3c3ca8cc859a31aec6578f0dcf1b32a5"><td class="memItemLeft" align="right" valign="top">time_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#a3c3ca8cc859a31aec6578f0dcf1b32a5">now</a></td></tr>
 <tr class="memdesc:a3c3ca8cc859a31aec6578f0dcf1b32a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Eine Variable für Zeitinformationen.  <a href="main_8h.html#a3c3ca8cc859a31aec6578f0dcf1b32a5">More...</a><br /></td></tr>
 <tr class="separator:a3c3ca8cc859a31aec6578f0dcf1b32a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed24fc049dc5a6c8b3fd89e20c79be34"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structudpdata__t.html">udpdata_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#aed24fc049dc5a6c8b3fd89e20c79be34">udpdata</a></td></tr>
-<tr class="memdesc:aed24fc049dc5a6c8b3fd89e20c79be34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Eine Variable zur Aufnahme der UDP Daten Struktur.  <a href="main_8h.html#aed24fc049dc5a6c8b3fd89e20c79be34">More...</a><br /></td></tr>
-<tr class="separator:aed24fc049dc5a6c8b3fd89e20c79be34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Enumeration Type Documentation</h2>
-<a id="a5cae2fb7fec0dd9e63cf2d755642cd9d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5cae2fb7fec0dd9e63cf2d755642cd9d">&#9670;&nbsp;</a></span>log_t</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="main_8h.html#a5cae2fb7fec0dd9e63cf2d755642cd9d">log_t</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Ein emum für den Logtype. Dieser wird bei write2log übergeben und dort gegen die Voreinstellungen geprüft. </p>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a5cae2fb7fec0dd9e63cf2d755642cd9dac485f57511b95cf2bcc7a998db1a3776"></a>log_rf24&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a5cae2fb7fec0dd9e63cf2d755642cd9da4ca727b87ed47043075ad233f0fe337d"></a>log_sys&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a5cae2fb7fec0dd9e63cf2d755642cd9da3ba073e468b71202f1fd7f6a1ee909e9"></a>log_mqtt&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a5cae2fb7fec0dd9e63cf2d755642cd9da361e3204c071b89506e3d751585ed344"></a>log_sens&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a5cae2fb7fec0dd9e63cf2d755642cd9daae18f0225d5b003dc8b16204dc27b207"></a>log_web&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a5cae2fb7fec0dd9e63cf2d755642cd9da6505034df32bb48fb0b1ed32ee980c2b"></a>log_critical&#160;</td><td class="fielddoc"></td></tr>
-</table>
-
-</div>
-</div>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ad4407547625c19c85b1f3abd751f1e83"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad4407547625c19c85b1f3abd751f1e83">&#9670;&nbsp;</a></span>ADC_MODE()</h2>
@@ -408,35 +278,6 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Die Callbackfunktion wird immer dann angesprochen wenn Meldungen für diesen Clienten vorliegen. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">topic</td><td>Das MQTT Topic </td></tr>
-    <tr><td class="paramname">payload</td><td>Die MQTT Nachricht </td></tr>
-    <tr><td class="paramname">length</td><td>Die Länge der Nachricht </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a25f9d4781873f4e42425716e120eeb81"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a25f9d4781873f4e42425716e120eeb81">&#9670;&nbsp;</a></span>fill_timeStr()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void fill_timeStr </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Füllt den "timeStr" mit der aktuellen Zeit. </p>
-
 </div>
 </div>
 <a id="a842468116f22581693ff26314ac776c5"></a>
@@ -466,8 +307,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="afa73ae560fb6d0382204c47ab715bfce"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afa73ae560fb6d0382204c47ab715bfce">&#9670;&nbsp;</a></span>getResetReason()</h2>
+<a id="a845f7355547e93bbff2ae671111faf0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a845f7355547e93bbff2ae671111faf0d">&#9670;&nbsp;</a></span>getResetReason()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -475,6 +316,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">char* getResetReason </td>
           <td>(</td>
+          <td class="paramtype">char *&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -506,90 +348,6 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a0be75b75b82f96e18d5c695059a67a63"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0be75b75b82f96e18d5c695059a67a63">&#9670;&nbsp;</a></span>handleWebSocketMessage()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void handleWebSocketMessage </td>
-          <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>arg</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint8_t *&#160;</td>
-          <td class="paramname"><em>data</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>len</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Der Handler für Websocket Messages. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">arg</td><td></td></tr>
-    <tr><td class="paramname">data</td><td></td></tr>
-    <tr><td class="paramname">len</td><td><br  />
- </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a95b2f5915497a4d5134f364c78e2b773"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a95b2f5915497a4d5134f364c78e2b773">&#9670;&nbsp;</a></span>httpServer()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">AsyncWebServer httpServer </td>
-          <td>(</td>
-          <td class="paramtype">80&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Create AsyncWebServer object on port 80. </p>
-
-</div>
-</div>
-<a id="ad2333f25c6f394c305cbe53136efd8b3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad2333f25c6f394c305cbe53136efd8b3">&#9670;&nbsp;</a></span>initWebSocket()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void initWebSocket </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Inittialisierung des WebSockets. </p>
-
-</div>
-</div>
 <a id="afe461d27b9c48d5921c00d521181f12f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afe461d27b9c48d5921c00d521181f12f">&#9670;&nbsp;</a></span>loop()</h2>
 
@@ -606,231 +364,6 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Die Hauptschleife. </p>
-
-</div>
-</div>
-<a id="a5fa4362e9e501432f7db1bf47c2de6f3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5fa4362e9e501432f7db1bf47c2de6f3">&#9670;&nbsp;</a></span>mk_cmd()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const char* mk_cmd </td>
-          <td>(</td>
-          <td class="paramtype">AsyncWebServerRequest *&#160;</td>
-          <td class="paramname"><em>request</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Verarbeitung der Webserveraufrufe "/cmd?[cmd]=[value]". </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">request</td><td>Der übergebene Datensatz </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Rückmeldung für die Webseite </dd></dl>
-
-</div>
-</div>
-<a id="ade3d1a75d42e96dc643cfb27cfbb69b7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ade3d1a75d42e96dc643cfb27cfbb69b7">&#9670;&nbsp;</a></span>mk_sysinfo1()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const char* mk_sysinfo1 </td>
-          <td>(</td>
-          <td class="paramtype">String &amp;&#160;</td>
-          <td class="paramname"><em>info_str</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Erzeugt ein JSON mit Informationen über das System (Teil1) Es wird für die Webseite und für MQTT genutzt. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">Ein</td><td>String zur Aufnahme der Informationen </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Ein Json zur Übergabe an die Webseite oder MQTT </dd></dl>
-
-</div>
-</div>
-<a id="a8e2c4bd4758573fdd71fcdd96ac6aae6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8e2c4bd4758573fdd71fcdd96ac6aae6">&#9670;&nbsp;</a></span>mk_sysinfo2()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const char* mk_sysinfo2 </td>
-          <td>(</td>
-          <td class="paramtype">String &amp;&#160;</td>
-          <td class="paramname"><em>info_str</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Erzeugt ein JSON mit Informationen über das System (Teil2) Es wird für die Webseite und für MQTT genutzt. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">Ein</td><td>String zur Aufnahme der Informationen </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Ein Json zur Übergabe an die Webseite oder MQTT </dd></dl>
-
-</div>
-</div>
-<a id="aea23fe1aefa77240f895260898969aa4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aea23fe1aefa77240f895260898969aa4">&#9670;&nbsp;</a></span>mk_sysinfo3()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const char* mk_sysinfo3 </td>
-          <td>(</td>
-          <td class="paramtype">String &amp;&#160;</td>
-          <td class="paramname"><em>info_str</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>do_mqtt</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Erzeugt ein JSON mit Informationen über das System (Teil3) Es wird für die Webseite und für MQTT genutzt. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">Ein</td><td>String zur Aufnahme der Informationen </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Ein Json zur Übergabe an die Webseite oder MQTT </dd></dl>
-
-</div>
-</div>
-<a id="ab493426912a21c3814290b82845981c5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab493426912a21c3814290b82845981c5">&#9670;&nbsp;</a></span>mk_topic()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const char* mk_topic </td>
-          <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>part1</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>part3</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Erzeugt das MQTT-Topic aus den übergebenen Teilen Part1, dem MQTT-Client Namen und dem Part3. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">part1</td><td>Part 1 des Topics ("stat","tele","cmnd") </td></tr>
-    <tr><td class="paramname">part3</td><td>Part 3 des Topics (Messwertname, etc.) </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><br  />
- </dd></dl>
-
-</div>
-</div>
-<a id="a55201b86f0d8a2bcd07a82ac997b6e6f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a55201b86f0d8a2bcd07a82ac997b6e6f">&#9670;&nbsp;</a></span>mk_wifiscan()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const char* mk_wifiscan </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Startet einen Scan nach verfügbaren Wifi Netzwerken. </p>
-<dl class="section return"><dt>Returns</dt><dd>Ein Json zur Übergabe an die Webseite </dd></dl>
-
-</div>
-</div>
-<a id="a3ad3c24f961d9fedd1cc38938291f367"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3ad3c24f961d9fedd1cc38938291f367">&#9670;&nbsp;</a></span>mk_wifishow()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const char* mk_wifishow </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Erzeugt ein JSON zur Anzeige der gefundenen Netzwerke. </p>
-<dl class="section return"><dt>Returns</dt><dd>Ein Json zur Übergabe an die Webseite </dd></dl>
-
-</div>
-</div>
-<a id="a49f065914a9c8d2c91e0f939f27875eb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a49f065914a9c8d2c91e0f939f27875eb">&#9670;&nbsp;</a></span>mqttClient()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">PubSubClient mqttClient </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="main_8h.html#a7148b45af03aadced9fb23eb73812860">mqtt_wifi_client</a>&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Ein Objekt als MQTT Client. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">Der</td><td>Wifi Client </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>
@@ -853,100 +386,6 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a73b040c1af0b850b8cf53a91bd326bb5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a73b040c1af0b850b8cf53a91bd326bb5">&#9670;&nbsp;</a></span>prozess_cmd()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void prozess_cmd </td>
-          <td>(</td>
-          <td class="paramtype">const String&#160;</td>
-          <td class="paramname"><em>cmd</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const String&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Der Komandoprozessor. Hier werden alle Befehle in der Form "Kommando = Wert" abgearbeitet. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">cmd</td><td>Das Komando, der bezeichner des Komandos </td></tr>
-    <tr><td class="paramname">value</td><td>Der Wert für dieses Kommando </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a0a33a2605722b34208ce855c85580af0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0a33a2605722b34208ce855c85580af0">&#9670;&nbsp;</a></span>radio()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">RF24 radio </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="config_8h.html#a679703aa051c503f2f50f2e75d32e321">RF24_RADIO_CE_PIN</a>&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="config_8h.html#a52e830042b458ebc97c2718f253d2617">RF24_RADIO_CSN_PIN</a>&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Ein Objekt zur Verwaltung des RF24 Interfaces. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">Radio</td><td>CE Pin </td></tr>
-    <tr><td class="paramname">Radio</td><td>CSN Pin </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a0d6bd9381b4219883fda23f6f5b9a5a0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0d6bd9381b4219883fda23f6f5b9a5a0">&#9670;&nbsp;</a></span>read_preferences()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void read_preferences </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Liest die Voreinstellungen aus dem Filesystem ein. </p>
-
-</div>
-</div>
 <a id="a36c917f8a7a7142669385533300ada1a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a36c917f8a7a7142669385533300ada1a">&#9670;&nbsp;</a></span>reconnect_mqtt()</h2>
 
@@ -961,28 +400,6 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Prüft ob MQTT noch verbunden ist, wenn nicht wird verbunden. </p>
-
-</div>
-</div>
-<a id="a2a2fcd0038f18b9441abe7eea45be09d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2a2fcd0038f18b9441abe7eea45be09d">&#9670;&nbsp;</a></span>save_preferences()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void save_preferences </td>
-          <td>(</td>
-          <td class="paramtype">void&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Sichert die Voreinstellungen ins Filesystem. </p>
 
 </div>
 </div>
@@ -1001,8 +418,6 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Erzeugt die Statusdaten und verschickt sie. </p>
-
 </div>
 </div>
 <a id="a081b7f9f84758166e4abc19227deed52"></a>
@@ -1019,34 +434,6 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Erzeugt die Telemetriedaten und verschickt sie. </p>
-
-</div>
-</div>
-<a id="acf96fc0645a3af24f296d734829a176c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acf96fc0645a3af24f296d734829a176c">&#9670;&nbsp;</a></span>serveFile()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void serveFile </td>
-          <td>(</td>
-          <td class="paramtype">AsyncWebServerRequest *&#160;</td>
-          <td class="paramname"><em>request</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Sendet die angeforderte Seite inkl mime Kodierung an den Webserver. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">request</td><td>Der Webserverrequest </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>
@@ -1066,6 +453,40 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Das Setup. </p>
+
+</div>
+</div>
+<a id="a621194b1a7cef4dca87f2d3511517e69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a621194b1a7cef4dca87f2d3511517e69">&#9670;&nbsp;</a></span>setup_APserver()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setup_APserver </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4ab4ec5234d5d10aec36d3a7f0d5878f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ab4ec5234d5d10aec36d3a7f0d5878f">&#9670;&nbsp;</a></span>setup_webserver()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setup_webserver </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -1098,7 +519,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void write2log </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="main_8h.html#a5cae2fb7fec0dd9e63cf2d755642cd9d">log_t</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="common_8h.html#a5cae2fb7fec0dd9e63cf2d755642cd9d">log_t</a>&#160;</td>
           <td class="paramname"><em>kat</em>, </td>
         </tr>
         <tr>
@@ -1171,121 +592,60 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a12b97dd15b0118cb30b85286f7c4b3c9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a12b97dd15b0118cb30b85286f7c4b3c9">&#9670;&nbsp;</a></span>ws()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">AsyncWebSocket ws </td>
-          <td>(</td>
-          <td class="paramtype">&quot;/ws&quot;&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Ein Server für die Websockets. </p>
-
-</div>
-</div>
-<a id="a7c9d566780491f75b0bc3156069d5e98"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7c9d566780491f75b0bc3156069d5e98">&#9670;&nbsp;</a></span>ws_onEvent()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ws_onEvent </td>
-          <td>(</td>
-          <td class="paramtype">AsyncWebSocket *&#160;</td>
-          <td class="paramname"><em>server</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">AsyncWebSocketClient *&#160;</td>
-          <td class="paramname"><em>client</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">AwsEventType&#160;</td>
-          <td class="paramname"><em>type</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>arg</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint8_t *&#160;</td>
-          <td class="paramname"><em>data</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>len</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Eventhandler für die Websockets. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">server</td><td>Keine direkte Verwendung </td></tr>
-    <tr><td class="paramname">client</td><td>Keine direkte Verwendung </td></tr>
-    <tr><td class="paramname">type</td><td>Der Eventtyp </td></tr>
-    <tr><td class="paramname">arg</td><td>Wird durchgereicht an handleWebSocketMessage </td></tr>
-    <tr><td class="paramname">data</td><td>Wird durchgereicht an handleWebSocketMessage </td></tr>
-    <tr><td class="paramname">len</td><td>Wird durchgereicht an handleWebSocketMessage </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <h2 class="groupheader">Variable Documentation</h2>
-<a id="a1690fb28f24b7095a247cf48613a7451"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1690fb28f24b7095a247cf48613a7451">&#9670;&nbsp;</a></span>debug_str</h2>
+<a id="aff9e15ae2a2e93c6ee031d9b9af89450"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff9e15ae2a2e93c6ee031d9b9af89450">&#9670;&nbsp;</a></span>ap_mode</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">String debug_str</td>
+          <td class="memname">bool ap_mode = false</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Ein String zum Einsatz in der Funktion write2log. Darf nicht genutzt werden wenn diese Funktion mit gefülltem String aufgerufen wird! </p>
-
 </div>
 </div>
-<a id="a48b3909d3c8695112a1cf1eb6f6765c9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a48b3909d3c8695112a1cf1eb6f6765c9">&#9670;&nbsp;</a></span>do_send_mqtt_stat</h2>
+<a id="ade347deddfb1dbd3ef4ff0cc4f609149"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade347deddfb1dbd3ef4ff0cc4f609149">&#9670;&nbsp;</a></span>do_log_critical</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool do_send_mqtt_stat = false</td>
+          <td class="memname">bool do_log_critical</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Ein Flag zur Triggerung der MQTT Status Daten. </p>
+</div>
+</div>
+<a id="ab5892bca4cbbfbac12d1ea66cbde6118"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5892bca4cbbfbac12d1ea66cbde6118">&#9670;&nbsp;</a></span>do_log_sensor</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool do_log_sensor</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abe67641ba4c2a833c65754b9a96447a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe67641ba4c2a833c65754b9a96447a5">&#9670;&nbsp;</a></span>do_log_sys</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool do_log_sys</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -1305,35 +665,103 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="ad73edb2daeced57717ef3b709bbadc81"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad73edb2daeced57717ef3b709bbadc81">&#9670;&nbsp;</a></span>last_stat</h2>
+<a id="a0a268f8be4745cc8d28746db7336c8e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a268f8be4745cc8d28746db7336c8e3">&#9670;&nbsp;</a></span>lastDay</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned long last_stat = 0</td>
+          <td class="memname">int lastDay = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Zeitpunkt der letzten Statusdatenerstellung. </p>
-
 </div>
 </div>
-<a id="ae072a0be82996e0ee3ee56674f33a4db"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae072a0be82996e0ee3ee56674f33a4db">&#9670;&nbsp;</a></span>loopcount</h2>
+<a id="aabbd4877b1894aa57dc8bad7f55fc192"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabbd4877b1894aa57dc8bad7f55fc192">&#9670;&nbsp;</a></span>lastHour</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int loopcount = 0</td>
+          <td class="memname">int lastHour = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Anzahl der Loopschleifendurchgänge werden hier festgehalten. </p>
+</div>
+</div>
+<a id="a70422909ac61fb4f4a49b9dbe7304270"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70422909ac61fb4f4a49b9dbe7304270">&#9670;&nbsp;</a></span>log_str</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String log_str</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ein String zum Einsatz in der Funktion write2log. Darf nicht genutzt werden wenn diese Funktion mit gefülltem String aufgerufen wird! </p>
+
+</div>
+</div>
+<a id="a21f645b1d19ab9bef104ca32797d0867"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21f645b1d19ab9bef104ca32797d0867">&#9670;&nbsp;</a></span>loop_starttime</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long loop_starttime = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ade105261091596e62ac218789edefc38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade105261091596e62ac218789edefc38">&#9670;&nbsp;</a></span>loop_time_alarm</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long loop_time_alarm</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aedb487fe0dda41747092f641fb94cea5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedb487fe0dda41747092f641fb94cea5">&#9670;&nbsp;</a></span>loopmsg</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char loopmsg[30]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7c55b49f260ee5dcac52d076a4b794ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c55b49f260ee5dcac52d076a4b794ab">&#9670;&nbsp;</a></span>magicno</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int magicno</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -1369,35 +797,19 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="ad8c9b2605cd129bb316c6642074c9d92"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad8c9b2605cd129bb316c6642074c9d92">&#9670;&nbsp;</a></span>mqtt_json</h2>
+<a id="acb14d59135ff35a33381e579da2efd46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb14d59135ff35a33381e579da2efd46">&#9670;&nbsp;</a></span>mqtt_last_stat</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">String mqtt_json</td>
+          <td class="memname">unsigned long mqtt_last_stat = 0</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Ein String zur Aufnahme der Informationen die als JSON übertragen werden. </p>
-
-</div>
-</div>
-<a id="aded783a5118be81032c5c3735e7bb8d3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aded783a5118be81032c5c3735e7bb8d3">&#9670;&nbsp;</a></span>mqtt_json_length_old</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">unsigned int mqtt_json_length_old</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Variable zur Zwischenspeicherung der aktuellen JSON Länge. </p>
+<p>Zeitpunkt der letzten Statusdatenerstellung. </p>
 
 </div>
 </div>
@@ -1417,35 +829,25 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a2b74c1af3bb822c6325257093b992336"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2b74c1af3bb822c6325257093b992336">&#9670;&nbsp;</a></span>mqtt_topic</h2>
+<a id="aa1931a85867fcdd2b4874aa50223cfc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1931a85867fcdd2b4874aa50223cfc0">&#9670;&nbsp;</a></span>mqtt_topicP2</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">String mqtt_topic</td>
+          <td class="memname">String mqtt_topicP2</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
-
-<p>In diesem String wird der Topic der aktuellen MQTT Message gespeichert. </p>
-
-</div>
-</div>
-<a id="a7148b45af03aadced9fb23eb73812860"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7148b45af03aadced9fb23eb73812860">&#9670;&nbsp;</a></span>mqtt_wifi_client</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">WiFiClient mqtt_wifi_client</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Ein Objekt für den MQTT Wifi Client. </p>
 
 </div>
 </div>
@@ -1465,14 +867,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a19d9a19b02203cf83a5ae87a3bf3f427"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a19d9a19b02203cf83a5ae87a3bf3f427">&#9670;&nbsp;</a></span>NTP_SERVER</h2>
+<a id="a4b25b86bb2ceb20fbb1c227ce85c0482"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b25b86bb2ceb20fbb1c227ce85c0482">&#9670;&nbsp;</a></span>ntp_server</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const char* NTP_SERVER = &quot;de.pool.ntp.org&quot;</td>
+          <td class="memname">const char* ntp_server = <a class="el" href="config_8h.html#a751e3f85cd240e89d390d18996089cd0">NTP_SERVER</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1481,51 +883,20 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a9ab81a7ae17f3497b23bbccb020c3308"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9ab81a7ae17f3497b23bbccb020c3308">&#9670;&nbsp;</a></span>payload</h2>
+<a id="a6ea06cf7b8092a0adaf07614d7ece59d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ea06cf7b8092a0adaf07614d7ece59d">&#9670;&nbsp;</a></span>preferences</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structpayload__t.html">payload_t</a> payload</td>
+          <td class="memname">Preferences preferences</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Der Payload vom Typ <a class="el" href="structpayload__t.html" title="Die Datenstruktur des payloads in dem RF24 Netzwerk. Sie wird nur benötigt wenn der RF24Gateway genut...">payload_t</a>. </p>
-
-</div>
-</div>
-<a id="a1482a749745edd9075ded3b6189c23e8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1482a749745edd9075ded3b6189c23e8">&#9670;&nbsp;</a></span>preference</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structprefs__t.html">prefs_t</a> preference</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Eine Variable zur Aufnahme der Preferences Struktur. </p>
-
-</div>
-</div>
-<a id="ae53ff54a40d030d008ae7bbba79f1a0d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae53ff54a40d030d008ae7bbba79f1a0d">&#9670;&nbsp;</a></span>preferencechange</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool preferencechange = false</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>"true" bei Veränderung der Preferences, sonst "false" </p>
+<p>TimeZone Info. </p>
+<p>Ein Objekt für die Preferences </p>
 
 </div>
 </div>
@@ -1541,39 +912,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Eine Variable zur Aufnahme der Preferences Struktur. </p>
 <p>Das reboot Flag, ist es auf "true" wird im nächsten Loop Durchgang der Node neu gestartet. </p>
-
-</div>
-</div>
-<a id="a5ef8eab3ddeba431e8d6f28a5c2e41e3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5ef8eab3ddeba431e8d6f28a5c2e41e3">&#9670;&nbsp;</a></span>rf24_hub2node</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint8_t rf24_hub2node[] = <a class="el" href="config_8h.html#a09f69030b8d9ea328b68d9094f8fee10">RF24_HUB2NODE</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Funkkennung Hub in Richtung Node. </p>
-
-</div>
-</div>
-<a id="a15ff746156b815912cf60f830cb3df41"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a15ff746156b815912cf60f830cb3df41">&#9670;&nbsp;</a></span>rf24_node2hub</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint8_t rf24_node2hub[] = <a class="el" href="config_8h.html#a0d59bcd261338d1bef2ac25f7ce555ca">RF24_NODE2HUB</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Funkkennung Node in Richtung Hub. </p>
 
 </div>
 </div>
@@ -1593,14 +933,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a8cae9cf2b3fe65745398e2d2dfc7e3e0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8cae9cf2b3fe65745398e2d2dfc7e3e0">&#9670;&nbsp;</a></span>timeStr</h2>
+<a id="a7d06d6a83f2f21cc0f87171e205af5ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d06d6a83f2f21cc0f87171e205af5ec">&#9670;&nbsp;</a></span>timeStr</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">char timeStr[12]</td>
+          <td class="memname">char timeStr[16]</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1625,54 +965,6 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a86743b683b9cb5f40d7894f943802013"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a86743b683b9cb5f40d7894f943802013">&#9670;&nbsp;</a></span>TZ_INFO</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const char* TZ_INFO = &quot;CET-1CEST-2,M3.5.0/02:00:00,M10.5.0/03:00:00&quot;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>TimeZone Info. </p>
-
-</div>
-</div>
-<a id="a46b48e04b347d8c6d55433b1f1dcc5b1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a46b48e04b347d8c6d55433b1f1dcc5b1">&#9670;&nbsp;</a></span>udp</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">WiFiUDP udp</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Ein Objekt für udp Daten. </p>
-
-</div>
-</div>
-<a id="aed24fc049dc5a6c8b3fd89e20c79be34"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aed24fc049dc5a6c8b3fd89e20c79be34">&#9670;&nbsp;</a></span>udpdata</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="structudpdata__t.html">udpdata_t</a> udpdata</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Eine Variable zur Aufnahme der UDP Daten Struktur. </p>
-
-</div>
-</div>
 <a id="a50e57bf0f05333a4871a10f3268672bf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a50e57bf0f05333a4871a10f3268672bf">&#9670;&nbsp;</a></span>uptime</h2>
 
@@ -1686,6 +978,48 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Ein Objekt zur Verwaltung der uptime. </p>
+
+</div>
+</div>
+<a id="a052c54f9087030f8d09e47f261ff8cdb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a052c54f9087030f8d09e47f261ff8cdb">&#9670;&nbsp;</a></span>wifi_ap_starttime</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long wifi_ap_starttime = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abec13d15bcf746ef1ad2f3a1a78eaa08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abec13d15bcf746ef1ad2f3a1a78eaa08">&#9670;&nbsp;</a></span>wifi_pass</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String wifi_pass</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acb585f6ad22b9a69cf709368bba0d7f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb585f6ad22b9a69cf709368bba0d7f2">&#9670;&nbsp;</a></span>wifi_ssid</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String wifi_ssid</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>

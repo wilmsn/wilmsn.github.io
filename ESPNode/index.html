@@ -68,7 +68,7 @@ $(function() {
 <div class="textblock"><p><a class="anchor" id="md__home_norbert_projekte_ESPNode_README"></a></p>
 <h1><a class="anchor" id="autotoc_md1"></a>
 brief description</h1>
-<p>ESPNode is a firmware for ESP8266 and ESP32 (in future). This firmware is not generic, it has to be configured and compiled for each individual node.</p>
+<p>ESPNode is a firmware for ESP8266 and ESP32. This firmware is not generic, it has to be configured and compiled for each individual node.</p>
 <h3><a class="anchor" id="autotoc_md2"></a>
 Features:</h3>
 <ul>
@@ -103,7 +103,7 @@ Hauptprogramm</h1>
 <p>Danach ist das Programm initialisiert und läuft in einer Endlosschleife. Innerhalb der Schleife finden (zum Teil zeitgesteuert) folgende Aktionen statt:</p>
 <ul>
 <li>RF24 Gateway (falls aktiviert): Prüfen ob neue Datenpakete anliegen, wenn ja dann an den Hub weiterleiten</li>
-<li>MQTT auf Pakete prüfen und veraarbeiten</li>
+<li>MQTT auf Pakete prüfen und verarbeiten</li>
 <li><a class="el" href="main_8cpp.html#afe461d27b9c48d5921c00d521181f12f" title="Die Hauptschleife.">loop()</a> Funktion aller Sensoren und Switches bedienen</li>
 </ul>
 <p>Zeitabhängige Aktionen:</p>
@@ -113,9 +113,23 @@ Hauptprogramm</h1>
 <li>Statusdaten und Messwerte senden (var: MESSINTERVAL)</li>
 </ul>
 <h1><a class="anchor" id="autotoc_md4"></a>
+Webinterface</h1>
+<p>Das Webinterface selber ist generisch gehalten, als "onePager = alles in einer Webdatei" gestaltet und bietet folgende generische Felder (Befüllung erfolgt mittels Javascript über Websocket):</p>
+<ul>
+<li>2 Titelzeilen (key: titel1 / titel2)</li>
+<li>Statuszeile für RF24 Messages (key: rf24)</li>
+<li>4 Statusfelder für Sensorwerte (key: sens1 ... sens4)</li>
+<li>4 Schalter (key: sw1 ...sw4)</li>
+<li>3 Schieberegler (key: slider1 ... slider3)</li>
+<li>LED Matrix (key: matrix)</li>
+<li>Webradio (key: webradio)</li>
+</ul>
+<p>Details zu den Feldern kann man am besten der Seite index.html entnehmen. Die zentrale Steuerung der Felder (Einblendung, Befüllung) findet in der Javascriptfunktion "prozessJS" statt. Zum Start der Weboberfläche sind alle Felder bis auf Titel1 ausgeblendet. Zusätzlich benötigte Felder werden durch eine JSON Nachricht aktiviert: z.B. "{"titel2": "Eine Beschreibung"} für die Befüllung von Titel 2.</p>
+<h1><a class="anchor" id="autotoc_md5"></a>
 Sensormodule</h1>
-<p>Sensormodule beschreiben bzw erzeugen eigene Objekte. Die Einbindung erfolgt über die Datei **"Node_settings.h"**. Dort müssen die nachfolgenden Funktionen vorhanden und mit Inhalt gefüllt sein. Zur Kompatibilität sind die Funktionen als Leerfunktion im Grundobjekt **"Sensor_Generic"** bereits vorhanden. Alle neuen Objekte für Sensoren und Aktoren werden von **"Sensor_Generic"** abgeleitet.</p>
-<h2><a class="anchor" id="autotoc_md5"></a>
+<p>Sensormodule beschreiben bzw erzeugen eigene Objekte. Die Einbindung erfolgt über die Datei **"Node_settings.h"**. Dort müssen die nachfolgenden Funktionen vorhanden und mit Inhalt gefüllt sein. Zur Kompatibilität sind die Funktionen als Leerfunktion im Grundobjekt **"Sensor_Generic" bzw. "Actor_Generic"** bereits vorhanden. Alle neuen Objekte für Sensoren werden von "Sensor_Generic" und für Aktoren von "Actor_Generic" abgeleitet. Beispiele dafür befinden sich in den mitgelieferten Modulen z.B. "sensor_18B20.h/cpp".</p>
+<p><b>tbd Überarbeiten ab hier</b></p>
+<h2><a class="anchor" id="autotoc_md6"></a>
 Funktion "begin()"</h2>
 <p>Dies Funktion kann je nach Einsatz und Aufgabe unterschiedliche Parameter erfordern. Damit die Funktion universell eingebaut werden kann, erfolgt ihr "Einbau" in der Datei **"Node_settings.h"** über eine Precompiler Direktive. Beispiel: </p><pre class="fragment">#include "sensor_18B20.h"
 #define SENSOR1_DEFINITION       Sensor_18B20 sensor1;
@@ -126,7 +140,7 @@ Funktion "begin()"</h2>
 <p>In der Webseite ist Platz für **"sensorinfo1"** bis **"sensorinfo5"** vorgesehen</p>
 <p>Innerhalb des Programmes wird in diesem Schritt alles nötige getan um das Objekt zu initalisieren und alle Werte auf Startwerte gesetzt.</p>
 <p>Die Implementierung erfolgt wiederum über eine Precompilerdirektive (Zeile3): Der erste Teil "SENSOR1_BEGIN_STATEMENT" ist statisch. Der zweite Teil wird entsprechend der benötigten Objektinitialisierung angepasst.</p>
-<h2><a class="anchor" id="autotoc_md6"></a>
+<h2><a class="anchor" id="autotoc_md7"></a>
 Funktion "start_measure()"</h2>
 <p>Innerhalb dieser Funktion muss bei einem Sensor zwingend folgendes Programmiert werden:</p>
 <p>1) Alles nötige zum Auslesen des oder der Messwerte.</p>
@@ -137,10 +151,10 @@ Funktion "start_measure()"</h2>
 <p>2.b) **"obj_mqtt_json"** Hier muss ein Teil-JSON für alle Messwerte zur Übertragung mittels MQTT eingetragen werden.</p>
 <p>Syntax: **{"Messwertlabel" : "Wert"}**</p>
 <p>Beispiel: **{"Temperatur" : 21.2 }**</p>
-<h2><a class="anchor" id="autotoc_md7"></a>
+<h2><a class="anchor" id="autotoc_md8"></a>
 Funktion set( keyword, value)</h2>
 <p>Diese Funktion muss für jeden Aktor/Switch gefüllt werden. Innerhalb des Hauptprogrammes werden alle Befehle (Format Item=value) durch jede set funktion der eingebauten Objekte geschleust. Die Objekte prüfen ob das Item für sie ein keyword ist und sie handeln müssen. Die benötigte Funktion für diese Prüfing ist im generischen Basisobjekt als Funktion <b>keyword_match</b> hinterlegt. Nach Beendigung der Funktion müssen auch hier die Variablen **"obj_html_stat_json"** und **"obj_mqtt_json"** gefüllt sein.</p>
-<h2><a class="anchor" id="autotoc_md8"></a>
+<h2><a class="anchor" id="autotoc_md9"></a>
 Funktion "html_create_json_part(json)"</h2>
 <p>Ein Sensor aktiviert seine Anzeige selbst indem der anzuzeigende Wert in das passende HTML Feld geschrieben wird. Bei einem Aktor/Switch muss dazu die Funktion "html_create_json_part" gefüllt werden. Durch das hier erzeugte JSON wird festgelgt was wie auf der HTML Seite angezeigt wird. Dabei gibt es folgende Möglichkeit:</p>
 <p>a) Reiner Ein-Aus Schalter</p>
@@ -149,7 +163,7 @@ Funktion "html_create_json_part(json)"</h2>
 <p>Codesegment: **"sw1 : 0 , sw1_label : Lichtschalter , sw1_format : x, slider1 : 1 , slider1label : Helligkeit , slider1val : 54"**</p>
 <p>c) Jede andere Kombination die nach Änderung der HTML Seite benötigt wird</p>
 <p>Beispiele dazu in der Datei <a class="el" href="switch__onoff_8h.html">switch_onoff.h</a>/cpp</p>
-<h1><a class="anchor" id="autotoc_md9"></a>
+<h1><a class="anchor" id="autotoc_md10"></a>
 Konfiguration</h1>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
