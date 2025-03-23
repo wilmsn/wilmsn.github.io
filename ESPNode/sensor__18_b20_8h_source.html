@@ -69,33 +69,37 @@ $(function() {
 <div class="title">sensor_18B20.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="sensor__18_b20_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef _SENSOR_18B20_H_</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define _SENSOR_18B20_H_</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//#define DEBUG_SERIAL_MODULE</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;OneWire.h&gt;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;DallasTemperature.h&gt;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="sensor__generic_8h.html">sensor_generic.h</a>&quot;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_sensor__18_b20.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_sensor__18_b20.html">Sensor_18B20</a> : <span class="keyword">public</span> <a class="code" href="class_sensor___generic.html">Sensor_Generic</a> {</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_sensor__18_b20.html#a5012d4599b6ec4e9bca1cbd6ec9f0a77">   19</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_sensor__18_b20.html#a5012d4599b6ec4e9bca1cbd6ec9f0a77">begin</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* html_place, <span class="keyword">const</span> <span class="keywordtype">char</span>* label, <span class="keyword">const</span> <span class="keywordtype">char</span>* mqtt_name);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_sensor__18_b20.html#a12518beddc0e846313f3dbf52f85aa82">   22</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_sensor__18_b20.html#a12518beddc0e846313f3dbf52f85aa82">start_measure</a>();</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    uint8_t obj_resolution = 12;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;};</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclass_sensor__18_b20_html"><div class="ttname"><a href="class_sensor__18_b20.html">Sensor_18B20</a></div><div class="ttdoc">Ein abgeleitetes Objekt für einen 18B20 Sensor.  Benötigt: OneWire und DallasTemperature als Gerätetr...</div><div class="ttdef"><b>Definition:</b> sensor_18B20.h:12</div></div>
-<div class="ttc" id="aclass_sensor__18_b20_html_a12518beddc0e846313f3dbf52f85aa82"><div class="ttname"><a href="class_sensor__18_b20.html#a12518beddc0e846313f3dbf52f85aa82">Sensor_18B20::start_measure</a></div><div class="ttdeci">void start_measure()</div><div class="ttdoc">Startet eine Messung. Nach der Erzeugung der Messwerte wird das Changed Flag gesetzt.</div></div>
-<div class="ttc" id="aclass_sensor__18_b20_html_a5012d4599b6ec4e9bca1cbd6ec9f0a77"><div class="ttname"><a href="class_sensor__18_b20.html#a5012d4599b6ec4e9bca1cbd6ec9f0a77">Sensor_18B20::begin</a></div><div class="ttdeci">void begin(const char *html_place, const char *label, const char *mqtt_name)</div><div class="ttdoc">Initialisierung des Sensorobjektes.</div></div>
-<div class="ttc" id="aclass_sensor___generic_html"><div class="ttname"><a href="class_sensor___generic.html">Sensor_Generic</a></div><div class="ttdoc">Ein generisches Objekt für einen Sensor. Nicht zum Einbau bestimmt, sondern nur als Vererbungsobjekt....</div><div class="ttdef"><b>Definition:</b> sensor_generic.h:13</div></div>
-<div class="ttc" id="asensor__generic_8h_html"><div class="ttname"><a href="sensor__generic_8h.html">sensor_generic.h</a></div></div>
+<a href="sensor__18_b20_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#ifdef USE_SENSOR_18B20</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#ifndef _SENSOR_18B20_H_</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#define _SENSOR_18B20_H_</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;OneWire.h&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;DallasTemperature.h&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="base__generic_8h.html">base_generic.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">class </span>Sensor_18B20 : <span class="keyword">public</span> <a class="code" href="class_base___generic.html">Base_Generic</a> {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_base___generic.html#a874447cd43263c5bbb63102c2201fb70">begin</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* html_place, <span class="keyword">const</span> <span class="keywordtype">char</span>* label, <span class="keyword">const</span> <span class="keywordtype">char</span>* mqtt_name, uint8_t gpio);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_base___generic.html#a9bd5d27ad69b5d034d7f85e928454d45">loop</a>(time_t <a class="code" href="common_8h.html#a3c3ca8cc859a31aec6578f0dcf1b32a5">now</a>);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">void</span> start_measure(time_t <a class="code" href="common_8h.html#a3c3ca8cc859a31aec6578f0dcf1b32a5">now</a>);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">bool</span>       obj_measure_started = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    time_t     obj_measure_starttime = 0;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;};</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="abase__generic_8h_html"><div class="ttname"><a href="base__generic_8h.html">base_generic.h</a></div></div>
+<div class="ttc" id="aclass_base___generic_html"><div class="ttname"><a href="class_base___generic.html">Base_Generic</a></div><div class="ttdoc">Ein generisches Objekt für einen Sensor/Actor. Nicht zum Einbau bestimmt, sondern nur als Vererbungso...</div><div class="ttdef"><b>Definition:</b> base_generic.h:13</div></div>
+<div class="ttc" id="aclass_base___generic_html_a874447cd43263c5bbb63102c2201fb70"><div class="ttname"><a href="class_base___generic.html#a874447cd43263c5bbb63102c2201fb70">Base_Generic::begin</a></div><div class="ttdeci">void begin(const char *html_place, const char *label)</div><div class="ttdoc">Legt die Startkonfiguration des Sensors fest. Die übergebenen Variabelen werden in die entsprechenden...</div><div class="ttdef"><b>Definition:</b> base_generic.cpp:8</div></div>
+<div class="ttc" id="aclass_base___generic_html_a9bd5d27ad69b5d034d7f85e928454d45"><div class="ttname"><a href="class_base___generic.html#a9bd5d27ad69b5d034d7f85e928454d45">Base_Generic::loop</a></div><div class="ttdeci">void loop(time_t now)</div><div class="ttdoc">Eine Funktion die im Hauptprogramm im loop regelmäßig aufgerufen wird. Hier können in den abgeleitete...</div><div class="ttdef"><b>Definition:</b> base_generic.cpp:29</div></div>
+<div class="ttc" id="acommon_8h_html_a3c3ca8cc859a31aec6578f0dcf1b32a5"><div class="ttname"><a href="common_8h.html#a3c3ca8cc859a31aec6578f0dcf1b32a5">now</a></div><div class="ttdeci">time_t now</div><div class="ttdoc">Eine Variable für Zeitinformationen.</div><div class="ttdef"><b>Definition:</b> main.h:117</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -69,34 +69,39 @@ $(function() {
 <div class="title">sensor_ldr.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="sensor__ldr_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef _SENSOR_LDR_H_</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define _SENSOR_LDR_H_</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">/***************************************************************************************</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> ***************************************************************************************/</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="sensor__generic_8h.html">sensor_generic.h</a>&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//Die folgende Zeile sorgt dafür das der Eingang A0 nicht genutzt wird um die interne Spannung zu messen!</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="sensor__ldr_8h.html#a2df4f22bee1a94368e19fac0c6779bc5">    8</a></span>&#160;<span class="preprocessor">#define ANALOGINPUT</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_sensor___l_d_r.html">   13</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_sensor___l_d_r.html">Sensor_LDR</a> : <span class="keyword">public</span> <a class="code" href="class_sensor___generic.html">Sensor_Generic</a> {</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_sensor___l_d_r.html#ac5266bc147e839328fa14c5fd424713d">   19</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_sensor___l_d_r.html#ac5266bc147e839328fa14c5fd424713d">begin</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* html_place, <span class="keyword">const</span> <span class="keywordtype">char</span>* label);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_sensor___l_d_r.html#a6242362584c5215bdaf9ccfb08b63cf5">   22</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_sensor___l_d_r.html#a6242362584c5215bdaf9ccfb08b63cf5">start_measure</a>();</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">private</span>:</div>
+<a href="sensor__ldr_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifdef USE_SENSOR_LDR</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#ifndef _SENSOR_LDR_H_</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#define _SENSOR_LDR_H_</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">/***************************************************************************************</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> ***************************************************************************************/</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="base__generic_8h.html">base_generic.h</a>&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">//Die folgende Zeile sorgt dafür das der Eingang A0 nicht genutzt wird um die interne Spannung zu messen!</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define ANALOGINPUT</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">class </span>Sensor_LDR : <span class="keyword">public</span> <a class="code" href="class_base___generic.html">Base_Generic</a> {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_base___generic.html#a874447cd43263c5bbb63102c2201fb70">begin</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* html_place, <span class="keyword">const</span> <span class="keywordtype">char</span>* label, uint32_t messinterval);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_base___generic.html#a9bd5d27ad69b5d034d7f85e928454d45">loop</a>(time_t <a class="code" href="common_8h.html#a3c3ca8cc859a31aec6578f0dcf1b32a5">now</a>);</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">int</span> obj_value;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;};</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclass_sensor___generic_html"><div class="ttname"><a href="class_sensor___generic.html">Sensor_Generic</a></div><div class="ttdoc">Ein generisches Objekt für einen Sensor. Nicht zum Einbau bestimmt, sondern nur als Vererbungsobjekt....</div><div class="ttdef"><b>Definition:</b> sensor_generic.h:13</div></div>
-<div class="ttc" id="aclass_sensor___l_d_r_html"><div class="ttname"><a href="class_sensor___l_d_r.html">Sensor_LDR</a></div><div class="ttdoc">Ein abgeleitetes Objekt um einen LDR auszulesen  Achtung: Da der analoge Eingang hier genutzt wird mu...</div><div class="ttdef"><b>Definition:</b> sensor_ldr.h:13</div></div>
-<div class="ttc" id="aclass_sensor___l_d_r_html_a6242362584c5215bdaf9ccfb08b63cf5"><div class="ttname"><a href="class_sensor___l_d_r.html#a6242362584c5215bdaf9ccfb08b63cf5">Sensor_LDR::start_measure</a></div><div class="ttdeci">void start_measure()</div><div class="ttdoc">Startet eine Messung.</div></div>
-<div class="ttc" id="aclass_sensor___l_d_r_html_ac5266bc147e839328fa14c5fd424713d"><div class="ttname"><a href="class_sensor___l_d_r.html#ac5266bc147e839328fa14c5fd424713d">Sensor_LDR::begin</a></div><div class="ttdeci">void begin(const char *html_place, const char *label)</div><div class="ttdoc">Die normale Initialisierung aus Sensor_Generic erweitert um eine Messung des LDR damit dieser sofort ...</div></div>
-<div class="ttc" id="asensor__generic_8h_html"><div class="ttname"><a href="sensor__generic_8h.html">sensor_generic.h</a></div></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">int</span>            obj_value;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    time_t         obj_measure_starttime = 0;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    time_t         obj_measure_interval = 60;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    time_t         obj_measure_delay = 60;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;};</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="abase__generic_8h_html"><div class="ttname"><a href="base__generic_8h.html">base_generic.h</a></div></div>
+<div class="ttc" id="aclass_base___generic_html"><div class="ttname"><a href="class_base___generic.html">Base_Generic</a></div><div class="ttdoc">Ein generisches Objekt für einen Sensor/Actor. Nicht zum Einbau bestimmt, sondern nur als Vererbungso...</div><div class="ttdef"><b>Definition:</b> base_generic.h:13</div></div>
+<div class="ttc" id="aclass_base___generic_html_a874447cd43263c5bbb63102c2201fb70"><div class="ttname"><a href="class_base___generic.html#a874447cd43263c5bbb63102c2201fb70">Base_Generic::begin</a></div><div class="ttdeci">void begin(const char *html_place, const char *label)</div><div class="ttdoc">Legt die Startkonfiguration des Sensors fest. Die übergebenen Variabelen werden in die entsprechenden...</div><div class="ttdef"><b>Definition:</b> base_generic.cpp:8</div></div>
+<div class="ttc" id="aclass_base___generic_html_a9bd5d27ad69b5d034d7f85e928454d45"><div class="ttname"><a href="class_base___generic.html#a9bd5d27ad69b5d034d7f85e928454d45">Base_Generic::loop</a></div><div class="ttdeci">void loop(time_t now)</div><div class="ttdoc">Eine Funktion die im Hauptprogramm im loop regelmäßig aufgerufen wird. Hier können in den abgeleitete...</div><div class="ttdef"><b>Definition:</b> base_generic.cpp:29</div></div>
+<div class="ttc" id="acommon_8h_html_a3c3ca8cc859a31aec6578f0dcf1b32a5"><div class="ttname"><a href="common_8h.html#a3c3ca8cc859a31aec6578f0dcf1b32a5">now</a></div><div class="ttdeci">time_t now</div><div class="ttdoc">Eine Variable für Zeitinformationen.</div><div class="ttdef"><b>Definition:</b> main.h:117</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -1,4 +1,0 @@
-<map id="Switch_Generic" name="Switch_Generic">
-<area shape="rect" id="node1" title="Ein generisches Objekt für einen Sensor. Nicht zum Einbau bestimmt, sondern nur als Vererbungsobjekt...." alt="" coords="5,80,128,107"/>
-<area shape="rect" id="node2" href="$class_base___generic.html" title="Ein generisches Objekt für einen Sensor. Nicht zum Einbau bestimmt, sondern nur als Vererbungsobjekt...." alt="" coords="11,5,122,32"/>
-</map>

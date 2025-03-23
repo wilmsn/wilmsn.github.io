@@ -1,3 +1,3 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$structudpdata__t.html" title="Die Datenstructur zur Übertragung der Daten zwischen Gateway und Hub Im Prinzig ebtspricht diese Stru..." alt="" coords="5,5,92,32"/>
+<area shape="rect" id="node1" href="$structpayload__t.html" title="Die Datenstruktur des payloads in dem RF24 Netzwerk. Sie wird nur benötigt wenn der RF24Gateway genut..." alt="" coords="5,5,92,32"/>
 </map>

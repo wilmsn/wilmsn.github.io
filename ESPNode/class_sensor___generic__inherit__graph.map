@@ -1,7 +1,0 @@
-<map id="Sensor_Generic" name="Sensor_Generic">
-<area shape="rect" id="node1" title="Ein generisches Objekt für einen Sensor. Nicht zum Einbau bestimmt, sondern nur als Vererbungsobjekt...." alt="" coords="139,80,261,107"/>
-<area shape="rect" id="node3" href="$class_sensor__18_b20.html" title="Ein abgeleitetes Objekt für einen 18B20 Sensor. &#160;Benötigt: OneWire und DallasTemperature als Gerätetr..." alt="" coords="5,155,120,181"/>
-<area shape="rect" id="node4" href="$class_sensor___bosch.html" title="Ein abgeleitetes Objekt für einen Bosch Sensor. &#160;Benötigt: https://github.com/wilmsn/BMX_sensor als G..." alt="" coords="144,155,256,181"/>
-<area shape="rect" id="node5" href="$class_sensor___l_d_r.html" title="Ein abgeleitetes Objekt um einen LDR auszulesen &#160;Achtung: Da der analoge Eingang hier genutzt wird mu..." alt="" coords="280,155,379,181"/>
-<area shape="rect" id="node2" href="$class_base___generic.html" title="Ein generisches Objekt für einen Sensor. Nicht zum Einbau bestimmt, sondern nur als Vererbungsobjekt...." alt="" coords="145,5,255,32"/>
-</map>

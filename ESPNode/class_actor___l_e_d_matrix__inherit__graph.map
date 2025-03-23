@@ -1,6 +1,0 @@
-<map id="Actor_LEDMatrix" name="Actor_LEDMatrix">
-<area shape="rect" id="node1" title="Ein abgeleitetes Objekt für eine eine LED Matrix. &#160;Benötigt: https://github.com/wilmsn/LED_Matrix als..." alt="" coords="5,229,136,256"/>
-<area shape="rect" id="node2" href="$class_switch___on_off.html" title="Ein abgeleitetes Objekt für einen Ein&#45;Aus Schalter. &#160;Der Schalter reagiert nur wenn es in der set Fun..." alt="" coords="16,155,125,181"/>
-<area shape="rect" id="node3" href="$class_actor___generic.html" title="Ein generisches Objekt für einen Actor. Nicht zum Einbau bestimmt, sondern nur als Vererbungsobjekt...." alt="" coords="14,80,127,107"/>
-<area shape="rect" id="node4" href="$class_base___generic.html" title="Ein generisches Objekt für einen Sensor. Nicht zum Einbau bestimmt, sondern nur als Vererbungsobjekt...." alt="" coords="15,5,126,32"/>
-</map>

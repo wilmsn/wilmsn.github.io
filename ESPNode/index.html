@@ -67,7 +67,7 @@ $(function() {
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="md__home_norbert_projekte_ESPNode_README"></a></p>
 <h1><a class="anchor" id="autotoc_md1"></a>
-brief description</h1>
+Brief Description</h1>
 <p>ESPNode is a firmware for ESP8266 and ESP32. This firmware is not generic, it has to be configured and compiled for each individual node.</p>
 <h3><a class="anchor" id="autotoc_md2"></a>
 Features:</h3>
@@ -78,16 +78,13 @@ Features:</h3>
 <li>Written in C++ for Arduino</li>
 </ul>
 <p><img src="https://wilmsn.github.io/ESPNode/espnode.png" alt="ESPNode Komponenten" class="inline"/></p>
-<p>ESPNode as a part of RF24Hub</p>
-<p><img src="https://wilmsn.github.io/ESPNode/einbindung.png" alt="Einbindung des ESPNode in den RF24Hub" class="inline"/></p>
 <p>The main documentation of this projekt is in german language.</p>
 <p><a href="http://wilmsn.github.io/ESPNode/index.html">Programmdoku auf wilmsn.github.io/ESPNode</a></p>
 <h1><a class="anchor" id="autotoc_md3"></a>
 Hauptprogramm</h1>
 <p>Details zum Hauptprogramm gibt es in der <a href="http://wilmsn.github.io/ESPNode/index.html">Programmdoku</a>, hier wird nur das zugrundeliegende Konzept beschrieben. Im Hauptprogramm sind folgende Komponenten vorgesehen:</p>
 <ul>
-<li>Einbau von bis zu 4 Schaltern</li>
-<li>Einbau von bis zu 2 Sensoren (Hardware) mit bis zu 4 Messwerten in Summe</li>
+<li>Einbau von bis zu 6 Modulen.</li>
 </ul>
 <p>Sofern die Module/Objektdefinitionen bereits vorhanden sind, kann das Programm einfach durch Konfiguration angepasst werden. Ohne Konfiguration sind alle Elemente deaktiviert. Details über die Konfiguration sind <a href="#konfiguration">hier</a> zu finden</p>
 <p>Initialisierung des Hauptprogrammes: Hier werden nacheinander folgende Dinge erledigt:</p>
@@ -96,15 +93,15 @@ Hauptprogramm</h1>
 <li>Öffnen des internen Filesystems</li>
 <li>Starten des Webservers</li>
 <li>Starten des RF24 Gateways (falls aktiviert)</li>
-<li>Ausführen der BEGIN Staements aller Sensoren und Switches</li>
-<li>Starten des Messvorgangs aller Sensoren</li>
+<li>Ausführen der BEGIN Statements aller Module</li>
+<li>Start des Messvorgangs aller Sensoren</li>
 <li>Start des MQTT Clients</li>
 </ul>
 <p>Danach ist das Programm initialisiert und läuft in einer Endlosschleife. Innerhalb der Schleife finden (zum Teil zeitgesteuert) folgende Aktionen statt:</p>
 <ul>
-<li>RF24 Gateway (falls aktiviert): Prüfen ob neue Datenpakete anliegen, wenn ja dann an den Hub weiterleiten</li>
-<li>MQTT auf Pakete prüfen und verarbeiten</li>
-<li><a class="el" href="main_8cpp.html#afe461d27b9c48d5921c00d521181f12f" title="Die Hauptschleife.">loop()</a> Funktion aller Sensoren und Switches bedienen</li>
+<li>RF24 Gateway (falls aktiviert): Prüfen ob neue Datenpakete anliegen, wenn ja dann an den Hub oder Node weiterleiten</li>
+<li>MQTT auf Pakete prüfen und veraarbeiten</li>
+<li><a class="el" href="main_8cpp.html#afe461d27b9c48d5921c00d521181f12f" title="Die Hauptschleife.">loop()</a> Funktion aller Module bedienen</li>
 </ul>
 <p>Zeitabhängige Aktionen:</p>
 <ul>
@@ -113,59 +110,111 @@ Hauptprogramm</h1>
 <li>Statusdaten und Messwerte senden (var: MESSINTERVAL)</li>
 </ul>
 <h1><a class="anchor" id="autotoc_md4"></a>
-Webinterface</h1>
-<p>Das Webinterface selber ist generisch gehalten, als "onePager = alles in einer Webdatei" gestaltet und bietet folgende generische Felder (Befüllung erfolgt mittels Javascript über Websocket):</p>
-<ul>
-<li>2 Titelzeilen (key: titel1 / titel2)</li>
-<li>Statuszeile für RF24 Messages (key: rf24)</li>
-<li>4 Statusfelder für Sensorwerte (key: sens1 ... sens4)</li>
-<li>4 Schalter (key: sw1 ...sw4)</li>
-<li>3 Schieberegler (key: slider1 ... slider3)</li>
-<li>LED Matrix (key: matrix)</li>
-<li>Webradio (key: webradio)</li>
-</ul>
-<p>Details zu den Feldern kann man am besten der Seite index.html entnehmen. Die zentrale Steuerung der Felder (Einblendung, Befüllung) findet in der Javascriptfunktion "prozessJS" statt. Zum Start der Weboberfläche sind alle Felder bis auf Titel1 ausgeblendet. Zusätzlich benötigte Felder werden durch eine JSON Nachricht aktiviert: z.B. "{"titel2": "Eine Beschreibung"} für die Befüllung von Titel 2.</p>
-<h1><a class="anchor" id="autotoc_md5"></a>
-Sensormodule</h1>
-<p>Sensormodule beschreiben bzw erzeugen eigene Objekte. Die Einbindung erfolgt über die Datei **"Node_settings.h"**. Dort müssen die nachfolgenden Funktionen vorhanden und mit Inhalt gefüllt sein. Zur Kompatibilität sind die Funktionen als Leerfunktion im Grundobjekt **"Sensor_Generic" bzw. "Actor_Generic"** bereits vorhanden. Alle neuen Objekte für Sensoren werden von "Sensor_Generic" und für Aktoren von "Actor_Generic" abgeleitet. Beispiele dafür befinden sich in den mitgelieferten Modulen z.B. "sensor_18B20.h/cpp".</p>
-<p><b>tbd Überarbeiten ab hier</b></p>
-<h2><a class="anchor" id="autotoc_md6"></a>
-Funktion "begin()"</h2>
-<p>Dies Funktion kann je nach Einsatz und Aufgabe unterschiedliche Parameter erfordern. Damit die Funktion universell eingebaut werden kann, erfolgt ihr "Einbau" in der Datei **"Node_settings.h"** über eine Precompiler Direktive. Beispiel: </p><pre class="fragment">#include "sensor_18B20.h"
-#define SENSOR1_DEFINITION       Sensor_18B20 sensor1;
-#define SENSOR1_BEGIN_STATEMENT  sensor1.begin("sens1","Temperatur","Temperatur");
-</pre><p> In der ersten Zeile wird die Headerdatei für die Objektdefinition eingebunden. In der zweiten Zeile das Objekt definiert. Die Direktive **"SENSOR1_DEFINITION"** MUSS für den ersten Sensor verwendet werden. Gibt es weitere Sensoren, gibt es im Programm eine Vorbereitung für 3 Sensoren (SENSOR1 bis SENSOR3) und 4 Aktoren (SWITCH1 bis SWITCH4). Liefert eine Hardware mehrere Messwerte, wird diese als ein Sensor implementiert (siehe "sensor_bosch.h/cpp". Die Objektdefinition ist hier "Sensor_18B20". Dieser Ausdruck ist variabel und entspricht dem der Definition. Das erzeugte Objekt heist "sensor1".</p>
-<p>In die Variable <b>obj_sensorinfo</b> wird ein Teil-JSON mit allen unter Sysinfo anzuzeigenden Sensorinfos angelegt.</p>
-<p>Syntax: **"sensorinfo1 : Sensordetails linke Spalte # Sensordetails rechte Spalte"**</p>
-<p>In der Webseite ist Platz für **"sensorinfo1"** bis **"sensorinfo5"** vorgesehen</p>
-<p>Innerhalb des Programmes wird in diesem Schritt alles nötige getan um das Objekt zu initalisieren und alle Werte auf Startwerte gesetzt.</p>
-<p>Die Implementierung erfolgt wiederum über eine Precompilerdirektive (Zeile3): Der erste Teil "SENSOR1_BEGIN_STATEMENT" ist statisch. Der zweite Teil wird entsprechend der benötigten Objektinitialisierung angepasst.</p>
-<h2><a class="anchor" id="autotoc_md7"></a>
-Funktion "start_measure()"</h2>
-<p>Innerhalb dieser Funktion muss bei einem Sensor zwingend folgendes Programmiert werden:</p>
-<p>1) Alles nötige zum Auslesen des oder der Messwerte.</p>
-<p>2) Befüllung folgender Variablen (vordefiniert in "Sensor_Generic")</p>
-<p>2.a) **"obj_html_stat_json"** Hier muss ein kompletter gültiger JSON eingetragen mit dem/den aktuellen Messwert(en) eingetragen werden.</p>
-<p>Syntax: **{"Einbauplatz" : "Anzuzeigender Schriftzug"}**</p>
-<p>Beispiel: **{"sens1" : "Temperatur 21 °C"}**</p>
-<p>2.b) **"obj_mqtt_json"** Hier muss ein Teil-JSON für alle Messwerte zur Übertragung mittels MQTT eingetragen werden.</p>
-<p>Syntax: **{"Messwertlabel" : "Wert"}**</p>
-<p>Beispiel: **{"Temperatur" : 21.2 }**</p>
+Module</h1>
+<p>Module beschreiben bzw erzeugen eigene Objekte. Die Definition erfolgt in der Datei **"Node_settings.h"**. Die Aktivierung der Konfiguration für einen Node erfolgt in der Datei **"config.h"**</p>
+<p>Für die nachfolgenden Beispiele reichen die mitgelieferten Klassenbibliotheken.</p>
+<h2><a class="anchor" id="autotoc_md5"></a>
+Beispiel 1: Einfacher ESP8266 Node ohne externe Bauteile</h2>
+<p>Hie kann auf einem ESP8266 lediglich die interne LED per Schalter über die Weboberfläche ein und ausgeschaltet werden. </p><pre class="fragment">#ifdef NODESIMPLE
+#define USE_SWITCH_ONOFF
+#include "switch_onoff.h"
+
+#define HOSTNAME               "nodesimple"
+#define HOST_DISCRIPTION       "Ein ESP32 Node ohne externe Elemente"
+#define DEBUG_SERIAL_WEB
+#define DEBUG_SERIAL_MODULE
+#define DEBUG_SERIAL_MQTT
+#define MODULE1_DEFINITION      Switch_OnOff module1;
+#ifdef ESP32
+#ifndef LED_BUILTIN
+#define LED_BUILTIN   2
+#endif
+#define MODULE1_BEGIN_STATEMENT module1.begin("sw1", "interne LED", "int_led", "int_led", false, true, LED_BUILTIN);
+#else
+#define MODULE1_BEGIN_STATEMENT module1.begin("sw1", "interne LED", "int_led", "int_led", false, false, false, 2);
+#endif
+#define DO_LOG_SYSTEM           true
+#define MAGICNO                 0
+
+#endif
+</pre> <h2><a class="anchor" id="autotoc_md6"></a>
+Beispiel 2: Demo für die Witty Cloud</h2>
+<p>Die Witty Cloud ist ein ESP8266 Modul mit einer RGB LED und einem LDR. In der Weboberfläche gibt es 4 Schalter für die RGB Leds und die interne LED. Zusätzlich kann die Helligkeit der jeweiligen RGB Led mittels SChieberegler geändert werden. </p><pre class="fragment">#ifdef WITTYNODE
+
+#define DEBUG_SERIAL_MODULE
+#define DEBUG_SERIAL_WEB
+
+#define USE_SWITCH_ONOFF
+#include "switch_onoff.h"
+#define USE_SENSOR_LDR
+#include "sensor_ldr.h"
+
+#define WITTY_RGB_RT           15
+#define WITTY_RGB_GN           12
+#define WITTY_RGB_BL           13
+#define WITTY_LED_PIN          2
+
+#define MAGICNO                123
+
+#define HOSTNAME               "wittynode"
+#define HOST_DISCRIPTION       "A Witty Node"
+
+#define MQTT_CLIENT            "WittyNode"
+#define MQTT_TOPICP2           "wittynode"
+
+#define DEBUG_SERIAL_WEB
+#define DEBUG_SERIAL_MODULE
+#define DEBUG_SERIAL_MQTT
+#define DEBUG_SERIAL_SYSTEM
+
+#define DO_LOG_MQTT              true
+#define DO_LOG_MODULE            true
+#define DO_LOG_WEB               true
+#define DO_LOG_SYSTEM            true
+
+#define MODULE1_DEFINITION      Switch_OnOff module1;
+#define MODULE1_BEGIN_STATEMENT module1.begin("sw1", "interne LED", "int_led", "int_led", false, false, false, WITTY_LED_PIN);
+
+#define MODULE2_DEFINITION      Switch_OnOff module2;
+#define MODULE2_BEGIN_STATEMENT module2.begin("sw2", "RGB rot", "rot", "rot", false, true, false, WITTY_RGB_RT, 100, 100, 1, "Rot-Helligkeit", "rot_sl", "rot_sl");
+
+#define MODULE3_DEFINITION      Switch_OnOff module3;
+#define MODULE3_BEGIN_STATEMENT module3.begin("sw3", "RGB gruen", "gruen", "gruen", false, true, false, WITTY_RGB_GN, 100, 100, 2, "Grün Helligkeit", "gruen_sl", "gruen_sl");
+
+#define MODULE4_DEFINITION      Switch_OnOff module4;
+#define MODULE4_BEGIN_STATEMENT module4.begin("sw4", "RGB blau", "blau", "blau", false, true, false, WITTY_RGB_BL, 100, 100, 3, "Blau Helligkeit", "blau_sl", "blau_sl");
+
+#define MODULE5_DEFINITION      Sensor_LDR module5;
+#define MODULE5_BEGIN_STATEMENT module5.begin("out1", "LDR", 30);
+
+#endif
+</pre> <h2><a class="anchor" id="autotoc_md7"></a>
+Funktion der jeweiligen Zeilen:</h2>
+<pre class="fragment">#ifdef NODESIMPLE
+#endif
+</pre><p> Syntax: #ifdef &lt;Name des Nodes&gt; #endif Zwischen diesen beiden Zeilen befindet sich die Definition für den Node "NODESIMPEL". (Zeilen sind verpflichtend) Diese Konfiguration wird in der Datei <b><a class="el" href="config_8h.html">config.h</a></b> mit der folgenden Zeile aktiviert. #define NODESIMPEL Syntax: #define &lt;Name des Nodes&gt; <b>Achtung:</b> Es darf immer nur eine Konfiguration aktiviert sein !!! <br  />
+ </p><pre class="fragment">#include "switch_onoff.h"
+</pre><p> Syntax: #include "&lt;Name der Headerdatei&gt;" Hier wird/werden die Headerdatei(en) für das/die verwendete Modul(e) includiert. (min. 1 Zeile ist verpflichtend) </p><pre class="fragment">#define HOSTNAME               "nodesimple"
+</pre><p> Syntax: #define HOSTNAME &lt;Netzwerkname des Nodes&gt; Legt den Hostnamen fest. Dieser wird für die Anmeldung im Netz genutzt und in der Weboberfläche angezeigt. (Zeile ist verpflichtend) </p><pre class="fragment">#define HOST_DISCRIPTION       "Ein ESP8266 Node ohne externe 
+</pre><p> Syntax: #define HOST_DISCRIPTION &lt;Beschreibender Text&gt; Ein beschreibender Text für die Weboberfläche. (Zeile ist optional) </p><pre class="fragment">#define MODULE1_DEFINITION      Switch_OnOff module1;
+#define MODULE2_DEFINITION      Sensor_LDR module2;
+</pre><p> Syntax: #define MODULE[1..6]_DEFINITION &lt;Name der Objektklasse&gt; module[1...6];</p>
+<p>Durch diese Zeile wird aus dem Klassenmodell eine Instanz. Wichtig dabei ist: Die Nummern müssen aufsteigend, mit 1 beginnend vergeben werden. </p><pre class="fragment">#define MODULE1_BEGIN_STATEMENT module1.begin("sw1", "interne LED", "int_led", "int_led", false, true, LED_BUILTIN);
+</pre><p> Syntax: #define MODULE[1...6]_BEGIN_STATEMENT module[1...6].begin(&lt;Parameter1&gt;,...,&lt;ParameterN&gt;); Hier wird die Initialisierung des Objektes durchgeführt. Die Art und Anzahl der übergebenen Parameter hängt von deren Definition in der Klassenbibliothek ab. (min. 1 Zeile ist verpflichtend)</p>
 <h2><a class="anchor" id="autotoc_md8"></a>
-Funktion set( keyword, value)</h2>
-<p>Diese Funktion muss für jeden Aktor/Switch gefüllt werden. Innerhalb des Hauptprogrammes werden alle Befehle (Format Item=value) durch jede set funktion der eingebauten Objekte geschleust. Die Objekte prüfen ob das Item für sie ein keyword ist und sie handeln müssen. Die benötigte Funktion für diese Prüfing ist im generischen Basisobjekt als Funktion <b>keyword_match</b> hinterlegt. Nach Beendigung der Funktion müssen auch hier die Variablen **"obj_html_stat_json"** und **"obj_mqtt_json"** gefüllt sein.</p>
-<h2><a class="anchor" id="autotoc_md9"></a>
-Funktion "html_create_json_part(json)"</h2>
-<p>Ein Sensor aktiviert seine Anzeige selbst indem der anzuzeigende Wert in das passende HTML Feld geschrieben wird. Bei einem Aktor/Switch muss dazu die Funktion "html_create_json_part" gefüllt werden. Durch das hier erzeugte JSON wird festgelgt was wie auf der HTML Seite angezeigt wird. Dabei gibt es folgende Möglichkeit:</p>
-<p>a) Reiner Ein-Aus Schalter</p>
-<p>Codesegment: **"sw1 : 0 , sw1_label : Lichtschalter , sw1_format : x"**</p>
-<p>b) Schalter mit Regler</p>
-<p>Codesegment: **"sw1 : 0 , sw1_label : Lichtschalter , sw1_format : x, slider1 : 1 , slider1label : Helligkeit , slider1val : 54"**</p>
-<p>c) Jede andere Kombination die nach Änderung der HTML Seite benötigt wird</p>
-<p>Beispiele dazu in der Datei <a class="el" href="switch__onoff_8h.html">switch_onoff.h</a>/cpp</p>
-<h1><a class="anchor" id="autotoc_md10"></a>
-Konfiguration</h1>
-</div></div><!-- PageDoc -->
+Weitere Konfigurationszeilen:</h2>
+<p>Einschalten und konfigurieren des eingebauten MQTT Clients: </p><pre class="fragment">#define MQTT_CLIENT            "wittynode"
+#define MQTT_TOPICP2           "wittynode"
+</pre><p> Syntax: #define MQTT_CLIENT &lt;Name des Clients&gt; #define MQTT_TOPICP2 &lt;Name des Topicp2&gt; Mit den beiden Zeilen wird der MQTT Client eingeschaltet und konfiguriert. &lt;Name des Clients&gt; ist der Name mit dem sich dieser Client bein MQTT Server anmeldet. Das Topic des MQTT Server (Vergleichbar mit einem Pfad im Dateisystem) ist im allgemeinen so aufgebaut: &lt;Topic Part 1&gt;/&lt;Topic Part 2&gt;/&lt;Topic Part3&gt; Topic Part 1 und Topic Part 3 sind fest in der Konfiguration hinterlegt und werden idR. nicht geändert. Topic Part 2 kann bei Bedarf wiederum aus mehreren Subtopics bestehen. Denkbar wäre also folgende Konstellation: stat/haus/keller/bastelkeller/temperaturnode/info1 In diesem Fall wäre &lt;Name des Topicp2&gt; "haus/keller/bastelkeller/temperaturnode" (Wenn MQTT verwendet werden soll sind beide Zeilen verpflichtend)</p>
+<p>Einschalten und konfigurieren des eingebauten RF24 Gateways: </p><pre class="fragment">#define RF24GW_HUB_SERVER        "rpi1.fritz.box"
+#define RF24GW_NO                      103
+</pre><p> Syntax: #define RF24GW_HUB_SERVER &lt;Hostname des RF24 Servers&gt; #define RF24GW_NO &lt;Nummer des Gateways&gt; Mit diesen beiden Zeilen wird der RF24 Gateway konfiguriert und aktiviert. Zum RF24 Gateway gibt es noch mehrere Einstellungen in der Datei "config.h", die einmalig für das komplette System festgelegt werden.</p>
+<p>Einstellungen zum Debugging (Sollten in der produktiven Umgebung ausgeschaltet sein)</p>
+<p>Debuggingausgaben zum Web auf der seriellen Schnittstelle </p><pre class="fragment">#define DEBUG_SERIAL_WEB
+</pre><p> Debuggingausgaben zum Modul auf der seriellen Schnittstelle </p><pre class="fragment">#define DEBUG_SERIAL_MODULE
+</pre><p> Debuggingausgaben zu MQTT auf der seriellen Schnittstelle </p><pre class="fragment">#define DEBUG_SERIAL_MQTT
+</pre><p> Debuggingausgaben zum System auf der seriellen Schnittstelle </p><pre class="fragment">#define DEBUG_SERIAL_SYSTEM
+</pre> </div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
