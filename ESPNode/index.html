@@ -79,10 +79,11 @@ Features:</h3>
 </ul>
 <p><img src="https://wilmsn.github.io/ESPNode/espnode.png" alt="ESPNode Komponenten" class="inline"/></p>
 <p>The main documentation of this projekt is in german language.</p>
-<p><a href="http://wilmsn.github.io/ESPNode/index.html">Programmdoku auf wilmsn.github.io/ESPNode</a></p>
+<p><a href="http://wilmsn.github.io/ESPNode/index.html">See the web version here</a></p>
 <h1><a class="anchor" id="autotoc_md3"></a>
 Hauptprogramm</h1>
-<p>Details zum Hauptprogramm gibt es in der <a href="http://wilmsn.github.io/ESPNode/index.html">Programmdoku</a>, hier wird nur das zugrundeliegende Konzept beschrieben. Im Hauptprogramm sind folgende Komponenten vorgesehen:</p>
+<p>Mehr Details gibt es in der <a href="http://wilmsn.github.io/ESPNode/index.html">Onlineprogrammdoku</a>.</p>
+<p>Im Hauptprogramm sind folgende Komponenten vorgesehen:</p>
 <ul>
 <li>Einbau von bis zu 6 Modulen.</li>
 </ul>
@@ -106,8 +107,8 @@ Hauptprogramm</h1>
 <p>Zeitabhängige Aktionen:</p>
 <ul>
 <li>Telemetriedaten senden (var: TELEINTERVAL)</li>
-<li>Messungen starten (var: STATINTERVAL)</li>
-<li>Statusdaten und Messwerte senden (var: MESSINTERVAL)</li>
+<li>Messungen starten (var: MESSINTERVAL)</li>
+<li>Statusdaten und Messwerte senden (var: STATINTERVAL)</li>
 </ul>
 <h1><a class="anchor" id="autotoc_md4"></a>
 Module</h1>
@@ -192,29 +193,94 @@ Beispiel 2: Demo für die Witty Cloud</h2>
 Funktion der jeweiligen Zeilen:</h2>
 <pre class="fragment">#ifdef NODESIMPLE
 #endif
-</pre><p> Syntax: #ifdef &lt;Name des Nodes&gt; #endif Zwischen diesen beiden Zeilen befindet sich die Definition für den Node "NODESIMPEL". (Zeilen sind verpflichtend) Diese Konfiguration wird in der Datei <b><a class="el" href="config_8h.html">config.h</a></b> mit der folgenden Zeile aktiviert. #define NODESIMPEL Syntax: #define &lt;Name des Nodes&gt; <b>Achtung:</b> Es darf immer nur eine Konfiguration aktiviert sein !!! <br  />
+</pre><p> Syntax: #ifdef &lt;Name des Nodes&gt; #endif Zwischen diesen beiden Zeilen befindet sich die Definition für den Node "NODESIMPEL". (Zeilen sind verpflichtend)</p>
+<p>Diese Konfiguration wird in der Datei <b><a class="el" href="config_8h.html">config.h</a></b> mit der folgenden Zeile aktiviert. </p><pre class="fragment">#define NODESIMPEL
+</pre><p> Syntax: </p><pre class="fragment">#define &lt;Name des Nodes&gt;
+</pre><p> <b>Achtung:</b> Es darf immer nur eine Konfiguration aktiviert sein !!! <br  />
  </p><pre class="fragment">#include "switch_onoff.h"
-</pre><p> Syntax: #include "&lt;Name der Headerdatei&gt;" Hier wird/werden die Headerdatei(en) für das/die verwendete Modul(e) includiert. (min. 1 Zeile ist verpflichtend) </p><pre class="fragment">#define HOSTNAME               "nodesimple"
-</pre><p> Syntax: #define HOSTNAME &lt;Netzwerkname des Nodes&gt; Legt den Hostnamen fest. Dieser wird für die Anmeldung im Netz genutzt und in der Weboberfläche angezeigt. (Zeile ist verpflichtend) </p><pre class="fragment">#define HOST_DISCRIPTION       "Ein ESP8266 Node ohne externe 
-</pre><p> Syntax: #define HOST_DISCRIPTION &lt;Beschreibender Text&gt; Ein beschreibender Text für die Weboberfläche. (Zeile ist optional) </p><pre class="fragment">#define MODULE1_DEFINITION      Switch_OnOff module1;
+</pre><p> Syntax: </p><pre class="fragment">#include "&lt;Name der Headerdatei&gt;"
+</pre><p> Hier wird/werden die Headerdatei(en) für das/die verwendete Modul(e) includiert. (min. 1 Zeile ist verpflichtend) </p><pre class="fragment">#define HOSTNAME               "nodesimple"
+</pre><p> Syntax: </p><pre class="fragment">#define HOSTNAME               &lt;Netzwerkname des Nodes&gt;
+</pre><p> Legt den Hostnamen fest. Dieser wird für die Anmeldung im Netz genutzt und in der Weboberfläche angezeigt. (Zeile ist verpflichtend) </p><pre class="fragment">#define HOST_DISCRIPTION       "Ein ESP8266 Node ohne externe 
+</pre><p> Syntax: </p><pre class="fragment">#define HOST_DISCRIPTION       &lt;Beschreibender Text&gt; 
+</pre><p> Ein beschreibender Text für die Weboberfläche. (Zeile ist optional) </p><pre class="fragment">#define MODULE1_DEFINITION      Switch_OnOff module1;
 #define MODULE2_DEFINITION      Sensor_LDR module2;
-</pre><p> Syntax: #define MODULE[1..6]_DEFINITION &lt;Name der Objektklasse&gt; module[1...6];</p>
-<p>Durch diese Zeile wird aus dem Klassenmodell eine Instanz. Wichtig dabei ist: Die Nummern müssen aufsteigend, mit 1 beginnend vergeben werden. </p><pre class="fragment">#define MODULE1_BEGIN_STATEMENT module1.begin("sw1", "interne LED", "int_led", "int_led", false, true, LED_BUILTIN);
+</pre><p> Syntax: </p><pre class="fragment">#define MODULE[1..6]_DEFINITION      &lt;Name der Objektklasse&gt; module[1...6];
+</pre><p> Durch diese Zeile wird aus dem Klassenmodell eine Instanz. Wichtig dabei ist: Die Nummern müssen aufsteigend, mit 1 beginnend vergeben werden. </p><pre class="fragment">#define MODULE1_BEGIN_STATEMENT module1.begin("sw1", "interne LED", "int_led", "int_led", false, true, LED_BUILTIN);
 </pre><p> Syntax: #define MODULE[1...6]_BEGIN_STATEMENT module[1...6].begin(&lt;Parameter1&gt;,...,&lt;ParameterN&gt;); Hier wird die Initialisierung des Objektes durchgeführt. Die Art und Anzahl der übergebenen Parameter hängt von deren Definition in der Klassenbibliothek ab. (min. 1 Zeile ist verpflichtend)</p>
 <h2><a class="anchor" id="autotoc_md8"></a>
 Weitere Konfigurationszeilen:</h2>
 <p>Einschalten und konfigurieren des eingebauten MQTT Clients: </p><pre class="fragment">#define MQTT_CLIENT            "wittynode"
 #define MQTT_TOPICP2           "wittynode"
-</pre><p> Syntax: #define MQTT_CLIENT &lt;Name des Clients&gt; #define MQTT_TOPICP2 &lt;Name des Topicp2&gt; Mit den beiden Zeilen wird der MQTT Client eingeschaltet und konfiguriert. &lt;Name des Clients&gt; ist der Name mit dem sich dieser Client bein MQTT Server anmeldet. Das Topic des MQTT Server (Vergleichbar mit einem Pfad im Dateisystem) ist im allgemeinen so aufgebaut: &lt;Topic Part 1&gt;/&lt;Topic Part 2&gt;/&lt;Topic Part3&gt; Topic Part 1 und Topic Part 3 sind fest in der Konfiguration hinterlegt und werden idR. nicht geändert. Topic Part 2 kann bei Bedarf wiederum aus mehreren Subtopics bestehen. Denkbar wäre also folgende Konstellation: stat/haus/keller/bastelkeller/temperaturnode/info1 In diesem Fall wäre &lt;Name des Topicp2&gt; "haus/keller/bastelkeller/temperaturnode" (Wenn MQTT verwendet werden soll sind beide Zeilen verpflichtend)</p>
+</pre><p> Syntax: </p><pre class="fragment">#define MQTT_CLIENT            &lt;Name des Clients&gt;
+#define MQTT_TOPICP2          &lt;Name des Topicp2&gt;
+</pre><p> Mit den beiden Zeilen wird der MQTT Client eingeschaltet und konfiguriert.</p>
+<p>&lt;Name des Clients&gt; ist der Name mit dem sich dieser Client bein MQTT Server anmeldet.</p>
+<p>Das Topic des MQTT Server (Vergleichbar mit einem Pfad im Dateisystem) ist im allgemeinen so aufgebaut:</p>
+<p>&lt;Topic Part 1&gt;/&lt;Topic Part 2&gt;/&lt;Topic Part3&gt; Topic Part 1 und Topic Part 3 sind fest in der Konfiguration hinterlegt und werden idR. nicht geändert.</p>
+<p>Topic Part 2 kann bei Bedarf wiederum aus mehreren Subtopics bestehen. Denkbar wäre also folgende Konstellation: </p><pre class="fragment">   stat/haus/keller/bastelkeller/temperaturnode/info1
+</pre><p> In diesem Fall wäre &lt;Name des Topicp2&gt; "haus/keller/bastelkeller/temperaturnode"</p>
+<p>(Wenn MQTT verwendet werden soll sind beide Zeilen verpflichtend)</p>
 <p>Einschalten und konfigurieren des eingebauten RF24 Gateways: </p><pre class="fragment">#define RF24GW_HUB_SERVER        "rpi1.fritz.box"
 #define RF24GW_NO                      103
-</pre><p> Syntax: #define RF24GW_HUB_SERVER &lt;Hostname des RF24 Servers&gt; #define RF24GW_NO &lt;Nummer des Gateways&gt; Mit diesen beiden Zeilen wird der RF24 Gateway konfiguriert und aktiviert. Zum RF24 Gateway gibt es noch mehrere Einstellungen in der Datei "config.h", die einmalig für das komplette System festgelegt werden.</p>
+</pre><p> Syntax: </p><pre class="fragment">#define RF24GW_HUB_SERVER        &lt;Hostname des RF24 Servers&gt;
+#define RF24GW_NO                         &lt;Nummer des Gateways&gt;
+</pre><p> Mit diesen beiden Zeilen wird der RF24 Gateway konfiguriert und aktiviert. Zum RF24 Gateway gibt es noch mehrere Einstellungen in der Datei "config.h", die einmalig für das komplette System festgelegt werden.</p>
 <p>Einstellungen zum Debugging (Sollten in der produktiven Umgebung ausgeschaltet sein)</p>
 <p>Debuggingausgaben zum Web auf der seriellen Schnittstelle </p><pre class="fragment">#define DEBUG_SERIAL_WEB
 </pre><p> Debuggingausgaben zum Modul auf der seriellen Schnittstelle </p><pre class="fragment">#define DEBUG_SERIAL_MODULE
 </pre><p> Debuggingausgaben zu MQTT auf der seriellen Schnittstelle </p><pre class="fragment">#define DEBUG_SERIAL_MQTT
 </pre><p> Debuggingausgaben zum System auf der seriellen Schnittstelle </p><pre class="fragment">#define DEBUG_SERIAL_SYSTEM
-</pre> </div></div><!-- PageDoc -->
+</pre> <h2><a class="anchor" id="autotoc_md9"></a>
+Erstellung eines neuen Modules / einer neuen Klasse</h2>
+<p>Für jedes neue Modul werden jeweils eine Headerdatei und eine CPP-Datei angelegt. Innerhalb dieser Dateien wird eine Klasse beschrieben die in den ESPNode eingebaut wird. Diese Klasse kann natürlich Objekte nutzen die wiederum auf anderen Klassen basieren. Es ist darauf zu achten das sich in der Headerdatei nur Deklarationen befnden. Definitionen und Initialisierungen kommen in die CPP Datei.</p>
+<p>Die Modulklasse wird direkt oder indirekt von der Klasse "Base_Generic" abgeleitet. Beispiel: </p><pre class="fragment">class Sensor_18B20 : public Base_Generic {
+
+public:
+
+private:
+
+};
+</pre><p> Das hat den Vorteil das alle benötigten Funktionen bereits vorhanden sind und dadurch sichergestellt wird das der Compiler fehlerfrei läuft. Einige der in der Klasse "Base_Generic" definierten Funktionen sind jedoch leer und müssen in der abgeleiteten Funktion mit sinnvollem Inhalt gefüllt werden.</p>
+<h3><a class="anchor" id="autotoc_md10"></a>
+Wichtiger Hinweis</h3>
+<p>Nicht benötigte Module ( wichtig bei Hardwarebezug z.B addressiete Pins ) müssen entweder</p>
+<p>a) durch eine passende Precompilerdirektive deaktiviert werden (Beispiel Modul "actor_ledmatrix"):</p>
+<p>Datei "actor_ledmatrix.h": </p><pre class="fragment">#ifdef USE_ACTOR_LEDMATRIX
+
+... Programmext ...
+
+#endif
+</pre><p> Datei "actor_ledmatrix.cpp": </p><pre class="fragment">#include "config.h"
+#ifdef USE_ACTOR_LEDMATRIX
+
+... Programmext ...
+
+#endif
+</pre><p> Diese Direktive wird dann in der Datei "Node_settings.h" aktiviert:</p>
+<p>oder</p>
+<p>b) entfernt werden =&gt; sehr unpraktisch!!</p>
+<p><b>Problem:</b> Besitzt ein Modul einen Hardwarebezug stören sich die Programme gegenseitig auch wenn sie nicht aktiv sind. (Beispiel: 2 Module greifen mit unterschiedlichen Methoden auf GPIO 4 zu, jedoch ist für einen Node jeweils nur ein Modul mit einer Methode aktiviert)</p>
+<p><b>Lösung:</b> Umgesetzt ist die Methode a)</p>
+<p>Die benötigte Direktive steht jeweils in der ersten Zeile der Moduldateien *.h bzw. in der zweite Zeile von *.cpp</p>
+<h2><a class="anchor" id="autotoc_md11"></a>
+Funktionen und Aufgaben</h2>
+<h3><a class="anchor" id="autotoc_md12"></a>
+Funktion "begin()"</h3>
+<p>Hier wird das Objekt initialisiert dabei ist naturgemäß die Anzahl der Parameter variabel. Jedliche grundlegende Konfiguration muss ier erfolgen. Im weiteren Programm gibt es dazu keine Möglichkeit mehr. Der Einbau in den ESPNode mittels Precompilerdirektive wurde bereits behandelt.</p>
+<h2><a class="anchor" id="autotoc_md13"></a>
+Funktion set( keyword, value)</h2>
+<p>Diese Funktion muss für jedes Modul gefüllt werden. Innerhalb des Hauptprogrammes werden alle Befehle (Format "Item"="value") durch jede set funktion der eingebauten Objekte geschleust. Die Objekte prüfen ob das "Item" für sie ein keyword ist und sie handeln müssen. Die benötigte Funktion für diese Prüfing ist im generischen Basisobjekt als Funktion <b>keyword_match</b> hinterlegt. Alle nötigen Handlungen für einen "Keyword Match" sind hier zu hinterlegen.</p>
+<h2><a class="anchor" id="autotoc_md14"></a>
+Funktion "html_create(String&amp; tmpstr)"</h2>
+<p>Stellt alle Konfigurationsdaten (als JSON Teilstring) bereit die für dieses Modul beim Aufruf der Webseite benötigt werden Ein Modul aktiviert seine Anzeige selbst indem der anzuzeigende Wert in das passende HTML Feld geschrieben wird. Dazu muss die Funktion "html_create" seinen zu liefernden Inhalt an den übergebenen String anhängen. Durch das hier erzeugte JSON wird festgelgt was wie auf der HTML Seite angezeigt wird. Dabei gibt es folgende Möglichkeit:</p>
+<p>a) Reiner Ein-Aus Schalter</p>
+<p>Codesegment: **"sw1 : 0 , sw1_label : Lichtschalter , sw1_format : x"**</p>
+<p>b) Schalter mit Regler</p>
+<p>Codesegment: **"sw1 : 0 , sw1_label : Lichtschalter , sw1_format : x, slider1 : 1 , slider1label : Helligkeit , slider1val : 54"**</p>
+<p>c) Jede andere Kombination die nach Änderung der HTML Seite benötigt wird</p>
+<p>Beispiele dazu in der Datei <a class="el" href="switch__onoff_8h.html">switch_onoff.h</a>/cpp </p>
+</div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
