@@ -70,10 +70,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Ein generisches Objekt für einen Sensor/Actor. Nicht zum Einbau bestimmt, sondern nur als Vererbungsobjekt.<br  />
-Hier werden Grundfähigkeiten für jeden Sensor oder Actor erstellt.<br  />
- <br  />
-.  
+<p>Ein generisches Objekt für einen Sensor/Actor. Achtung: Nicht zum Einbau bestimmt, sondern nur als Vererbungsobjekt. Ein leeres Objekt als Grundlage für alle Sensoren und Actoren. Jedes spezialisierte Objekt wird als Ableitung dieses Objektes erstellt. Hier werden Grundfähigkeiten für jeden Sensor oder Actor erstellt.  
  <a href="class_base___generic.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="base__generic_8h_source.html">base_generic.h</a>&gt;</code></p>
@@ -81,105 +78,83 @@ Hier werden Grundfähigkeiten für jeden Sensor oder Actor erstellt.<br  />
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ad270bcb00689bd179bae3287e2d7ed94"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base___generic.html#ad270bcb00689bd179bae3287e2d7ed94">Base_Generic</a> (void)</td></tr>
-<tr class="memdesc:ad270bcb00689bd179bae3287e2d7ed94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Der Initiator.<br  />
-.  <a href="class_base___generic.html#ad270bcb00689bd179bae3287e2d7ed94">More...</a><br /></td></tr>
+<tr class="memdesc:ad270bcb00689bd179bae3287e2d7ed94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Der Initiator. Hier werden alle Variablen auf ihre Anfangswerte gesetzt.  <a href="class_base___generic.html#ad270bcb00689bd179bae3287e2d7ed94">More...</a><br /></td></tr>
 <tr class="separator:ad270bcb00689bd179bae3287e2d7ed94"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a874447cd43263c5bbb63102c2201fb70"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base___generic.html#a874447cd43263c5bbb63102c2201fb70">begin</a> (const char *html_place, const char *label)</td></tr>
-<tr class="memdesc:a874447cd43263c5bbb63102c2201fb70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Legt die Startkonfiguration des Sensors fest. Die übergebenen Variabelen werden in die entsprechenden "obj_*" Variabelen gespeichert.<br  />
-.  <a href="class_base___generic.html#a874447cd43263c5bbb63102c2201fb70">More...</a><br /></td></tr>
-<tr class="separator:a874447cd43263c5bbb63102c2201fb70"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a7ebacdd0ef7220ca5146c823f2a8b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base___generic.html#a6a7ebacdd0ef7220ca5146c823f2a8b1">begin</a> (const char *html_place, const char *label, const char *<a class="el" href="class_base___generic.html#a44f94dbcb8fa13daeef3d655bfafcc35">mqtt_name</a>)</td></tr>
-<tr class="memdesc:a6a7ebacdd0ef7220ca5146c823f2a8b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Legt die Startkonfiguration des Sensors fest. Die übergebenen Variabelen werden in die entsprechenden "obj_*" Variabelen gespeichert.  <a href="class_base___generic.html#a6a7ebacdd0ef7220ca5146c823f2a8b1">More...</a><br /></td></tr>
-<tr class="separator:a6a7ebacdd0ef7220ca5146c823f2a8b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acae27e1d2388317aaa6e80700dd6a87d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base___generic.html#acae27e1d2388317aaa6e80700dd6a87d">begin</a> (const char *html_place, const char *label, const char *<a class="el" href="class_base___generic.html#a44f94dbcb8fa13daeef3d655bfafcc35">mqtt_name</a>, const char *keyword)</td></tr>
-<tr class="memdesc:acae27e1d2388317aaa6e80700dd6a87d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Legt die Startkonfiguration des Sensors fest. Die übergebenen Variabelen werden in die entsprechenden "obj_*" Variabelen gespeichert.  <a href="class_base___generic.html#acae27e1d2388317aaa6e80700dd6a87d">More...</a><br /></td></tr>
-<tr class="separator:acae27e1d2388317aaa6e80700dd6a87d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad40370b242df81f67b920619d5989cd4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base___generic.html#ad40370b242df81f67b920619d5989cd4">begin</a> (const char *_html_place, const char *_label)</td></tr>
+<tr class="memdesc:ad40370b242df81f67b920619d5989cd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Legt die Startkonfiguration des Sensors fest. Die übergebenen Variabelen werden in die entsprechenden Objektvariabelen gespeichert.  <a href="class_base___generic.html#ad40370b242df81f67b920619d5989cd4">More...</a><br /></td></tr>
+<tr class="separator:ad40370b242df81f67b920619d5989cd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2556ed4e400651525caf0d99a11b673"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base___generic.html#aa2556ed4e400651525caf0d99a11b673">begin</a> (const char *_html_place, const char *_label, const char *_mqtt_name)</td></tr>
+<tr class="memdesc:aa2556ed4e400651525caf0d99a11b673"><td class="mdescLeft">&#160;</td><td class="mdescRight">Legt die Startkonfiguration des Sensors fest. Die übergebenen Variabelen werden in die entsprechenden Objektvariabelen gespeichert.  <a href="class_base___generic.html#aa2556ed4e400651525caf0d99a11b673">More...</a><br /></td></tr>
+<tr class="separator:aa2556ed4e400651525caf0d99a11b673"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fecffe5ad4b3134a3a16eeb282467c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base___generic.html#a2fecffe5ad4b3134a3a16eeb282467c4">begin</a> (const char *_html_place, const char *_label, const char *_mqtt_name, const char *_keyword)</td></tr>
+<tr class="memdesc:a2fecffe5ad4b3134a3a16eeb282467c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Legt die Startkonfiguration des Sensors fest. Die übergebenen Variabelen werden in die entsprechenden Objektvariabelen gespeichert.  <a href="class_base___generic.html#a2fecffe5ad4b3134a3a16eeb282467c4">More...</a><br /></td></tr>
+<tr class="separator:a2fecffe5ad4b3134a3a16eeb282467c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9bd5d27ad69b5d034d7f85e928454d45"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base___generic.html#a9bd5d27ad69b5d034d7f85e928454d45">loop</a> (time_t <a class="el" href="main_8h.html#a3c3ca8cc859a31aec6578f0dcf1b32a5">now</a>)</td></tr>
-<tr class="memdesc:a9bd5d27ad69b5d034d7f85e928454d45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Eine Funktion die im Hauptprogramm im loop regelmäßig aufgerufen wird. Hier können in den abgeleiteten Modulen regelmäßige Aufrufe hinterlegt werden.  <a href="class_base___generic.html#a9bd5d27ad69b5d034d7f85e928454d45">More...</a><br /></td></tr>
+<tr class="memdesc:a9bd5d27ad69b5d034d7f85e928454d45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Eine Funktion die im Hauptprogramm im loop regelmäßig aufgerufen wird. Hier als leere Funktion implementiert, kann im abgeleiteten Objekt gefüllt werden. Es ist der einzige Ort in dem das Modul Rechenzeit bekommt, sollte sparsam genutzt werden.  <a href="class_base___generic.html#a9bd5d27ad69b5d034d7f85e928454d45">More...</a><br /></td></tr>
 <tr class="separator:a9bd5d27ad69b5d034d7f85e928454d45"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac13261b9e69d4c14fa4f9b08f095af7f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base___generic.html#ac13261b9e69d4c14fa4f9b08f095af7f">set</a> (const String &amp;keyword, const String &amp;value)</td></tr>
-<tr class="separator:ac13261b9e69d4c14fa4f9b08f095af7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab8c1de0bdae89a9ccec55b7f1588233"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base___generic.html#aab8c1de0bdae89a9ccec55b7f1588233">keyword_match</a> (const String &amp;keyword)</td></tr>
-<tr class="memdesc:aab8c1de0bdae89a9ccec55b7f1588233"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prüft ob das übergebene keyword dem hinterlegten keyword entspricht.  <a href="class_base___generic.html#aab8c1de0bdae89a9ccec55b7f1588233">More...</a><br /></td></tr>
-<tr class="separator:aab8c1de0bdae89a9ccec55b7f1588233"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad3c192a4b18896d3dc8acd1aa4e0a0e0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base___generic.html#ad3c192a4b18896d3dc8acd1aa4e0a0e0">html_create</a> (String &amp;tmpstr)</td></tr>
-<tr class="memdesc:ad3c192a4b18896d3dc8acd1aa4e0a0e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dummy, in dieser Funktion wird bei der abgeleiteten Klasse der Webinhalt initialisiert.  <a href="class_base___generic.html#ad3c192a4b18896d3dc8acd1aa4e0a0e0">More...</a><br /></td></tr>
-<tr class="separator:ad3c192a4b18896d3dc8acd1aa4e0a0e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2af6f51ee939ebc238d5f97c50670697"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base___generic.html#a2af6f51ee939ebc238d5f97c50670697">html_refresh</a> ()</td></tr>
-<tr class="memdesc:a2af6f51ee939ebc238d5f97c50670697"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sendet den Inhalt der Variablen "obj_htm_stat" als Websocketmessage.  <a href="class_base___generic.html#a2af6f51ee939ebc238d5f97c50670697">More...</a><br /></td></tr>
-<tr class="separator:a2af6f51ee939ebc238d5f97c50670697"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad09710d6584e7f1e315639f6efb9844a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base___generic.html#ad09710d6584e7f1e315639f6efb9844a">html_info</a> (String &amp;tmpstr)</td></tr>
-<tr class="memdesc:ad09710d6584e7f1e315639f6efb9844a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dummy, in dieser Funktion wird bei der abgeleiteten Klasse der Inhalt für die Systeminfoseite geliefert.  <a href="class_base___generic.html#ad09710d6584e7f1e315639f6efb9844a">More...</a><br /></td></tr>
-<tr class="separator:ad09710d6584e7f1e315639f6efb9844a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44f94dbcb8fa13daeef3d655bfafcc35"><td class="memItemLeft" align="right" valign="top">String &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base___generic.html#a44f94dbcb8fa13daeef3d655bfafcc35">mqtt_name</a> ()</td></tr>
-<tr class="memdesc:a44f94dbcb8fa13daeef3d655bfafcc35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Der mqtt_name wird im Topic3 für die Statusdaten genutzt.  <a href="class_base___generic.html#a44f94dbcb8fa13daeef3d655bfafcc35">More...</a><br /></td></tr>
-<tr class="separator:a44f94dbcb8fa13daeef3d655bfafcc35"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:affc3f2c7853fdf33919ee6c2ff53542b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base___generic.html#affc3f2c7853fdf33919ee6c2ff53542b">mqtt_has_stat</a> ()</td></tr>
-<tr class="memdesc:affc3f2c7853fdf33919ee6c2ff53542b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ein Schalter ob mqtt_stat vorhanden ist.  <a href="class_base___generic.html#affc3f2c7853fdf33919ee6c2ff53542b">More...</a><br /></td></tr>
-<tr class="separator:affc3f2c7853fdf33919ee6c2ff53542b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab0ef0c5029f086f462bffed4d1c79ad7"><td class="memItemLeft" align="right" valign="top">String &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base___generic.html#ab0ef0c5029f086f462bffed4d1c79ad7">mqtt_stat</a> ()</td></tr>
-<tr class="memdesc:ab0ef0c5029f086f462bffed4d1c79ad7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Aktuelle Statuswerte werden hier für die MQTT Übertragung zurückgegeben.  <a href="class_base___generic.html#ab0ef0c5029f086f462bffed4d1c79ad7">More...</a><br /></td></tr>
-<tr class="separator:ab0ef0c5029f086f462bffed4d1c79ad7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3aec2385737ce56a34c086e338970d61"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base___generic.html#a3aec2385737ce56a34c086e338970d61">mqtt_stat_changed</a> ()</td></tr>
-<tr class="memdesc:a3aec2385737ce56a34c086e338970d61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sobald sich ein Wert innerhalb von mqtt_state() verändert muss die abgeleitete Klasse "obj_mqtt_state_changed" entsprechend setzen.  <a href="class_base___generic.html#a3aec2385737ce56a34c086e338970d61">More...</a><br /></td></tr>
-<tr class="separator:a3aec2385737ce56a34c086e338970d61"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec581ac75b704d0061805d4a2e8392f2"><td class="memItemLeft" align="right" valign="top">String &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base___generic.html#aec581ac75b704d0061805d4a2e8392f2">mqtt_info</a> ()</td></tr>
-<tr class="memdesc:aec581ac75b704d0061805d4a2e8392f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hier wird alles übertragen was keine aktuelen Statuswerte sind.  <a href="class_base___generic.html#aec581ac75b704d0061805d4a2e8392f2">More...</a><br /></td></tr>
-<tr class="separator:aec581ac75b704d0061805d4a2e8392f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8304e0b297a0f62f866772bdd401124"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base___generic.html#ad8304e0b297a0f62f866772bdd401124">mqtt_has_info</a> ()</td></tr>
-<tr class="memdesc:ad8304e0b297a0f62f866772bdd401124"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ein Schalter ob mqtt_info vorhanden ist.  <a href="class_base___generic.html#ad8304e0b297a0f62f866772bdd401124">More...</a><br /></td></tr>
-<tr class="separator:ad8304e0b297a0f62f866772bdd401124"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a3068ca9ff05e966b037ddb6b625258"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base___generic.html#a2a3068ca9ff05e966b037ddb6b625258">set</a> (const String &amp;_keyword, const String &amp;_value)</td></tr>
+<tr class="memdesc:a2a3068ca9ff05e966b037ddb6b625258"><td class="mdescLeft">&#160;</td><td class="mdescRight">Der Komandointerpreter. Hier als leere Funktion implementiert, kann im abgeleiteten Objekt gefüllt werden. Über die Set Funktion werden alle Kommandos gescheusst. Das Modul entscheidet selber ob und wie es auf das übergebene Keywort reagiert.  <a href="class_base___generic.html#a2a3068ca9ff05e966b037ddb6b625258">More...</a><br /></td></tr>
+<tr class="separator:a2a3068ca9ff05e966b037ddb6b625258"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeba9c585ae059515d678e4198fb63cfb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base___generic.html#aeba9c585ae059515d678e4198fb63cfb">keyword_match</a> (const String &amp;_keyword)</td></tr>
+<tr class="memdesc:aeba9c585ae059515d678e4198fb63cfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prüft ob das übergebene keyword dem hinterlegten keyword entspricht.  <a href="class_base___generic.html#aeba9c585ae059515d678e4198fb63cfb">More...</a><br /></td></tr>
+<tr class="separator:aeba9c585ae059515d678e4198fb63cfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebfe52622b11e9735af1769b42a80e19"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base___generic.html#aebfe52622b11e9735af1769b42a80e19">html_update</a> ()</td></tr>
+<tr class="memdesc:aebfe52622b11e9735af1769b42a80e19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sendet ein Zustandsupdate an den Webbrowser. Sendet alle benötigten Daten um eine Zustandsänderung auf der Webseite für dieses Modul darzustellen. Kann von der abgeleiteten Klasse genutzt weden, muss aber nicht. Um die Funktion zu nutzen müssen die zu sendenden Daten als Teil-JSON (ohne geschweifte Klammern) in der Variablen "html_json" hinterlegt sein.  <a href="class_base___generic.html#aebfe52622b11e9735af1769b42a80e19">More...</a><br /></td></tr>
+<tr class="separator:aebfe52622b11e9735af1769b42a80e19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaff7d882be648586dd3f5c5de2948f8b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base___generic.html#aaff7d882be648586dd3f5c5de2948f8b">html_init</a> ()</td></tr>
+<tr class="memdesc:aaff7d882be648586dd3f5c5de2948f8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialisierung einer Webseite Wenn sich ein Browser verbindet und die Webseite des Nodes aufruft, wird diese Funtion durch das Hauptprogramm aufgerufen. Die Funktion stellt ein Teil-JSON mit allen Initialisierungsdaten in "html_json" bereit. Dieses sendet das Hauptprogramm mittels Message als Websocket an den Browser.  <a href="class_base___generic.html#aaff7d882be648586dd3f5c5de2948f8b">More...</a><br /></td></tr>
+<tr class="separator:aaff7d882be648586dd3f5c5de2948f8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:abcc2fbc942b62523b7aab47167017690"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base___generic.html#abcc2fbc942b62523b7aab47167017690">obj_keyword</a></td></tr>
-<tr class="memdesc:abcc2fbc942b62523b7aab47167017690"><td class="mdescLeft">&#160;</td><td class="mdescRight">Das Schlüsselword für diesen Sensor/Actor.  <a href="class_base___generic.html#abcc2fbc942b62523b7aab47167017690">More...</a><br /></td></tr>
-<tr class="separator:abcc2fbc942b62523b7aab47167017690"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98f23a130f364f27dcc9941e308402c4"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base___generic.html#a98f23a130f364f27dcc9941e308402c4">obj_html_place</a></td></tr>
-<tr class="memdesc:a98f23a130f364f27dcc9941e308402c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Der Einbauort für diesen Sensor/Actor, dient auch als Schlüsselwort wenn die Änderung durch die Webseite verursacht wird.  <a href="class_base___generic.html#a98f23a130f364f27dcc9941e308402c4">More...</a><br /></td></tr>
-<tr class="separator:a98f23a130f364f27dcc9941e308402c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c4207f1f5899592c9a206c4d37d7c1f"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base___generic.html#a6c4207f1f5899592c9a206c4d37d7c1f">obj_label</a></td></tr>
-<tr class="memdesc:a6c4207f1f5899592c9a206c4d37d7c1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Eine Beschriftung für die Webseite. Wird sie gesetzt, wird sie auch als Schlüsselwort genutzt.  <a href="class_base___generic.html#a6c4207f1f5899592c9a206c4d37d7c1f">More...</a><br /></td></tr>
-<tr class="separator:a6c4207f1f5899592c9a206c4d37d7c1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b41f87622b7fc04f68ba5cdd15664b3"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base___generic.html#a4b41f87622b7fc04f68ba5cdd15664b3">obj_html_info</a> = &quot;\&quot;x\&quot;:0&quot;</td></tr>
-<tr class="memdesc:a4b41f87622b7fc04f68ba5cdd15664b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Systeminformationen zum Sensor für die Webseite als json abgespeichert;.  <a href="class_base___generic.html#a4b41f87622b7fc04f68ba5cdd15664b3">More...</a><br /></td></tr>
-<tr class="separator:a4b41f87622b7fc04f68ba5cdd15664b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a337de6cd5d961591bf3367df9108f7b2"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base___generic.html#a337de6cd5d961591bf3367df9108f7b2">obj_html_stat</a> = &quot;\&quot;x\&quot;:0&quot;</td></tr>
-<tr class="memdesc:a337de6cd5d961591bf3367df9108f7b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Informationen zum Sensor für die Webseite als json abgespeichert;.  <a href="class_base___generic.html#a337de6cd5d961591bf3367df9108f7b2">More...</a><br /></td></tr>
-<tr class="separator:a337de6cd5d961591bf3367df9108f7b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e8a93197a2c2780f301ce2a1fd039fc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base___generic.html#a4e8a93197a2c2780f301ce2a1fd039fc">obj_is_state</a> = false</td></tr>
-<tr class="memdesc:a4e8a93197a2c2780f301ce2a1fd039fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ein Schalter der angibt ob der Nodestatus aus diesem Modul genommen wird.  <a href="class_base___generic.html#a4e8a93197a2c2780f301ce2a1fd039fc">More...</a><br /></td></tr>
-<tr class="separator:a4e8a93197a2c2780f301ce2a1fd039fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab95421d5246c8476361b546ed1a2f57c"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base___generic.html#ab95421d5246c8476361b546ed1a2f57c">obj_state</a></td></tr>
-<tr class="memdesc:ab95421d5246c8476361b546ed1a2f57c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Der aktuelle State des Nodes wird hier abgelegt (nur wenn dieses Modul den State setzt)  <a href="class_base___generic.html#ab95421d5246c8476361b546ed1a2f57c">More...</a><br /></td></tr>
-<tr class="separator:ab95421d5246c8476361b546ed1a2f57c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a10a73a02c4d154efc50441c940332b8c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base___generic.html#a10a73a02c4d154efc50441c940332b8c">obj_mqtt_has_stat</a></td></tr>
-<tr class="memdesc:a10a73a02c4d154efc50441c940332b8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">In der abgeleiteten Klasse wird hier auf "true" gesetzt wenn dieses Modul Statusdaten bereitstellt.  <a href="class_base___generic.html#a10a73a02c4d154efc50441c940332b8c">More...</a><br /></td></tr>
-<tr class="separator:a10a73a02c4d154efc50441c940332b8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a529f8d3977e703a1ea7263c609db00"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base___generic.html#a5a529f8d3977e703a1ea7263c609db00">obj_mqtt_state</a></td></tr>
-<tr class="memdesc:a5a529f8d3977e703a1ea7263c609db00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Der aktuelle Wert/Zustand des Schalters: "0" oder "1".  <a href="class_base___generic.html#a5a529f8d3977e703a1ea7263c609db00">More...</a><br /></td></tr>
-<tr class="separator:a5a529f8d3977e703a1ea7263c609db00"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ae2567ad44cc2abc3e570ba23464b7b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base___generic.html#a9ae2567ad44cc2abc3e570ba23464b7b">obj_mqtt_has_info</a></td></tr>
-<tr class="memdesc:a9ae2567ad44cc2abc3e570ba23464b7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">In der abgeleiteten Klasse wird hier auf "true" gesetzt wenn dieses Modul Telemetriedaten bereitstellt.  <a href="class_base___generic.html#a9ae2567ad44cc2abc3e570ba23464b7b">More...</a><br /></td></tr>
-<tr class="separator:a9ae2567ad44cc2abc3e570ba23464b7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae409956e2754b52dd83020bf750818f6"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base___generic.html#ae409956e2754b52dd83020bf750818f6">obj_mqtt_info</a></td></tr>
-<tr class="memdesc:ae409956e2754b52dd83020bf750818f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sollte es in diesem Modul telemetrieähnliche Daten geben, werden diese hier als Teil-JSON eingetragen.  <a href="class_base___generic.html#ae409956e2754b52dd83020bf750818f6">More...</a><br /></td></tr>
-<tr class="separator:ae409956e2754b52dd83020bf750818f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a39967456dd076766a1c2e53dcf7474c9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base___generic.html#a39967456dd076766a1c2e53dcf7474c9">obj_mqtt_stat_changed</a></td></tr>
-<tr class="memdesc:a39967456dd076766a1c2e53dcf7474c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Schalter ob "obj_mqtt_state" verändert worden ist und neu (=true) übertragen werden soll.  <a href="class_base___generic.html#a39967456dd076766a1c2e53dcf7474c9">More...</a><br /></td></tr>
-<tr class="separator:a39967456dd076766a1c2e53dcf7474c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad313097e45b4f460659db815754ac058"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base___generic.html#ad313097e45b4f460659db815754ac058">obj_mqtt_stat</a></td></tr>
-<tr class="memdesc:ad313097e45b4f460659db815754ac058"><td class="mdescLeft">&#160;</td><td class="mdescRight">Der MQTT Status.  <a href="class_base___generic.html#ad313097e45b4f460659db815754ac058">More...</a><br /></td></tr>
-<tr class="separator:ad313097e45b4f460659db815754ac058"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad92d9da9ad72f390d7a9207c9a25e24d"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base___generic.html#ad92d9da9ad72f390d7a9207c9a25e24d">obj_mqtt_name</a></td></tr>
-<tr class="memdesc:ad92d9da9ad72f390d7a9207c9a25e24d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Die Bezeichnung für den ersten Wert.  <a href="class_base___generic.html#ad92d9da9ad72f390d7a9207c9a25e24d">More...</a><br /></td></tr>
-<tr class="separator:ad92d9da9ad72f390d7a9207c9a25e24d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3393f40c88e514cd4f0b1ee7e63ab82"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base___generic.html#ac3393f40c88e514cd4f0b1ee7e63ab82">keyword</a></td></tr>
+<tr class="memdesc:ac3393f40c88e514cd4f0b1ee7e63ab82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Das gespeicherte Schlüsselword für diesen Sensor/Actor.  <a href="class_base___generic.html#ac3393f40c88e514cd4f0b1ee7e63ab82">More...</a><br /></td></tr>
+<tr class="separator:ac3393f40c88e514cd4f0b1ee7e63ab82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1e7677c3479f9155e99568aec4c8226"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base___generic.html#ac1e7677c3479f9155e99568aec4c8226">html_place</a></td></tr>
+<tr class="memdesc:ac1e7677c3479f9155e99568aec4c8226"><td class="mdescLeft">&#160;</td><td class="mdescRight">Der Einbauort für diesen Sensor/Actor, dient auch als Schlüsselwort wenn die Änderung durch die Webseite verursacht wird.  <a href="class_base___generic.html#ac1e7677c3479f9155e99568aec4c8226">More...</a><br /></td></tr>
+<tr class="separator:ac1e7677c3479f9155e99568aec4c8226"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76945c915dda5d15beeef5563b7f8804"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base___generic.html#a76945c915dda5d15beeef5563b7f8804">label</a></td></tr>
+<tr class="memdesc:a76945c915dda5d15beeef5563b7f8804"><td class="mdescLeft">&#160;</td><td class="mdescRight">Eine Beschriftung für die Webseite. Wird sie gesetzt, wird sie auch als Schlüsselwort genutzt.  <a href="class_base___generic.html#a76945c915dda5d15beeef5563b7f8804">More...</a><br /></td></tr>
+<tr class="separator:a76945c915dda5d15beeef5563b7f8804"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a567ab2c20d9864c885fc67692d8343cd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base___generic.html#a567ab2c20d9864c885fc67692d8343cd">is_state</a> = false</td></tr>
+<tr class="memdesc:a567ab2c20d9864c885fc67692d8343cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ein Schalter der angibt ob der Nodestatus aus diesem Modul genommen wird. Macht nur Sinn bei einem Schalter und muss dann in der abgeleiteten Klasse auf true gesetzt werden.  <a href="class_base___generic.html#a567ab2c20d9864c885fc67692d8343cd">More...</a><br /></td></tr>
+<tr class="separator:a567ab2c20d9864c885fc67692d8343cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d825d95e746592fce2e341be72af40a"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base___generic.html#a2d825d95e746592fce2e341be72af40a">state</a></td></tr>
+<tr class="memdesc:a2d825d95e746592fce2e341be72af40a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Der aktuelle State des Nodes wird hier abgelegt (nur wenn dieses Modul den State setzt)  <a href="class_base___generic.html#a2d825d95e746592fce2e341be72af40a">More...</a><br /></td></tr>
+<tr class="separator:a2d825d95e746592fce2e341be72af40a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca5cc4a826648d174fc36e52abdafd5b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base___generic.html#aca5cc4a826648d174fc36e52abdafd5b">html_has_info</a> = false</td></tr>
+<tr class="memdesc:aca5cc4a826648d174fc36e52abdafd5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">In der abgeleiteten Klasse wird hier auf "true" gesetzt wenn dieses Modul Daten für die Seite "Systeminfo" bereitstellt.  <a href="class_base___generic.html#aca5cc4a826648d174fc36e52abdafd5b">More...</a><br /></td></tr>
+<tr class="separator:aca5cc4a826648d174fc36e52abdafd5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a745feb7e363f32f7523790d3c2b1acd6"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base___generic.html#a745feb7e363f32f7523790d3c2b1acd6">html_info</a></td></tr>
+<tr class="memdesc:a745feb7e363f32f7523790d3c2b1acd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Systeminformationen zum Sensor für die Webseite als json abgespeichert. Dieser String muss durch das abgeleitete Objekt gefüllt werden. Dabei gilt für jeden Systeminfowert: ""html_placeX"+":"+"labelX"+"MesswertX"+"EinheitX", ... " Hier muss immer ein komplettes, gültiges Teil-JSON stehen!  <a href="class_base___generic.html#a745feb7e363f32f7523790d3c2b1acd6">More...</a><br /></td></tr>
+<tr class="separator:a745feb7e363f32f7523790d3c2b1acd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af771a7a39a07fa303b5a531e7be84c04"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base___generic.html#af771a7a39a07fa303b5a531e7be84c04">html_json</a></td></tr>
+<tr class="memdesc:af771a7a39a07fa303b5a531e7be84c04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Informationen zum Sensor für die Webseite als json abgespeichert; Dieser String muss durch das abgeleitete Objekt gefüllt werden. Dabei gilt für jeden Messwert: ""html_placeX"+":"+"labelX"+"MesswertX"+"EinheitX", ... ".  <a href="class_base___generic.html#af771a7a39a07fa303b5a531e7be84c04">More...</a><br /></td></tr>
+<tr class="separator:af771a7a39a07fa303b5a531e7be84c04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab4ec8f47c848691c969c82b3d8690b8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base___generic.html#aab4ec8f47c848691c969c82b3d8690b8">html_json_filled</a> = false</td></tr>
+<tr class="memdesc:aab4ec8f47c848691c969c82b3d8690b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Schalter: Wird wahr wenn html_json gefüllt ist. Die Rücksetzung des Schalters erfolgt durch das Hauptprogramm.  <a href="class_base___generic.html#aab4ec8f47c848691c969c82b3d8690b8">More...</a><br /></td></tr>
+<tr class="separator:aab4ec8f47c848691c969c82b3d8690b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee4d2c97b2d5637105f6f7600b39c992"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base___generic.html#aee4d2c97b2d5637105f6f7600b39c992">mqtt_has_info</a> = false</td></tr>
+<tr class="memdesc:aee4d2c97b2d5637105f6f7600b39c992"><td class="mdescLeft">&#160;</td><td class="mdescRight">In der abgeleiteten Klasse wird hier auf "true" gesetzt wenn dieses Modul Telemetriedaten bereitstellt.  <a href="class_base___generic.html#aee4d2c97b2d5637105f6f7600b39c992">More...</a><br /></td></tr>
+<tr class="separator:aee4d2c97b2d5637105f6f7600b39c992"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab43bc8be5864d22f1eca429541b979a1"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base___generic.html#ab43bc8be5864d22f1eca429541b979a1">mqtt_info</a></td></tr>
+<tr class="memdesc:ab43bc8be5864d22f1eca429541b979a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sollte es in diesem Modul telemetrieähnliche Daten geben, werden diese hier als Teil-JSON eingetragen.  <a href="class_base___generic.html#ab43bc8be5864d22f1eca429541b979a1">More...</a><br /></td></tr>
+<tr class="separator:ab43bc8be5864d22f1eca429541b979a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5224d70b160067023453eada785c0143"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base___generic.html#a5224d70b160067023453eada785c0143">mqtt_stat_changed</a> = false</td></tr>
+<tr class="memdesc:a5224d70b160067023453eada785c0143"><td class="mdescLeft">&#160;</td><td class="mdescRight">Schalter ob "obj_mqtt_state" verändert worden ist und neu (=true) übertragen werden soll. Rücksetzung erfolgt im Hauptprogramm.  <a href="class_base___generic.html#a5224d70b160067023453eada785c0143">More...</a><br /></td></tr>
+<tr class="separator:a5224d70b160067023453eada785c0143"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ab34827780093c01ff18d681dac5f1b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base___generic.html#a8ab34827780093c01ff18d681dac5f1b">mqtt_has_stat</a> = false</td></tr>
+<tr class="memdesc:a8ab34827780093c01ff18d681dac5f1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">In der abgeleiteten Klasse wird hier auf "true" gesetzt wenn dieses Modul Statusdaten bereitstellt.  <a href="class_base___generic.html#a8ab34827780093c01ff18d681dac5f1b">More...</a><br /></td></tr>
+<tr class="separator:a8ab34827780093c01ff18d681dac5f1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf51c0cfb814919d52568166931c0535"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base___generic.html#abf51c0cfb814919d52568166931c0535">mqtt_stat</a></td></tr>
+<tr class="memdesc:abf51c0cfb814919d52568166931c0535"><td class="mdescLeft">&#160;</td><td class="mdescRight">Der MQTT Status Dieser String muss durch das abgeleitete Objekt gefüllt werden. Dabei gilt für jeden Messwert: "mqtt_nameX"+":"+"MesswertX",... Hier steht immer ein abgeschlossenes Teil-JSON ohne Klammern.  <a href="class_base___generic.html#abf51c0cfb814919d52568166931c0535">More...</a><br /></td></tr>
+<tr class="separator:abf51c0cfb814919d52568166931c0535"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07641f4eefbf534951d1ec7ec7395981"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_base___generic.html#a07641f4eefbf534951d1ec7ec7395981">mqtt_name</a></td></tr>
+<tr class="memdesc:a07641f4eefbf534951d1ec7ec7395981"><td class="mdescLeft">&#160;</td><td class="mdescRight">Die Bezeichnung für den ersten Wert.  <a href="class_base___generic.html#a07641f4eefbf534951d1ec7ec7395981">More...</a><br /></td></tr>
+<tr class="separator:a07641f4eefbf534951d1ec7ec7395981"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Ein generisches Objekt für einen Sensor/Actor. Nicht zum Einbau bestimmt, sondern nur als Vererbungsobjekt.<br  />
-Hier werden Grundfähigkeiten für jeden Sensor oder Actor erstellt.<br  />
- <br  />
-. </p>
+<div class="textblock"><p>Ein generisches Objekt für einen Sensor/Actor. Achtung: Nicht zum Einbau bestimmt, sondern nur als Vererbungsobjekt. Ein leeres Objekt als Grundlage für alle Sensoren und Actoren. Jedes spezialisierte Objekt wird als Ableitung dieses Objektes erstellt. Hier werden Grundfähigkeiten für jeden Sensor oder Actor erstellt. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ad270bcb00689bd179bae3287e2d7ed94"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad270bcb00689bd179bae3287e2d7ed94">&#9670;&nbsp;</a></span>Base_Generic()</h2>
@@ -197,15 +172,13 @@ Hier werden Grundfähigkeiten für jeden Sensor oder Actor erstellt.<br  />
       </table>
 </div><div class="memdoc">
 
-<p>Der Initiator.<br  />
-. </p>
-<p>Hier werden alle Variablen auf ihre Anfangswerte gesetzt. </p>
+<p>Der Initiator. Hier werden alle Variablen auf ihre Anfangswerte gesetzt. </p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a874447cd43263c5bbb63102c2201fb70"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a874447cd43263c5bbb63102c2201fb70">&#9670;&nbsp;</a></span>begin() <span class="overload">[1/3]</span></h2>
+<a id="ad40370b242df81f67b920619d5989cd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad40370b242df81f67b920619d5989cd4">&#9670;&nbsp;</a></span>begin() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -214,13 +187,13 @@ Hier werden Grundfähigkeiten für jeden Sensor oder Actor erstellt.<br  />
           <td class="memname">void Base_Generic::begin </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>html_place</em>, </td>
+          <td class="paramname"><em>_html_place</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>label</em>&#160;</td>
+          <td class="paramname"><em>_label</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -230,23 +203,19 @@ Hier werden Grundfähigkeiten für jeden Sensor oder Actor erstellt.<br  />
       </table>
 </div><div class="memdoc">
 
-<p>Legt die Startkonfiguration des Sensors fest. Die übergebenen Variabelen werden in die entsprechenden "obj_*" Variabelen gespeichert.<br  />
-. </p>
+<p>Legt die Startkonfiguration des Sensors fest. Die übergebenen Variabelen werden in die entsprechenden Objektvariabelen gespeichert. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">html_place</td><td>wird in obj_html_place gespeichert.<br  />
- </td></tr>
-    <tr><td class="paramname">label</td><td>wird in obj_label gespeichert<br  />
- <br  />
- </td></tr>
+    <tr><td class="paramname">_html_place</td><td>wird in html_place gespeichert. </td></tr>
+    <tr><td class="paramname">_label</td><td>wird in label gespeichert </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="a6a7ebacdd0ef7220ca5146c823f2a8b1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6a7ebacdd0ef7220ca5146c823f2a8b1">&#9670;&nbsp;</a></span>begin() <span class="overload">[2/3]</span></h2>
+<a id="aa2556ed4e400651525caf0d99a11b673"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2556ed4e400651525caf0d99a11b673">&#9670;&nbsp;</a></span>begin() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -255,19 +224,19 @@ Hier werden Grundfähigkeiten für jeden Sensor oder Actor erstellt.<br  />
           <td class="memname">void Base_Generic::begin </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>html_place</em>, </td>
+          <td class="paramname"><em>_html_place</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>label</em>, </td>
+          <td class="paramname"><em>_label</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>mqtt_name</em>&#160;</td>
+          <td class="paramname"><em>_mqtt_name</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -277,20 +246,20 @@ Hier werden Grundfähigkeiten für jeden Sensor oder Actor erstellt.<br  />
       </table>
 </div><div class="memdoc">
 
-<p>Legt die Startkonfiguration des Sensors fest. Die übergebenen Variabelen werden in die entsprechenden "obj_*" Variabelen gespeichert. </p>
+<p>Legt die Startkonfiguration des Sensors fest. Die übergebenen Variabelen werden in die entsprechenden Objektvariabelen gespeichert. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">html_place</td><td>wird in obj_html_place gespeichert. </td></tr>
-    <tr><td class="paramname">label</td><td>wird in obj_label gespeichert </td></tr>
-    <tr><td class="paramname">mqtt_name</td><td>wird in obj_mqtt_name gespeichert </td></tr>
+    <tr><td class="paramname">_html_place</td><td>wird in html_place gespeichert. </td></tr>
+    <tr><td class="paramname">_label</td><td>wird in label gespeichert </td></tr>
+    <tr><td class="paramname">_mqtt_name</td><td>wird in mqtt_name gespeichert </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="acae27e1d2388317aaa6e80700dd6a87d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acae27e1d2388317aaa6e80700dd6a87d">&#9670;&nbsp;</a></span>begin() <span class="overload">[3/3]</span></h2>
+<a id="a2fecffe5ad4b3134a3a16eeb282467c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fecffe5ad4b3134a3a16eeb282467c4">&#9670;&nbsp;</a></span>begin() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -299,25 +268,25 @@ Hier werden Grundfähigkeiten für jeden Sensor oder Actor erstellt.<br  />
           <td class="memname">void Base_Generic::begin </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>html_place</em>, </td>
+          <td class="paramname"><em>_html_place</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>label</em>, </td>
+          <td class="paramname"><em>_label</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>mqtt_name</em>, </td>
+          <td class="paramname"><em>_mqtt_name</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>keyword</em>&#160;</td>
+          <td class="paramname"><em>_keyword</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -327,67 +296,27 @@ Hier werden Grundfähigkeiten für jeden Sensor oder Actor erstellt.<br  />
       </table>
 </div><div class="memdoc">
 
-<p>Legt die Startkonfiguration des Sensors fest. Die übergebenen Variabelen werden in die entsprechenden "obj_*" Variabelen gespeichert. </p>
+<p>Legt die Startkonfiguration des Sensors fest. Die übergebenen Variabelen werden in die entsprechenden Objektvariabelen gespeichert. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">html_place</td><td>wird in obj_html_place gespeichert. </td></tr>
-    <tr><td class="paramname">label</td><td>wird in obj_label gespeichert </td></tr>
-    <tr><td class="paramname">mqtt_name</td><td>wird in obj_mqtt_name gespeichert </td></tr>
-    <tr><td class="paramname">keyword</td><td>wird in obj_keyword gespeichert </td></tr>
+    <tr><td class="paramname">_html_place</td><td>wird in html_place gespeichert. </td></tr>
+    <tr><td class="paramname">_label</td><td>wird in label gespeichert </td></tr>
+    <tr><td class="paramname">_mqtt_name</td><td>wird in mqtt_name gespeichert </td></tr>
+    <tr><td class="paramname">_keyword</td><td>wird in keyword gespeichert </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="ad3c192a4b18896d3dc8acd1aa4e0a0e0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad3c192a4b18896d3dc8acd1aa4e0a0e0">&#9670;&nbsp;</a></span>html_create()</h2>
+<a id="aaff7d882be648586dd3f5c5de2948f8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaff7d882be648586dd3f5c5de2948f8b">&#9670;&nbsp;</a></span>html_init()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Base_Generic::html_create </td>
-          <td>(</td>
-          <td class="paramtype">String &amp;&#160;</td>
-          <td class="paramname"><em>tmpstr</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Dummy, in dieser Funktion wird bei der abgeleiteten Klasse der Webinhalt initialisiert. </p>
-
-</div>
-</div>
-<a id="ad09710d6584e7f1e315639f6efb9844a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad09710d6584e7f1e315639f6efb9844a">&#9670;&nbsp;</a></span>html_info()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Base_Generic::html_info </td>
-          <td>(</td>
-          <td class="paramtype">String &amp;&#160;</td>
-          <td class="paramname"><em>tmpstr</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Dummy, in dieser Funktion wird bei der abgeleiteten Klasse der Inhalt für die Systeminfoseite geliefert. </p>
-
-</div>
-</div>
-<a id="a2af6f51ee939ebc238d5f97c50670697"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2af6f51ee939ebc238d5f97c50670697">&#9670;&nbsp;</a></span>html_refresh()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Base_Generic::html_refresh </td>
+          <td class="memname">void Base_Generic::html_init </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -395,12 +324,31 @@ Hier werden Grundfähigkeiten für jeden Sensor oder Actor erstellt.<br  />
       </table>
 </div><div class="memdoc">
 
-<p>Sendet den Inhalt der Variablen "obj_htm_stat" als Websocketmessage. </p>
+<p>Initialisierung einer Webseite Wenn sich ein Browser verbindet und die Webseite des Nodes aufruft, wird diese Funtion durch das Hauptprogramm aufgerufen. Die Funktion stellt ein Teil-JSON mit allen Initialisierungsdaten in "html_json" bereit. Dieses sendet das Hauptprogramm mittels Message als Websocket an den Browser. </p>
 
 </div>
 </div>
-<a id="aab8c1de0bdae89a9ccec55b7f1588233"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aab8c1de0bdae89a9ccec55b7f1588233">&#9670;&nbsp;</a></span>keyword_match()</h2>
+<a id="aebfe52622b11e9735af1769b42a80e19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebfe52622b11e9735af1769b42a80e19">&#9670;&nbsp;</a></span>html_update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Base_Generic::html_update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sendet ein Zustandsupdate an den Webbrowser. Sendet alle benötigten Daten um eine Zustandsänderung auf der Webseite für dieses Modul darzustellen. Kann von der abgeleiteten Klasse genutzt weden, muss aber nicht. Um die Funktion zu nutzen müssen die zu sendenden Daten als Teil-JSON (ohne geschweifte Klammern) in der Variablen "html_json" hinterlegt sein. </p>
+
+</div>
+</div>
+<a id="aeba9c585ae059515d678e4198fb63cfb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeba9c585ae059515d678e4198fb63cfb">&#9670;&nbsp;</a></span>keyword_match()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -409,7 +357,7 @@ Hier werden Grundfähigkeiten für jeden Sensor oder Actor erstellt.<br  />
           <td class="memname">bool Base_Generic::keyword_match </td>
           <td>(</td>
           <td class="paramtype">const String &amp;&#160;</td>
-          <td class="paramname"><em>keyword</em></td><td>)</td>
+          <td class="paramname"><em>_keyword</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -418,7 +366,7 @@ Hier werden Grundfähigkeiten für jeden Sensor oder Actor erstellt.<br  />
 <p>Prüft ob das übergebene keyword dem hinterlegten keyword entspricht. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">keyword</td><td>Das zu prüfende keyword </td></tr>
+    <tr><td class="paramname">_keyword</td><td>Das zu prüfende keyword </td></tr>
   </table>
   </dd>
 </dl>
@@ -442,134 +390,12 @@ Hier werden Grundfähigkeiten für jeden Sensor oder Actor erstellt.<br  />
       </table>
 </div><div class="memdoc">
 
-<p>Eine Funktion die im Hauptprogramm im loop regelmäßig aufgerufen wird. Hier können in den abgeleiteten Modulen regelmäßige Aufrufe hinterlegt werden. </p>
+<p>Eine Funktion die im Hauptprogramm im loop regelmäßig aufgerufen wird. Hier als leere Funktion implementiert, kann im abgeleiteten Objekt gefüllt werden. Es ist der einzige Ort in dem das Modul Rechenzeit bekommt, sollte sparsam genutzt werden. </p>
 
 </div>
 </div>
-<a id="ad8304e0b297a0f62f866772bdd401124"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad8304e0b297a0f62f866772bdd401124">&#9670;&nbsp;</a></span>mqtt_has_info()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Base_Generic::mqtt_has_info </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Ein Schalter ob mqtt_info vorhanden ist. </p>
-<dl class="section return"><dt>Returns</dt><dd>MQTT Info: true vorhanden; false nicht vorhanden </dd></dl>
-
-</div>
-</div>
-<a id="affc3f2c7853fdf33919ee6c2ff53542b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#affc3f2c7853fdf33919ee6c2ff53542b">&#9670;&nbsp;</a></span>mqtt_has_stat()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Base_Generic::mqtt_has_stat </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Ein Schalter ob mqtt_stat vorhanden ist. </p>
-<dl class="section return"><dt>Returns</dt><dd>mqtt_stat : "true" =&gt; vorhanden; "false" =&gt; nicht vorhanden </dd></dl>
-
-</div>
-</div>
-<a id="aec581ac75b704d0061805d4a2e8392f2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aec581ac75b704d0061805d4a2e8392f2">&#9670;&nbsp;</a></span>mqtt_info()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">String &amp; Base_Generic::mqtt_info </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Hier wird alles übertragen was keine aktuelen Statuswerte sind. </p>
-<dl class="section return"><dt>Returns</dt><dd>Ein Teil-JSON als String ohne Klammern </dd></dl>
-
-</div>
-</div>
-<a id="a44f94dbcb8fa13daeef3d655bfafcc35"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a44f94dbcb8fa13daeef3d655bfafcc35">&#9670;&nbsp;</a></span>mqtt_name()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">String &amp; Base_Generic::mqtt_name </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Der mqtt_name wird im Topic3 für die Statusdaten genutzt. </p>
-<dl class="section return"><dt>Returns</dt><dd>Inhalt der Variablen "obj_mqtt_name" </dd></dl>
-
-</div>
-</div>
-<a id="ab0ef0c5029f086f462bffed4d1c79ad7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab0ef0c5029f086f462bffed4d1c79ad7">&#9670;&nbsp;</a></span>mqtt_stat()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">String &amp; Base_Generic::mqtt_stat </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Aktuelle Statuswerte werden hier für die MQTT Übertragung zurückgegeben. </p>
-<p>Die Befüllung der zugrundeliegenden Variablen "obj_mqtt_state" erfolgt in dem abgeleiteten Script.</p>
-<p>Der Eintrag erfolgt entweder als Einzelwert oder als JSON formatierter String.</p>
-<p>Eine Übertragung per MQTT erfolgt nach jeder Änderung getriggert durch <a class="el" href="class_base___generic.html#a3aec2385737ce56a34c086e338970d61" title="Sobald sich ein Wert innerhalb von mqtt_state() verändert muss die abgeleitete Klasse &quot;obj_mqtt_state...">mqtt_stat_changed()</a> </p><dl class="section return"><dt>Returns</dt><dd>Ein String </dd></dl>
-
-</div>
-</div>
-<a id="a3aec2385737ce56a34c086e338970d61"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3aec2385737ce56a34c086e338970d61">&#9670;&nbsp;</a></span>mqtt_stat_changed()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Base_Generic::mqtt_stat_changed </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Sobald sich ein Wert innerhalb von mqtt_state() verändert muss die abgeleitete Klasse "obj_mqtt_state_changed" entsprechend setzen. </p>
-<dl class="section return"><dt>Returns</dt><dd>true wenn sich mqtt_state geändert hat sonst false </dd></dl>
-
-</div>
-</div>
-<a id="ac13261b9e69d4c14fa4f9b08f095af7f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac13261b9e69d4c14fa4f9b08f095af7f">&#9670;&nbsp;</a></span>set()</h2>
+<a id="a2a3068ca9ff05e966b037ddb6b625258"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a3068ca9ff05e966b037ddb6b625258">&#9670;&nbsp;</a></span>set()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -578,13 +404,13 @@ Hier werden Grundfähigkeiten für jeden Sensor oder Actor erstellt.<br  />
           <td class="memname">bool Base_Generic::set </td>
           <td>(</td>
           <td class="paramtype">const String &amp;&#160;</td>
-          <td class="paramname"><em>keyword</em>, </td>
+          <td class="paramname"><em>_keyword</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const String &amp;&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
+          <td class="paramname"><em>_value</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -594,36 +420,84 @@ Hier werden Grundfähigkeiten für jeden Sensor oder Actor erstellt.<br  />
       </table>
 </div><div class="memdoc">
 
+<p>Der Komandointerpreter. Hier als leere Funktion implementiert, kann im abgeleiteten Objekt gefüllt werden. Über die Set Funktion werden alle Kommandos gescheusst. Das Modul entscheidet selber ob und wie es auf das übergebene Keywort reagiert. </p>
+<dl class="section return"><dt>Returns</dt><dd>true wenn das Modul für den übergebenen Befehl zuständig ist, sonst false. </dd></dl>
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a4b41f87622b7fc04f68ba5cdd15664b3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4b41f87622b7fc04f68ba5cdd15664b3">&#9670;&nbsp;</a></span>obj_html_info</h2>
+<a id="aca5cc4a826648d174fc36e52abdafd5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca5cc4a826648d174fc36e52abdafd5b">&#9670;&nbsp;</a></span>html_has_info</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">String Base_Generic::obj_html_info = &quot;\&quot;x\&quot;:0&quot;</td>
+          <td class="memname">bool Base_Generic::html_has_info = false</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Systeminformationen zum Sensor für die Webseite als json abgespeichert;. </p>
-<p>Dieser String muss durch das abgeleitete Objekt gefüllt werden. Dabei gilt für jeden Systeminfowert:</p>
-<p>""obj_html_placeX"+":"+"obj_labelX"+"MesswertX"+"EinheitX", ... "</p>
-<p>Hier muss immer ein komplettes, gültiges Teil-JSON stehen dazu wird als default ein Dummy eingetragen. </p>
+<p>In der abgeleiteten Klasse wird hier auf "true" gesetzt wenn dieses Modul Daten für die Seite "Systeminfo" bereitstellt. </p>
 
 </div>
 </div>
-<a id="a98f23a130f364f27dcc9941e308402c4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a98f23a130f364f27dcc9941e308402c4">&#9670;&nbsp;</a></span>obj_html_place</h2>
+<a id="a745feb7e363f32f7523790d3c2b1acd6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a745feb7e363f32f7523790d3c2b1acd6">&#9670;&nbsp;</a></span>html_info</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">String Base_Generic::obj_html_place</td>
+          <td class="memname">String Base_Generic::html_info</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Systeminformationen zum Sensor für die Webseite als json abgespeichert. Dieser String muss durch das abgeleitete Objekt gefüllt werden. Dabei gilt für jeden Systeminfowert: ""html_placeX"+":"+"labelX"+"MesswertX"+"EinheitX", ... " Hier muss immer ein komplettes, gültiges Teil-JSON stehen! </p>
+
+</div>
+</div>
+<a id="af771a7a39a07fa303b5a531e7be84c04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af771a7a39a07fa303b5a531e7be84c04">&#9670;&nbsp;</a></span>html_json</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String Base_Generic::html_json</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Informationen zum Sensor für die Webseite als json abgespeichert; Dieser String muss durch das abgeleitete Objekt gefüllt werden. Dabei gilt für jeden Messwert: ""html_placeX"+":"+"labelX"+"MesswertX"+"EinheitX", ... ". </p>
+
+</div>
+</div>
+<a id="aab4ec8f47c848691c969c82b3d8690b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab4ec8f47c848691c969c82b3d8690b8">&#9670;&nbsp;</a></span>html_json_filled</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Base_Generic::html_json_filled = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Schalter: Wird wahr wenn html_json gefüllt ist. Die Rücksetzung des Schalters erfolgt durch das Hauptprogramm. </p>
+
+</div>
+</div>
+<a id="ac1e7677c3479f9155e99568aec4c8226"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1e7677c3479f9155e99568aec4c8226">&#9670;&nbsp;</a></span>html_place</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String Base_Generic::html_place</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -632,66 +506,46 @@ Hier werden Grundfähigkeiten für jeden Sensor oder Actor erstellt.<br  />
 
 </div>
 </div>
-<a id="a337de6cd5d961591bf3367df9108f7b2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a337de6cd5d961591bf3367df9108f7b2">&#9670;&nbsp;</a></span>obj_html_stat</h2>
+<a id="a567ab2c20d9864c885fc67692d8343cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a567ab2c20d9864c885fc67692d8343cd">&#9670;&nbsp;</a></span>is_state</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">String Base_Generic::obj_html_stat = &quot;\&quot;x\&quot;:0&quot;</td>
+          <td class="memname">bool Base_Generic::is_state = false</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Informationen zum Sensor für die Webseite als json abgespeichert;. </p>
-<p>Dieser String muss durch das abgeleitete Objekt gefüllt werden. Dabei gilt für jeden Messwert:</p>
-<p>""obj_html_placeX"+":"+"obj_labelX"+"MesswertX"+"EinheitX", ... "</p>
-<p>Hier muss immer ein komplettes, gültiges Teil-JSON stehen dazu wird als default ein Dummy eingetragen. </p>
+<p>Ein Schalter der angibt ob der Nodestatus aus diesem Modul genommen wird. Macht nur Sinn bei einem Schalter und muss dann in der abgeleiteten Klasse auf true gesetzt werden. </p>
 
 </div>
 </div>
-<a id="a4e8a93197a2c2780f301ce2a1fd039fc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4e8a93197a2c2780f301ce2a1fd039fc">&#9670;&nbsp;</a></span>obj_is_state</h2>
+<a id="ac3393f40c88e514cd4f0b1ee7e63ab82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3393f40c88e514cd4f0b1ee7e63ab82">&#9670;&nbsp;</a></span>keyword</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool Base_Generic::obj_is_state = false</td>
+          <td class="memname">String Base_Generic::keyword</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Ein Schalter der angibt ob der Nodestatus aus diesem Modul genommen wird. </p>
-<p>Macht nur Sinn bei einem Schalter und muss dann in der abgeleiteten Klasse auf true gesetzt werden. </p>
+<p>Das gespeicherte Schlüsselword für diesen Sensor/Actor. </p>
 
 </div>
 </div>
-<a id="abcc2fbc942b62523b7aab47167017690"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abcc2fbc942b62523b7aab47167017690">&#9670;&nbsp;</a></span>obj_keyword</h2>
+<a id="a76945c915dda5d15beeef5563b7f8804"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76945c915dda5d15beeef5563b7f8804">&#9670;&nbsp;</a></span>label</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">String Base_Generic::obj_keyword</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Das Schlüsselword für diesen Sensor/Actor. </p>
-
-</div>
-</div>
-<a id="a6c4207f1f5899592c9a206c4d37d7c1f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6c4207f1f5899592c9a206c4d37d7c1f">&#9670;&nbsp;</a></span>obj_label</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">String Base_Generic::obj_label</td>
+          <td class="memname">String Base_Generic::label</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -700,14 +554,14 @@ Hier werden Grundfähigkeiten für jeden Sensor oder Actor erstellt.<br  />
 
 </div>
 </div>
-<a id="a9ae2567ad44cc2abc3e570ba23464b7b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9ae2567ad44cc2abc3e570ba23464b7b">&#9670;&nbsp;</a></span>obj_mqtt_has_info</h2>
+<a id="aee4d2c97b2d5637105f6f7600b39c992"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee4d2c97b2d5637105f6f7600b39c992">&#9670;&nbsp;</a></span>mqtt_has_info</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool Base_Generic::obj_mqtt_has_info</td>
+          <td class="memname">bool Base_Generic::mqtt_has_info = false</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -716,14 +570,14 @@ Hier werden Grundfähigkeiten für jeden Sensor oder Actor erstellt.<br  />
 
 </div>
 </div>
-<a id="a10a73a02c4d154efc50441c940332b8c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a10a73a02c4d154efc50441c940332b8c">&#9670;&nbsp;</a></span>obj_mqtt_has_stat</h2>
+<a id="a8ab34827780093c01ff18d681dac5f1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ab34827780093c01ff18d681dac5f1b">&#9670;&nbsp;</a></span>mqtt_has_stat</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool Base_Generic::obj_mqtt_has_stat</td>
+          <td class="memname">bool Base_Generic::mqtt_has_stat = false</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -732,14 +586,14 @@ Hier werden Grundfähigkeiten für jeden Sensor oder Actor erstellt.<br  />
 
 </div>
 </div>
-<a id="ae409956e2754b52dd83020bf750818f6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae409956e2754b52dd83020bf750818f6">&#9670;&nbsp;</a></span>obj_mqtt_info</h2>
+<a id="ab43bc8be5864d22f1eca429541b979a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab43bc8be5864d22f1eca429541b979a1">&#9670;&nbsp;</a></span>mqtt_info</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">String Base_Generic::obj_mqtt_info</td>
+          <td class="memname">String Base_Generic::mqtt_info</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -748,14 +602,14 @@ Hier werden Grundfähigkeiten für jeden Sensor oder Actor erstellt.<br  />
 
 </div>
 </div>
-<a id="ad92d9da9ad72f390d7a9207c9a25e24d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad92d9da9ad72f390d7a9207c9a25e24d">&#9670;&nbsp;</a></span>obj_mqtt_name</h2>
+<a id="a07641f4eefbf534951d1ec7ec7395981"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07641f4eefbf534951d1ec7ec7395981">&#9670;&nbsp;</a></span>mqtt_name</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">String Base_Generic::obj_mqtt_name</td>
+          <td class="memname">String Base_Generic::mqtt_name</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -764,65 +618,46 @@ Hier werden Grundfähigkeiten für jeden Sensor oder Actor erstellt.<br  />
 
 </div>
 </div>
-<a id="ad313097e45b4f460659db815754ac058"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad313097e45b4f460659db815754ac058">&#9670;&nbsp;</a></span>obj_mqtt_stat</h2>
+<a id="abf51c0cfb814919d52568166931c0535"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf51c0cfb814919d52568166931c0535">&#9670;&nbsp;</a></span>mqtt_stat</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">String Base_Generic::obj_mqtt_stat</td>
+          <td class="memname">String Base_Generic::mqtt_stat</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Der MQTT Status. </p>
-<p>Dieser String muss durch das abgeleitete Objekt gefüllt werden. Dabei gilt für jeden Messwert:</p>
-<p>"mqtt_nameX"+":"+"MesswertX",...</p>
-<p>Hier steht immer ein abgeschlossenes Teil-JSON ohne Klammern. </p>
+<p>Der MQTT Status Dieser String muss durch das abgeleitete Objekt gefüllt werden. Dabei gilt für jeden Messwert: "mqtt_nameX"+":"+"MesswertX",... Hier steht immer ein abgeschlossenes Teil-JSON ohne Klammern. </p>
 
 </div>
 </div>
-<a id="a39967456dd076766a1c2e53dcf7474c9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a39967456dd076766a1c2e53dcf7474c9">&#9670;&nbsp;</a></span>obj_mqtt_stat_changed</h2>
+<a id="a5224d70b160067023453eada785c0143"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5224d70b160067023453eada785c0143">&#9670;&nbsp;</a></span>mqtt_stat_changed</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool Base_Generic::obj_mqtt_stat_changed</td>
+          <td class="memname">bool Base_Generic::mqtt_stat_changed = false</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Schalter ob "obj_mqtt_state" verändert worden ist und neu (=true) übertragen werden soll. </p>
+<p>Schalter ob "obj_mqtt_state" verändert worden ist und neu (=true) übertragen werden soll. Rücksetzung erfolgt im Hauptprogramm. </p>
 
 </div>
 </div>
-<a id="a5a529f8d3977e703a1ea7263c609db00"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5a529f8d3977e703a1ea7263c609db00">&#9670;&nbsp;</a></span>obj_mqtt_state</h2>
+<a id="a2d825d95e746592fce2e341be72af40a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d825d95e746592fce2e341be72af40a">&#9670;&nbsp;</a></span>state</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool Base_Generic::obj_mqtt_state</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Der aktuelle Wert/Zustand des Schalters: "0" oder "1". </p>
-
-</div>
-</div>
-<a id="ab95421d5246c8476361b546ed1a2f57c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab95421d5246c8476361b546ed1a2f57c">&#9670;&nbsp;</a></span>obj_state</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">String Base_Generic::obj_state</td>
+          <td class="memname">String Base_Generic::state</td>
         </tr>
       </table>
 </div><div class="memdoc">

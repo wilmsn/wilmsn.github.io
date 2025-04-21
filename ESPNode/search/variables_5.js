@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['katstr_374',['katStr',['../main_8h.html#a3cedd6a067f91ee1e775b435ac325d01',1,'main.h']]]
+  ['is_5fstate_356',['is_state',['../class_base___generic.html#a567ab2c20d9864c885fc67692d8343cd',1,'Base_Generic']]]
 ];

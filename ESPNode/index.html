@@ -69,8 +69,8 @@ $(function() {
 <h1><a class="anchor" id="autotoc_md1"></a>
 Brief Description</h1>
 <p>ESPNode is a firmware for ESP8266 and ESP32. This firmware is not generic, it has to be configured and compiled for each individual node.</p>
-<h3><a class="anchor" id="autotoc_md2"></a>
-Features:</h3>
+<h2><a class="anchor" id="autotoc_md2"></a>
+Features:</h2>
 <ul>
 <li>Implemented RF24 Gateway for my RF24Hub (<a href="https://github.com/wilmsn/RF24Hub">https://github.com/wilmsn/RF24Hub</a>)</li>
 <li>Implemented MQTT Client</li>
@@ -90,18 +90,18 @@ Hauptprogramm</h1>
 <p>Sofern die Module/Objektdefinitionen bereits vorhanden sind, kann das Programm einfach durch Konfiguration angepasst werden. Ohne Konfiguration sind alle Elemente deaktiviert. Details über die Konfiguration sind <a href="#konfiguration">hier</a> zu finden</p>
 <p>Initialisierung des Hauptprogrammes: Hier werden nacheinander folgende Dinge erledigt:</p>
 <ul>
-<li>Verbindung mit dem WLAN (es werden die 2 konfigurierten Netze getestet)</li>
+<li>Einlesen von Konfigurationsdaten aus den Preferences</li>
 <li>Öffnen des internen Filesystems</li>
+<li>Verbindung mit dem WLAN</li>
 <li>Starten des Webservers</li>
 <li>Starten des RF24 Gateways (falls aktiviert)</li>
+<li>Start des MQTT Clients (falls aktiviert)</li>
 <li>Ausführen der BEGIN Statements aller Module</li>
-<li>Start des Messvorgangs aller Sensoren</li>
-<li>Start des MQTT Clients</li>
 </ul>
 <p>Danach ist das Programm initialisiert und läuft in einer Endlosschleife. Innerhalb der Schleife finden (zum Teil zeitgesteuert) folgende Aktionen statt:</p>
 <ul>
 <li>RF24 Gateway (falls aktiviert): Prüfen ob neue Datenpakete anliegen, wenn ja dann an den Hub oder Node weiterleiten</li>
-<li>MQTT auf Pakete prüfen und veraarbeiten</li>
+<li>MQTT auf Pakete prüfen und verarbeiten</li>
 <li><a class="el" href="main_8cpp.html#afe461d27b9c48d5921c00d521181f12f" title="Die Hauptschleife.">loop()</a> Funktion aller Module bedienen</li>
 </ul>
 <p>Zeitabhängige Aktionen:</p>
@@ -115,8 +115,8 @@ Module</h1>
 <p>Module beschreiben bzw erzeugen eigene Objekte. Die Definition erfolgt in der Datei **"Node_settings.h"**. Die Aktivierung der Konfiguration für einen Node erfolgt in der Datei **"config.h"**</p>
 <p>Für die nachfolgenden Beispiele reichen die mitgelieferten Klassenbibliotheken.</p>
 <h2><a class="anchor" id="autotoc_md5"></a>
-Beispiel 1: Einfacher ESP8266 Node ohne externe Bauteile</h2>
-<p>Hie kann auf einem ESP8266 lediglich die interne LED per Schalter über die Weboberfläche ein und ausgeschaltet werden. </p><pre class="fragment">#ifdef NODESIMPLE
+Beispiel 1: Einfacher Node (ESP8266 oder ESP32) ohne externe Bauteile</h2>
+<p>Hie kann auf einem ESP8266/ESP32 lediglich die interne LED per Schalter über die Weboberfläche ein und ausgeschaltet werden. </p><pre class="fragment">#ifdef NODESIMPLE
 #define USE_SWITCH_ONOFF
 #include "switch_onoff.h"
 
@@ -213,25 +213,28 @@ Weitere Konfigurationszeilen:</h2>
 <p>Einschalten und konfigurieren des eingebauten MQTT Clients: </p><pre class="fragment">#define MQTT_CLIENT            "wittynode"
 #define MQTT_TOPICP2           "wittynode"
 </pre><p> Syntax: </p><pre class="fragment">#define MQTT_CLIENT            &lt;Name des Clients&gt;
-#define MQTT_TOPICP2          &lt;Name des Topicp2&gt;
-</pre><p> Mit den beiden Zeilen wird der MQTT Client eingeschaltet und konfiguriert.</p>
-<p>&lt;Name des Clients&gt; ist der Name mit dem sich dieser Client bein MQTT Server anmeldet.</p>
+#define MQTT_TOPICP2          &lt;Topic Part 2&gt;
+</pre><p> Mit den beiden Zeilen wird der MQTT Client eingeschaltet und konfiguriert. (Wenn MQTT verwendet werden soll sind beide Zeilen verpflichtend)</p>
+<p><code>&lt;Name des Clients&gt;</code> ist der Name mit dem sich dieser Client bein MQTT Server anmeldet.</p>
 <p>Das Topic des MQTT Server (Vergleichbar mit einem Pfad im Dateisystem) ist im allgemeinen so aufgebaut:</p>
-<p>&lt;Topic Part 1&gt;/&lt;Topic Part 2&gt;/&lt;Topic Part3&gt; Topic Part 1 und Topic Part 3 sind fest in der Konfiguration hinterlegt und werden idR. nicht geändert.</p>
+<p><code>&lt;Topic Part 1&gt; / &lt;Topic Part 2&gt; / &lt;Topic Part 3&gt;</code> Topic Part 1 und Topic Part 3 sind fest in der Konfiguration hinterlegt und werden idR. nicht geändert.</p>
+<p>Topic 1 und Topic 3 sind fallbezogen fest hinterlegt und können nur im Bedarf global in der Datei <a class="el" href="config_8h.html">config.h</a> geändert werden.</p>
 <p>Topic Part 2 kann bei Bedarf wiederum aus mehreren Subtopics bestehen. Denkbar wäre also folgende Konstellation: </p><pre class="fragment">   stat/haus/keller/bastelkeller/temperaturnode/info1
-</pre><p> In diesem Fall wäre &lt;Name des Topicp2&gt; "haus/keller/bastelkeller/temperaturnode"</p>
-<p>(Wenn MQTT verwendet werden soll sind beide Zeilen verpflichtend)</p>
-<p>Einschalten und konfigurieren des eingebauten RF24 Gateways: </p><pre class="fragment">#define RF24GW_HUB_SERVER        "rpi1.fritz.box"
+</pre><p> In diesem Fall wäre <code>&lt;Topic Part 2&gt;</code> "haus/keller/bastelkeller/temperaturnode"</p>
+<hr  />
+<p> Einschalten und konfigurieren des eingebauten RF24 Gateways. Nähere Infos <a href="https://github.com/wilmsn/RF24Hub">RF24Hub auf Github</a> </p><pre class="fragment">#define RF24GW_HUB_SERVER        "rpi1.fritz.box"
 #define RF24GW_NO                      103
 </pre><p> Syntax: </p><pre class="fragment">#define RF24GW_HUB_SERVER        &lt;Hostname des RF24 Servers&gt;
 #define RF24GW_NO                         &lt;Nummer des Gateways&gt;
-</pre><p> Mit diesen beiden Zeilen wird der RF24 Gateway konfiguriert und aktiviert. Zum RF24 Gateway gibt es noch mehrere Einstellungen in der Datei "config.h", die einmalig für das komplette System festgelegt werden.</p>
+</pre><p> Mit diesen beiden Zeilen wird der RF24 Gateway konfiguriert und aktiviert. Zum RF24 Gateway gibt es noch mehrere Einstellungen </p>
+<h1><a class="anchor" id="autotoc_md10"></a>
+in der Datei "config.h", die einmalig für das komplette System festgelegt werden.</h1>
 <p>Einstellungen zum Debugging (Sollten in der produktiven Umgebung ausgeschaltet sein)</p>
 <p>Debuggingausgaben zum Web auf der seriellen Schnittstelle </p><pre class="fragment">#define DEBUG_SERIAL_WEB
 </pre><p> Debuggingausgaben zum Modul auf der seriellen Schnittstelle </p><pre class="fragment">#define DEBUG_SERIAL_MODULE
 </pre><p> Debuggingausgaben zu MQTT auf der seriellen Schnittstelle </p><pre class="fragment">#define DEBUG_SERIAL_MQTT
 </pre><p> Debuggingausgaben zum System auf der seriellen Schnittstelle </p><pre class="fragment">#define DEBUG_SERIAL_SYSTEM
-</pre> <h2><a class="anchor" id="autotoc_md9"></a>
+</pre> <h2><a class="anchor" id="autotoc_md11"></a>
 Erstellung eines neuen Modules / einer neuen Klasse</h2>
 <p>Für jedes neue Modul werden jeweils eine Headerdatei und eine CPP-Datei angelegt. Innerhalb dieser Dateien wird eine Klasse beschrieben die in den ESPNode eingebaut wird. Diese Klasse kann natürlich Objekte nutzen die wiederum auf anderen Klassen basieren. Es ist darauf zu achten das sich in der Headerdatei nur Deklarationen befnden. Definitionen und Initialisierungen kommen in die CPP Datei.</p>
 <p>Die Modulklasse wird direkt oder indirekt von der Klasse "Base_Generic" abgeleitet. Beispiel: </p><pre class="fragment">class Sensor_18B20 : public Base_Generic {
@@ -242,8 +245,7 @@ private:
 
 };
 </pre><p> Das hat den Vorteil das alle benötigten Funktionen bereits vorhanden sind und dadurch sichergestellt wird das der Compiler fehlerfrei läuft. Einige der in der Klasse "Base_Generic" definierten Funktionen sind jedoch leer und müssen in der abgeleiteten Funktion mit sinnvollem Inhalt gefüllt werden.</p>
-<h3><a class="anchor" id="autotoc_md10"></a>
-Wichtiger Hinweis</h3>
+<p><b>Wichtiger Hinweis</b></p>
 <p>Nicht benötigte Module ( wichtig bei Hardwarebezug z.B addressiete Pins ) müssen entweder</p>
 <p>a) durch eine passende Precompilerdirektive deaktiviert werden (Beispiel Modul "actor_ledmatrix"):</p>
 <p>Datei "actor_ledmatrix.h": </p><pre class="fragment">#ifdef USE_ACTOR_LEDMATRIX
@@ -263,23 +265,46 @@ Wichtiger Hinweis</h3>
 <p><b>Problem:</b> Besitzt ein Modul einen Hardwarebezug stören sich die Programme gegenseitig auch wenn sie nicht aktiv sind. (Beispiel: 2 Module greifen mit unterschiedlichen Methoden auf GPIO 4 zu, jedoch ist für einen Node jeweils nur ein Modul mit einer Methode aktiviert)</p>
 <p><b>Lösung:</b> Umgesetzt ist die Methode a)</p>
 <p>Die benötigte Direktive steht jeweils in der ersten Zeile der Moduldateien *.h bzw. in der zweite Zeile von *.cpp</p>
-<h2><a class="anchor" id="autotoc_md11"></a>
-Funktionen und Aufgaben</h2>
-<h3><a class="anchor" id="autotoc_md12"></a>
+<h2><a class="anchor" id="autotoc_md12"></a>
+Aufgaben</h2>
+<p>Jedes Modul ist für die Bereitstellung seiner Daten egal ob Aktualisierung der Webseite oder Versand mittels MQTT selbst verantwortlich.</p>
+<h3><a class="anchor" id="autotoc_md13"></a>
+Web</h3>
+<p>Hier sind drei Szenarien zu unterscheiden: Die Kommunikation mit der Webseite erfolgt mittels JSON Statements. Ein JSON Statenment besteht immer aus einem Wertepaar: "Schlüssel":"Wert". Mehrere Statements werden durch Komma getrennt.</p>
+<p><b>1) Öffnen einer Webseite</b> Wird eine Webseite geöffnet und das Modul darüber (mittels html_init()) informiert, dann werden in der Variablen "html_json" alle benötigten JSON Statements gespeichert.</p>
+<p><b>2) Update einer Webseite</b> Bei jeder Änderung, die auf der Webseite dargestellt wird, wird durch das Modul eigenständig eine JSON Nachricht mit den neuen Daten an die Webseite geschickt.</p>
+<p><b>3) Systeminfo Daten</b> Hardwaredaten zu diesem Modul können auf der Seite "Systeminfo" angezeigt werden. Dazu sind folgende Maßnahmen erforderliich:</p>
+<p>Über den Schalter "html_has_info" wird dem Hauptprogramm mitgeteilt das diese Daten vorhanden sind.</p>
+<p>In der Variablen "html_info" werden diese Daten als JSON bereitgestellt.</p>
+<p>Beispiel: Es soll ein Sensor mit seinem HW-GPIO angezeigt werden:</p>
+<p>Zunächst wird eine neue Abschnittsüberschrift erzeugt. Der Schlüssel dafür lautet <code>tab_head_&lt;myname&gt;</code> Wichtig Da jeder Schlüssel im JSON eindeutig sein muss ist bei `&lt;myname&gt;èine eindeutige Bezeichnung zu wählen. Der Wert ist die angezeigte Abschnittsüberschrift. Danach folgen max 5 Zeilen in folgender Syntax:</p>
+<p>Schlüssel: tab_lineX_id (mit X =1 ..5)</p>
+<p>Wert: <code>&lt;Zellelinks&gt;#&lt;Zelle rachts&gt;</code></p>
+<p>Beispiel: </p><pre class="fragment">  "tab_head_ldr":"Sensor","tab_line1_ldr":"LDR:#GPIO: A0"
+</pre><h3><a class="anchor" id="autotoc_md14"></a>
+MQTT</h3>
+<p>Mittels MQTT werden folgende Arten von Daten bereitgestellt.</p>
+<p><b>1) Telemetriedaten</b></p>
+<p>sind von ihrer Natur her statisch und verändern sich nicht während der Laufzeit. Die können z.B. Anschlüsse von Serńsoren oder Schaltern sein. Die Daten werden inḿ JSON Format in die Variable "mqtt_info" geschrieben. Um dem Hauptprogramm zu signalisieren das es diese Daten gibt ist der Schalter "mqtt_has_info" au true zu setzen.</p>
+<p><b>2) Zustandsdaten</b></p>
+<p>sind z.B Messwerte, Schalterzustände, etc. Zustandsdaten werden als normale Messwerte übertragen. Zusätzlich kann ein Wert den Status des kompletten Nodes darstellen.</p>
+<p>Normale Messwerte werden als JSON in die Variable "mqtt_stat" geschrieben. Durch den Schalter <code>mqtt_has_stat = true</code>wird dem Hauptprogramm mitgeteilt das dieses Modul Daten zuliefert. Wichtig: "mqtt_stat" ist immer mit den letzten gültigen Daten gefüllt. Werden die Daten aktualisiert wird der Schalter "mqtt_stat_changed" auf true gesetzt. Danach werden sie zeitnah vom Hauptprogramm an den Broker geschickt.</p>
+<p>Wird ein Wert als Nodestatus definiert ist folgendes zu beachten: Der Wert wird in die Variable "state" eingetragen. Zusätzlich muss "is_state" auf true gesetzt sein. Achtung: Ein Node kann nur einen State haben!</p>
+<h2><a class="anchor" id="autotoc_md15"></a>
+Funktionen und Variablen</h2>
+<p>Hier werden nur Funktionen und Variablen beschrieben die zwingend erforderlich sind. Diese Funktionen sind alle in der Klasse "Base_Generic" definiert, es handelt ich jedoch teilweise nur um Funktionen ohne Inhalt.</p>
+<h3><a class="anchor" id="autotoc_md16"></a>
 Funktion "begin()"</h3>
-<p>Hier wird das Objekt initialisiert dabei ist naturgemäß die Anzahl der Parameter variabel. Jedliche grundlegende Konfiguration muss ier erfolgen. Im weiteren Programm gibt es dazu keine Möglichkeit mehr. Der Einbau in den ESPNode mittels Precompilerdirektive wurde bereits behandelt.</p>
-<h2><a class="anchor" id="autotoc_md13"></a>
-Funktion set( keyword, value)</h2>
-<p>Diese Funktion muss für jedes Modul gefüllt werden. Innerhalb des Hauptprogrammes werden alle Befehle (Format "Item"="value") durch jede set funktion der eingebauten Objekte geschleust. Die Objekte prüfen ob das "Item" für sie ein keyword ist und sie handeln müssen. Die benötigte Funktion für diese Prüfing ist im generischen Basisobjekt als Funktion <b>keyword_match</b> hinterlegt. Alle nötigen Handlungen für einen "Keyword Match" sind hier zu hinterlegen.</p>
-<h2><a class="anchor" id="autotoc_md14"></a>
-Funktion "html_create(String&amp; tmpstr)"</h2>
-<p>Stellt alle Konfigurationsdaten (als JSON Teilstring) bereit die für dieses Modul beim Aufruf der Webseite benötigt werden Ein Modul aktiviert seine Anzeige selbst indem der anzuzeigende Wert in das passende HTML Feld geschrieben wird. Dazu muss die Funktion "html_create" seinen zu liefernden Inhalt an den übergebenen String anhängen. Durch das hier erzeugte JSON wird festgelgt was wie auf der HTML Seite angezeigt wird. Dabei gibt es folgende Möglichkeit:</p>
-<p>a) Reiner Ein-Aus Schalter</p>
-<p>Codesegment: **"sw1 : 0 , sw1_label : Lichtschalter , sw1_format : x"**</p>
-<p>b) Schalter mit Regler</p>
-<p>Codesegment: **"sw1 : 0 , sw1_label : Lichtschalter , sw1_format : x, slider1 : 1 , slider1label : Helligkeit , slider1val : 54"**</p>
-<p>c) Jede andere Kombination die nach Änderung der HTML Seite benötigt wird</p>
-<p>Beispiele dazu in der Datei <a class="el" href="switch__onoff_8h.html">switch_onoff.h</a>/cpp </p>
+<p>Hier wird das Objekt initialisiert dabei ist naturgemäß die Anzahl der Parameter variabel. Jedliche grundlegende Konfiguration muss hier erfolgen. Im weiteren Programm gibt es dazu keine Möglichkeit mehr. Der Einbau in den ESPNode mittels Precompilerdirektive wurde bereits behandelt.</p>
+<h3><a class="anchor" id="autotoc_md17"></a>
+Funktion set( _cmnd, _val)</h3>
+<p>Hier werden alle Anweisungen für dieses Modul umgesetzt. Diese Funktion muss bei Bedarf im abgeleiteten Modul gefüllt werden. Innerhalb des Hauptprogrammes werden alle Befehle (Format "comand"="value") durch jede set funktion der eingebauten Module geschleust. Die Module prüfen innerhalb der **"set"** Funktion ob das "comand" für sie ein keyword ist und sie handeln müssen. Die benötigte Funktion für diese Prüfung ist im generischen Basisobjekt als Funktion <b>keyword_match</b> hinterlegt. Alle nötigen Handlungen für einen "Keyword Match" sind hier zu hinterlegen.</p>
+<h2><a class="anchor" id="autotoc_md18"></a>
+Funktion "html_init()"</h2>
+<p>Stellt alle Konfigurationsdaten (als JSON Teilstring) bereit, die für dieses Modul beim Aufruf der Webseite benötigt werden. Die Daten werden in die Variable "html_json" geschrieben. Um dem Hauptprogramm mitzuteilen das Daten zur Verfügung stehen wird der Schalter "html_json_filled" auf "true" gesetzt.</p>
+<h2><a class="anchor" id="autotoc_md19"></a>
+Funktion loop(time_t now)</h2>
+<p>In dieser Funktion steht dem Modul Rechenzeit zur Verfügung. Hier werden alle Aktionen durchgeführt die nicht durch ein "comand" veranlasst worden sind z.B. regelmäßige Messungen mit Sensoren. ZU beachten ist folgendes: Rechenzeit ist ein knappes Gut. Es findet seitens des Hauptprogrammes keine Kontrolle/Zeitbegrenzung statt. Die Loop Funktionen aller Module wird nah dem "Round Robin" Prinzip angesteuert. Verwendung von "delay()" ist unbedingt zu vermeiden. Um eine Wartefunktion zu realisieren gbt es den übergebenen Zeitstempel. </p>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- start footer part -->

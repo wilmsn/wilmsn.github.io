@@ -69,14 +69,14 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Die Datenstruktur des payloads in dem RF24 Netzwerk. Sie wird nur benötigt wenn der RF24Gateway genutzt wird und auch dies nur damit Logging-Informationen angezeigt werden können.  
+<p>Anschlusspin für den CE Pin des Funkmodules.  
  <a href="structpayload__t.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="config_8h_source.html">config.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a3afa33b39f6de1877e858f9fb0b5f87a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="config_8h.html#a030de4f033221607739a15cb52508022">NODE_DATTYPE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpayload__t.html#a3afa33b39f6de1877e858f9fb0b5f87a">node_id</a></td></tr>
+<tr class="memitem:a3afa33b39f6de1877e858f9fb0b5f87a"><td class="memItemLeft" align="right" valign="top">NODE_DATTYPE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpayload__t.html#a3afa33b39f6de1877e858f9fb0b5f87a">node_id</a></td></tr>
 <tr class="separator:a3afa33b39f6de1877e858f9fb0b5f87a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ea24ed09a51f607a1e2a1b0f2ade2cb"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpayload__t.html#a6ea24ed09a51f607a1e2a1b0f2ade2cb">msg_id</a></td></tr>
 <tr class="separator:a6ea24ed09a51f607a1e2a1b0f2ade2cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -86,7 +86,7 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a1a9dfd6db5d1c123d2dccecceb14112e"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpayload__t.html#a1a9dfd6db5d1c123d2dccecceb14112e">msg_flags</a></td></tr>
 <tr class="memdesc:a1a9dfd6db5d1c123d2dccecceb14112e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nachrichtenflag, Definition siehe Nachrichtenflags.  <a href="structpayload__t.html#a1a9dfd6db5d1c123d2dccecceb14112e">More...</a><br /></td></tr>
 <tr class="separator:a1a9dfd6db5d1c123d2dccecceb14112e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c24bc8a9f0e51a910baa9f8c4110fbc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="config_8h.html#ac284fce722a0be7bec73e511dc3f2bbd">ONR_DATTYPE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpayload__t.html#a5c24bc8a9f0e51a910baa9f8c4110fbc">orderno</a></td></tr>
+<tr class="memitem:a5c24bc8a9f0e51a910baa9f8c4110fbc"><td class="memItemLeft" align="right" valign="top">ONR_DATTYPE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpayload__t.html#a5c24bc8a9f0e51a910baa9f8c4110fbc">orderno</a></td></tr>
 <tr class="separator:a5c24bc8a9f0e51a910baa9f8c4110fbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6097a5427f09fe70856fb44f916da240"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpayload__t.html#a6097a5427f09fe70856fb44f916da240">heartbeatno</a></td></tr>
 <tr class="separator:a6097a5427f09fe70856fb44f916da240"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -116,7 +116,9 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a123b9a41dc6fbff0b0c8aeed9e03a7d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Die Datenstruktur des payloads in dem RF24 Netzwerk. Sie wird nur benötigt wenn der RF24Gateway genutzt wird und auch dies nur damit Logging-Informationen angezeigt werden können. </p>
+<div class="textblock"><p>Anschlusspin für den CE Pin des Funkmodules. </p>
+<p>Anschlusspin für den CSN Pin des Funkmodules Der verwendete RF24 Funkkanal Die Übertragungsgeschwindigkeit Der Netzwerkschlüssel Hub zum Node Der Netzwerkschlüssel Node zum Hub Der Datentyp für die Node_ID. Ist aktuell auf 1...255 festgelegt. Werden mehr Nodes benötigt, kann der Datentyp hier zentral umgestellt werden. Der Datentyp für die Ordernummer. Auch hier eine zentrale Festlegung des Datentyps, der ggf. die Umstellung vereinfacht.</p>
+<p>Die Datenstruktur des payloads in dem RF24 Netzwerk. Sie wird nur benötigt wenn der RF24Gateway genutzt wird und auch dies nur damit Logging-Informationen angezeigt werden können. </p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
 <a id="a18f328fa1c71e87663b30ed1fde701bb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a18f328fa1c71e87663b30ed1fde701bb">&#9670;&nbsp;</a></span>data1</h2>
@@ -283,7 +285,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="config_8h.html#a030de4f033221607739a15cb52508022">NODE_DATTYPE</a> payload_t::node_id</td>
+          <td class="memname">NODE_DATTYPE payload_t::node_id</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -299,7 +301,7 @@ Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="config_8h.html#ac284fce722a0be7bec73e511dc3f2bbd">ONR_DATTYPE</a> payload_t::orderno</td>
+          <td class="memname">ONR_DATTYPE payload_t::orderno</td>
         </tr>
       </table>
 </div><div class="memdoc">
